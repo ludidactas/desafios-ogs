@@ -1,0 +1,447 @@
+# Habilidades básicas › Cerrar el territorio
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/close_territory).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-cerrar-territorio-01
+  titulo: Cerrar el territorio (1)
+  etiqueta: cerrar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: Negro tiene un territorio chico, pero Blanco puede reducirlo jugando en A. Jugás con
+    negras. Evitá esa reducción cerrando el territorio con una sola jugada.
+  piedras:
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 8, c: 4, color: B }
+  marcas:
+    - { r: 8, c: 3, tipo: letra, texto: A }
+  desenlaces:
+    - en: [8, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-cerrar-territorio-02
+  titulo: Cerrar el territorio (2)
+  etiqueta: cerrar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: cerrá el territorio negro con una sola jugada."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+  desenlaces:
+    - en: [5, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-cerrar-territorio-03
+  titulo: Cerrar el territorio (3)
+  etiqueta: cerrar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: cerrá el territorio negro con una sola jugada."
+  piedras:
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: B }
+  desenlaces:
+    - en: [8, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-cerrar-territorio-04
+  titulo: Cerrar el territorio (4)
+  etiqueta: cerrar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: cerrá el territorio negro con una sola jugada."
+  piedras:
+    - { r: 2, c: 0, color: B }
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: B }
+    - { r: 3, c: 0, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: B }
+  desenlaces:
+    - en: [5, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-cerrar-territorio-05
+  titulo: Cerrar el territorio (5)
+  etiqueta: cerrar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: cerrá el territorio negro con una sola jugada."
+  piedras:
+    - { r: 3, c: 1, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 6, color: N }
+    - { r: 8, c: 7, color: B }
+  desenlaces:
+    - en: [7, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-cerrar-territorio-06
+  titulo: Cerrar el territorio (6)
+  etiqueta: cerrar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: cerrá el territorio negro con una sola jugada."
+  piedras:
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+  desenlaces:
+    - en: [6, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-cerrar-territorio-07
+  titulo: Cerrar el territorio (7)
+  etiqueta: cerrar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: cerrá el territorio negro con una sola jugada."
+  piedras:
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+  desenlaces:
+    - en: [7, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-cerrar-territorio-08
+  titulo: Cerrar el territorio (8)
+  etiqueta: cerrar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: cerrá el territorio negro con una sola jugada."
+  piedras:
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 6, color: N }
+    - { r: 8, c: 7, color: B }
+  desenlaces:
+    - en: [7, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-cerrar-territorio-09
+  titulo: Cerrar el territorio (9)
+  etiqueta: cerrar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: cerrá el territorio negro con una sola jugada."
+  piedras:
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+  desenlaces:
+    - en: [7, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-cerrar-territorio-10
+  titulo: Cerrar el territorio (10)
+  etiqueta: cerrar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: cerrá el territorio negro con una sola jugada."
+  piedras:
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: B }
+  secuencia:
+    ramas:
+      - en: [6, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [6, 2]
+
+- id: ogs-cerrar-territorio-11
+  titulo: Cerrar el territorio (11)
+  etiqueta: cerrar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: cerrá el territorio negro con una sola jugada."
+  piedras:
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [7, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [7, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 1]
+
+- id: ogs-cerrar-territorio-12
+  titulo: Cerrar el territorio (12)
+  etiqueta: cerrar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: cerrá el territorio negro con una sola jugada."
+  piedras:
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 0, color: N }
+    - { r: 4, c: 1, color: B }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [7, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [7, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 1]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [7, 2]
+        siguiente:
+          ramas:
+            - en: [8, 2]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [7, 1]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [8, 2]

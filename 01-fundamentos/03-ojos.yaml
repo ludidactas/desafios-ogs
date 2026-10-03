@@ -1,0 +1,223 @@
+# Fundamentos › Ojos — Qué es un ojo, ojos de dos puntos y ojos falsos
+
+# Escrito a mano (no lo genera extraer-ogs.mjs) a partir de la sección "Fundamentals" del tutorial
+# "Learn to Play Go" de online-go.com (https://online-go.com/learn-to-play-go/).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com
+# Cambios respecto del original: adaptación al formato Desafio, coordenadas a [fila, columna],
+# textos en castellano rioplatense y feedback propio por rama.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: fundamentos-que-es-un-ojo
+  titulo: "Qué es un ojo"
+  etiqueta: ojos
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá las piedras blancas."
+  piedras:
+    - { r: 1, c: 3, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+  marcas:
+    - { r: 2, c: 3, tipo: letra, texto: "A" }
+    - { r: 8, c: 4, tipo: letra, texto: "B" }
+  jugadasCorrectas:
+    - [8, 4]
+  mensajeError: >
+    Esa jugada no captura. Recordá que no se puede jugar dentro de un ojo,
+    salvo que la jugada capture piedras.
+  explicacion: >
+    El punto A está rodeado por piedras blancas: se llama ojo. Negro no puede
+    jugar en A porque sería una autocaptura. El punto B también es un ojo,
+    pero ahí Negro sí puede jugar, porque con esa piedra captura.
+
+- id: fundamentos-ojo-de-dos-puntos
+  titulo: "Un ojo de dos puntos"
+  etiqueta: ojos
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: >
+    Jugás con negras: capturá el grupo blanco llenando su ojo punto por punto.
+  piedras:
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 7, c: 0, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: N }
+  secuencia:
+    ramas:
+      - en: [8, 0]
+        correcto: true
+        texto: >
+          Blanco captura tu piedra, pero su ojo sigue siendo uno solo. Volvé a
+          jugar en el mismo punto.
+        respuestaRival: [8, 1]
+        siguiente:
+          ramas:
+            - en: [8, 0]
+              correcto: true
+              texto: "¡Correcto! Al ocupar el último punto del ojo capturaste todo el grupo."
+      - en: [8, 1]
+        correcto: true
+        texto: >
+          Blanco captura tu piedra, pero su ojo sigue siendo uno solo. Volvé a
+          jugar en el mismo punto.
+        respuestaRival: [8, 0]
+        siguiente:
+          ramas:
+            - en: [8, 1]
+              correcto: true
+              texto: "¡Correcto! Al ocupar el último punto del ojo capturaste todo el grupo."
+  explicacion: >
+    Blanco tiene un solo ojo, aunque más grande (de dos puntos), así que el
+    grupo no está a salvo. Negro juega en uno de los puntos del ojo; Blanco
+    captura esa piedra, y Negro vuelve a jugar en el mismo lugar, esta vez
+    capturando todo el grupo.
+  mensajeError: >
+    Esa jugada no captura el grupo blanco: su único ojo tiene dos puntos y hay
+    que llenarlo.
+
+- id: fundamentos-uno-o-dos-ojos
+  titulo: "Uno o dos ojos"
+  etiqueta: ojos
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá uno de los grupos blancos."
+  piedras:
+    - { r: 0, c: 6, color: N }
+    - { r: 0, c: 7, color: B }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 2, c: 7, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 3, c: 8, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 0, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: N }
+  secuencia:
+    ramas:
+      - en: [1, 8]
+        correcto: true
+        texto: >
+          Jugar en el medio del ojo impide que Blanco arme dos ojos. Blanco
+          responde en un extremo: ocupá el otro.
+        respuestaRival: [2, 8]
+        siguiente:
+          ramas:
+            - en: [0, 8]
+              correcto: true
+              texto: "¡Correcto! Blanco no pudo formar dos ojos y el grupo quedó capturado."
+      - en: [2, 8]
+        correcto: false
+        texto: >
+          Jugar en ese punto no alcanza: Blanco responde en el medio del ojo y
+          se queda con dos ojos.
+        respuestaRival: [1, 8]
+      - en: [0, 8]
+        correcto: false
+        texto: >
+          Jugar en ese punto no alcanza: Blanco responde en el medio del ojo y
+          se queda con dos ojos.
+        respuestaRival: [1, 8]
+  explicacion: >
+    Blanco tiene dos grupos. Uno tiene dos ojos y el otro un solo ojo grande.
+    El grupo con dos ojos está a salvo y nunca se puede capturar. El otro se
+    puede capturar si se juega en el punto justo de su ojo.
+  mensajeError: >
+    Jugar en ese punto no alcanza: Blanco responde en el medio del ojo y se
+    queda con dos ojos.
+
+- id: fundamentos-ojo-falso
+  titulo: "Ojo falso"
+  etiqueta: ojos
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá el grupo blanco atacando el ojo falso."
+  piedras:
+    - { r: 0, c: 6, color: N }
+    - { r: 0, c: 7, color: B }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: B }
+    - { r: 1, c: 8, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 2, c: 7, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 8, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 0, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: N }
+  marcas:
+    - { r: 0, c: 8, tipo: letra, texto: "A" }
+    - { r: 2, c: 8, tipo: letra, texto: "B" }
+  secuencia:
+    ramas:
+      - en: [3, 7]
+        correcto: true
+        texto: >
+          Cortaste el ojo falso. Blanco conecta en B para salvar la piedra
+          cortada, pero así le queda un solo ojo, en A.
+        respuestaRival: [2, 8]
+        siguiente:
+          ramas:
+            - en: [0, 8]
+              correcto: true
+              texto: "¡Correcto! Con un solo ojo, el grupo blanco no puede vivir."
+  explicacion: >
+    Un grupo blanco tiene dos ojos verdaderos. El otro tiene un ojo verdadero
+    en A y un ojo falso en B. El ojo falso no es seguro y se puede atacar.
+  mensajeError: "Esa jugada no ataca el ojo falso: el grupo blanco sigue a salvo."

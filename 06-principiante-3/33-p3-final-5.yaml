@@ -1,0 +1,527 @@
+# Principiante, nivel 3 › Final — ¿Sente o gote?
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl3-endgame-5).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p3-final-5-01
+  titulo: Final (1)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Sente y gote (mantener o perder la iniciativa) son conceptos importantes, también en
+    el final. Una jugada es sente si mantenés la iniciativa: tu rival tiene que responder. Claro que
+    responder nunca es obligatorio, pero una jugada es sente si al rival le traería muchos problemas
+    no responder. Acá, después de la 1 de Negro, Blanco bloquea con 2. Después Negro conecta su
+    piedra con 3, y Blanco tiene que cubrir el corte con 4: si no, Negro entraría en la esquina
+    jugando ahí. Negro mantiene la iniciativa y puede jugar en otro lado. ¿La jugada 1 es sente o
+    gote para Negro?"
+  piedras:
+    - { r: 12, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 4, color: N }
+  marcas:
+    - { r: 18, c: 3, tipo: letra, texto: "1" }
+    - { r: 18, c: 2, tipo: letra, texto: "2" }
+    - { r: 18, c: 4, tipo: letra, texto: "3" }
+    - { r: 17, c: 2, tipo: letra, texto: "4" }
+  opciones:
+    - { texto: sente, correcta: true }
+    - { texto: gote, correcta: false }
+
+- id: ogs-p3-final-5-02
+  titulo: Final (2)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Si Blanco juega 1, Negro bloquea con 2 y Blanco tiene que defender su piedra con 3.
+    Después, Negro no necesita responder acá porque su territorio está seguro. ¿La jugada 1 es sente
+    o gote para Blanco?
+  piedras:
+    - { r: 12, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 4, color: B }
+    - { r: 18, c: 5, color: N }
+  marcas:
+    - { r: 18, c: 4, tipo: letra, texto: "1" }
+    - { r: 18, c: 5, tipo: letra, texto: "2" }
+    - { r: 18, c: 3, tipo: letra, texto: "3" }
+  opciones:
+    - { texto: sente, correcta: false }
+    - { texto: gote, correcta: true }
+
+- id: ogs-p3-final-5-03
+  titulo: Final (3)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿La jugada 1 es sente o gote?
+  piedras:
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 3, color: B }
+  marcas:
+    - { r: 15, c: 0, tipo: letra, texto: "1" }
+  opciones:
+    - { texto: sente, correcta: false }
+    - { texto: gote, correcta: true }
+
+- id: ogs-p3-final-5-04
+  titulo: Final (4)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 9 }
+  instruccion: ¿La jugada 1 es sente o gote?
+  piedras:
+    - { r: 11, c: 2, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 16, c: 9, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 4, color: N }
+  marcas:
+    - { r: 16, c: 4, tipo: letra, texto: "1" }
+  opciones:
+    - { texto: sente, correcta: true }
+    - { texto: gote, correcta: false }
+
+- id: ogs-p3-final-5-05
+  titulo: Final (5)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿La jugada 1 es sente o gote?
+  piedras:
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: B }
+  marcas:
+    - { r: 15, c: 0, tipo: letra, texto: "1" }
+  opciones:
+    - { texto: sente, correcta: true }
+    - { texto: gote, correcta: false }
+
+- id: ogs-p3-final-5-06
+  titulo: Final (6)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿La jugada 1 es sente o gote?
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 16, c: 8, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 1, color: B }
+  marcas:
+    - { r: 18, c: 1, tipo: letra, texto: "1" }
+  opciones:
+    - { texto: sente, correcta: true }
+    - { texto: gote, correcta: false }
+
+- id: ogs-p3-final-5-07
+  titulo: Final (7)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿La jugada 1 es sente o gote?
+  piedras:
+    - { r: 11, c: 1, color: N }
+    - { r: 12, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 16, c: 8, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 2, color: B }
+  marcas:
+    - { r: 18, c: 2, tipo: letra, texto: "1" }
+  opciones:
+    - { texto: sente, correcta: true }
+    - { texto: gote, correcta: false }
+
+- id: ogs-p3-final-5-08
+  titulo: Final (8)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿La jugada 1 es sente o gote?
+  piedras:
+    - { r: 11, c: 2, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 16, c: 8, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: B }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 5, color: B }
+  marcas:
+    - { r: 18, c: 5, tipo: letra, texto: "1" }
+  opciones:
+    - { texto: sente, correcta: true }
+    - { texto: gote, correcta: false }
+
+- id: ogs-p3-final-5-09
+  titulo: Final (9)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿La jugada 1 es sente o gote?
+  piedras:
+    - { r: 11, c: 0, color: B }
+    - { r: 11, c: 1, color: B }
+    - { r: 11, c: 2, color: B }
+    - { r: 12, c: 0, color: N }
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 16, c: 8, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 2, color: N }
+  marcas:
+    - { r: 14, c: 2, tipo: letra, texto: "1" }
+  opciones:
+    - { texto: sente, correcta: false }
+    - { texto: gote, correcta: true }
+
+- id: ogs-p3-final-5-10
+  titulo: Final (10)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿La jugada 1 es sente o gote?
+  piedras:
+    - { r: 11, c: 2, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 8, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 6, color: N }
+  marcas:
+    - { r: 15, c: 0, tipo: letra, texto: "1" }
+  opciones:
+    - { texto: sente, correcta: true }
+    - { texto: gote, correcta: false }
+
+- id: ogs-p3-final-5-11
+  titulo: Final (11)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿La jugada 1 es sente o gote?
+  piedras:
+    - { r: 11, c: 1, color: N }
+    - { r: 11, c: 2, color: N }
+    - { r: 12, c: 3, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 8, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 2, color: B }
+  marcas:
+    - { r: 18, c: 2, tipo: letra, texto: "1" }
+  opciones:
+    - { texto: sente, correcta: false }
+    - { texto: gote, correcta: true }
+
+- id: ogs-p3-final-5-12
+  titulo: Final (12)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿La jugada 1 es sente o gote?
+  piedras:
+    - { r: 11, c: 2, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 1, color: B }
+  marcas:
+    - { r: 18, c: 1, tipo: letra, texto: "1" }
+  opciones:
+    - { texto: sente, correcta: false }
+    - { texto: gote, correcta: true }
+
+- id: ogs-p3-final-5-13
+  titulo: Final (13)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿La jugada 1 es sente o gote?
+  piedras:
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 0, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 4, color: N }
+  marcas:
+    - { r: 13, c: 0, tipo: letra, texto: "1" }
+  opciones:
+    - { texto: sente, correcta: true }
+    - { texto: gote, correcta: false }
+
+- id: ogs-p3-final-5-14
+  titulo: Final (14)
+  etiqueta: p3-final-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿La jugada 1 es sente o gote?
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 8, color: B }
+    - { r: 18, c: 5, color: N }
+  marcas:
+    - { r: 15, c: 0, tipo: letra, texto: "1" }
+  opciones:
+    - { texto: sente, correcta: false }
+    - { texto: gote, correcta: true }

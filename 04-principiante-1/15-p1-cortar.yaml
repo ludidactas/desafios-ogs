@@ -1,0 +1,1004 @@
+# Principiante, nivel 1 › Cortar — Cortar las piedras rivales
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl1-cut).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p1-cortar-01
+  titulo: Cortar (1)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Blanco puede cortar las piedras negras y separarlas en dos grupos débiles. Jugás con
+    blancas. Cortá las piedras marcadas.
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+  marcas:
+    - { r: 12, c: 2, tipo: triangulo }
+    - { r: 14, c: 2, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 17, c: 3, tipo: triangulo }
+    - { r: 15, c: 3, tipo: cruz }
+  secuencia:
+    ramas:
+      - en: [15, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [14, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 3]
+      - en: [15, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 3]
+      - en: [13, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 3]
+
+- id: ogs-p1-cortar-02
+  titulo: Cortar (2)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 11, c: 4, color: N }
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 1, color: B }
+  marcas:
+    - { r: 11, c: 4, tipo: triangulo }
+    - { r: 13, c: 3, tipo: triangulo }
+    - { r: 13, c: 4, tipo: triangulo }
+    - { r: 14, c: 2, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 16, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [13, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [12, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [13, 2]
+      - en: [15, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [13, 2]
+
+- id: ogs-p1-cortar-03
+  titulo: Cortar (3)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 3, color: N }
+  marcas:
+    - { r: 15, c: 1, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 15, c: 4, tipo: triangulo }
+    - { r: 15, c: 5, tipo: triangulo }
+    - { r: 16, c: 4, tipo: triangulo }
+    - { r: 17, c: 3, tipo: triangulo }
+    - { r: 18, c: 3, tipo: triangulo }
+  desenlaces:
+    - en: [16, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-cortar-04
+  titulo: Cortar (4)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+  marcas:
+    - { r: 12, c: 2, tipo: triangulo }
+    - { r: 13, c: 2, tipo: triangulo }
+    - { r: 14, c: 2, tipo: triangulo }
+    - { r: 14, c: 4, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 17, c: 3, tipo: triangulo }
+    - { r: 17, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [16, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 4]
+        siguiente:
+          ramas:
+            - en: [15, 4]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [14, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 4]
+      - en: [15, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 3]
+      - en: [16, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 3]
+
+- id: ogs-p1-cortar-05
+  titulo: Cortar (5)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 11, c: 3, color: B }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 12, c: 4, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+  marcas:
+    - { r: 12, c: 4, tipo: triangulo }
+    - { r: 13, c: 3, tipo: triangulo }
+    - { r: 14, c: 2, tipo: triangulo }
+    - { r: 14, c: 4, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 16, c: 1, tipo: triangulo }
+    - { r: 17, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [15, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [15, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [14, 3]
+        siguiente:
+          ramas:
+            - en: [15, 1]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-p1-cortar-06
+  titulo: Cortar (6)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 5, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+  marcas:
+    - { r: 13, c: 5, tipo: triangulo }
+    - { r: 14, c: 5, tipo: triangulo }
+    - { r: 15, c: 1, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 15, c: 5, tipo: triangulo }
+    - { r: 15, c: 7, tipo: triangulo }
+    - { r: 16, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [15, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [14, 4]
+        siguiente:
+          ramas:
+            - en: [14, 3]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [16, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 4]
+      - en: [15, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 4]
+
+- id: ogs-p1-cortar-07
+  titulo: Cortar (7)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 12, c: 4, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+  marcas:
+    - { r: 12, c: 4, tipo: triangulo }
+    - { r: 14, c: 3, tipo: triangulo }
+    - { r: 14, c: 4, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 17, c: 3, tipo: triangulo }
+    - { r: 17, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [16, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 4]
+        siguiente:
+          ramas:
+            - en: [15, 5]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [16, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 3]
+      - en: [13, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 3]
+      - en: [13, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 3]
+
+- id: ogs-p1-cortar-08
+  titulo: Cortar (8)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 14, c: 2, tipo: triangulo }
+    - { r: 14, c: 5, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 15, c: 4, tipo: triangulo }
+    - { r: 15, c: 6, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [15, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [14, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 3]
+
+- id: ogs-p1-cortar-09
+  titulo: Cortar (9)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+  marcas:
+    - { r: 13, c: 3, tipo: triangulo }
+    - { r: 13, c: 4, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 16, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [14, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [14, 4]
+        siguiente:
+          ramas:
+            - en: [15, 4]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [15, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 3]
+      - en: [14, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 3]
+
+- id: ogs-p1-cortar-10
+  titulo: Cortar (10)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 12, c: 3, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+  marcas:
+    - { r: 12, c: 3, tipo: triangulo }
+    - { r: 13, c: 2, tipo: triangulo }
+    - { r: 14, c: 2, tipo: triangulo }
+  desenlaces:
+    - en: [12, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-cortar-11
+  titulo: Cortar (11)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 11, c: 2, color: B }
+    - { r: 11, c: 3, color: B }
+    - { r: 12, c: 2, color: N }
+    - { r: 12, c: 3, color: B }
+    - { r: 12, c: 4, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+  marcas:
+    - { r: 12, c: 2, tipo: triangulo }
+    - { r: 12, c: 4, tipo: triangulo }
+    - { r: 13, c: 2, tipo: triangulo }
+    - { r: 14, c: 3, tipo: triangulo }
+    - { r: 14, c: 4, tipo: triangulo }
+    - { r: 15, c: 4, tipo: triangulo }
+    - { r: 16, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [13, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [13, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [13, 3]
+
+- id: ogs-p1-cortar-12
+  titulo: Cortar (12)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 3, color: N }
+  marcas:
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 17, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [17, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 1]
+        siguiente:
+          ramas:
+            - en: [17, 1]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [17, 4]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-p1-cortar-13
+  titulo: Cortar (13)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 13, c: 3, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 5, color: N }
+  marcas:
+    - { r: 17, c: 5, tipo: triangulo }
+    - { r: 16, c: 6, tipo: triangulo }
+    - { r: 16, c: 4, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 16, c: 1, tipo: triangulo }
+  desenlaces:
+    - en: [17, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-cortar-14
+  titulo: Cortar (14)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 2, color: N }
+  marcas:
+    - { r: 17, c: 2, tipo: triangulo }
+    - { r: 16, c: 5, tipo: triangulo }
+    - { r: 16, c: 4, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 14, c: 2, tipo: triangulo }
+    - { r: 12, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [17, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [13, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+
+- id: ogs-p1-cortar-15
+  titulo: Cortar (15)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 17, c: 1, color: N }
+  marcas:
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 14, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [15, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 1]
+
+- id: ogs-p1-cortar-16
+  titulo: Cortar (16)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+  marcas:
+    - { r: 17, c: 5, tipo: triangulo }
+    - { r: 17, c: 4, tipo: triangulo }
+    - { r: 17, c: 2, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 14, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [18, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [15, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 1]
+
+- id: ogs-p1-cortar-17
+  titulo: Cortar (17)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 12, c: 3, color: N }
+    - { r: 12, c: 5, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+  marcas:
+    - { r: 17, c: 2, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 16, c: 1, tipo: triangulo }
+    - { r: 15, c: 0, tipo: triangulo }
+    - { r: 14, c: 2, tipo: triangulo }
+    - { r: 13, c: 2, tipo: triangulo }
+    - { r: 13, c: 1, tipo: triangulo }
+    - { r: 12, c: 5, tipo: triangulo }
+    - { r: 12, c: 3, tipo: triangulo }
+    - { r: 12, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [14, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [13, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [12, 0]
+
+- id: ogs-p1-cortar-18
+  titulo: Cortar (18)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+  marcas:
+    - { r: 17, c: 2, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 16, c: 1, tipo: triangulo }
+    - { r: 16, c: 0, tipo: triangulo }
+    - { r: 14, c: 1, tipo: triangulo }
+    - { r: 13, c: 1, tipo: triangulo }
+    - { r: 12, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [15, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [14, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 0]
+
+- id: ogs-p1-cortar-19
+  titulo: Cortar (19)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 14, c: 6, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 4, color: N }
+  marcas:
+    - { r: 18, c: 4, tipo: triangulo }
+    - { r: 17, c: 6, tipo: triangulo }
+    - { r: 17, c: 5, tipo: triangulo }
+    - { r: 17, c: 2, tipo: triangulo }
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 17, c: 0, tipo: triangulo }
+    - { r: 16, c: 6, tipo: triangulo }
+    - { r: 14, c: 6, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [18, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [17, 3]
+        siguiente:
+          ramas:
+            - en: [18, 5]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [17, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 3]
+
+- id: ogs-p1-cortar-20
+  titulo: Cortar (20)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 7, color: B }
+  marcas:
+    - { r: 17, c: 5, tipo: triangulo }
+    - { r: 16, c: 4, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 14, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [17, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 4]
+
+- id: ogs-p1-cortar-21
+  titulo: Cortar (21)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+  marcas:
+    - { r: 16, c: 4, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 16, c: 1, tipo: triangulo }
+    - { r: 14, c: 2, tipo: triangulo }
+    - { r: 13, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [15, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [14, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 1]
+
+- id: ogs-p1-cortar-22
+  titulo: Cortar (22)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 12, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: N }
+  marcas:
+    - { r: 17, c: 3, tipo: triangulo }
+    - { r: 16, c: 4, tipo: triangulo }
+    - { r: 15, c: 6, tipo: triangulo }
+    - { r: 15, c: 4, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 14, c: 2, tipo: triangulo }
+    - { r: 14, c: 1, tipo: triangulo }
+  desenlaces:
+    - en: [14, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-cortar-23
+  titulo: Cortar (23)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 17, c: 2, color: B }
+  marcas:
+    - { r: 16, c: 1, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 15, c: 1, tipo: triangulo }
+    - { r: 13, c: 2, tipo: triangulo }
+    - { r: 12, c: 2, tipo: triangulo }
+  desenlaces:
+    - en: [14, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-cortar-24
+  titulo: Cortar (24)
+  etiqueta: p1-cortar
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: cortá las piedras marcadas."
+  piedras:
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 5, color: N }
+  marcas:
+    - { r: 17, c: 5, tipo: triangulo }
+    - { r: 16, c: 7, tipo: triangulo }
+    - { r: 16, c: 5, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 15, c: 6, tipo: triangulo }
+  desenlaces:
+    - en: [17, 4]
+      correcto: true
+      texto: ¡Correcto!

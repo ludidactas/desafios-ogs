@@ -1,0 +1,462 @@
+# Habilidades básicas › ¿Se puede escapar? — ¿Podés escapar?
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/escape-possible).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-escape-posible-01
+  titulo: ¿Se puede escapar? (1)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Si atacan tus piedras, vas a querer escapar. Pero antes de intentarlo, asegurate de
+    que se puedan salvar: si no, no agregues piedras a un grupo perdido. Jugás con blancas. ¿Puede
+    Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 8, c: 4, color: N }
+  marcas:
+    - { r: 7, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-escape-posible-02
+  titulo: ¿Se puede escapar? (2)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: N }
+  marcas:
+    - { r: 6, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-escape-posible-03
+  titulo: ¿Se puede escapar? (3)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 7, color: B }
+  marcas:
+    - { r: 7, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-escape-posible-04
+  titulo: ¿Se puede escapar? (4)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 3, color: N }
+  marcas:
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-escape-posible-05
+  titulo: ¿Se puede escapar? (5)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+  marcas:
+    - { r: 8, c: 5, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-escape-posible-06
+  titulo: ¿Se puede escapar? (6)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+  marcas:
+    - { r: 8, c: 5, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-escape-posible-07
+  titulo: ¿Se puede escapar? (7)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: B }
+  marcas:
+    - { r: 8, c: 5, tipo: triangulo }
+    - { r: 8, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-escape-posible-08
+  titulo: ¿Se puede escapar? (8)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: B }
+  marcas:
+    - { r: 8, c: 5, tipo: triangulo }
+    - { r: 8, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-escape-posible-09
+  titulo: ¿Se puede escapar? (9)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+  marcas:
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-escape-posible-10
+  titulo: ¿Se puede escapar? (10)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 6, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+  marcas:
+    - { r: 6, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-escape-posible-11
+  titulo: ¿Se puede escapar? (11)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 3, c: 6, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+  marcas:
+    - { r: 8, c: 5, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-escape-posible-12
+  titulo: ¿Se puede escapar? (12)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+  marcas:
+    - { r: 8, c: 5, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-escape-posible-13
+  titulo: ¿Se puede escapar? (13)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 2, c: 6, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+  marcas:
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-escape-posible-14
+  titulo: ¿Se puede escapar? (14)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 3, c: 7, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 5, color: N }
+  marcas:
+    - { r: 6, c: 5, tipo: triangulo }
+    - { r: 5, c: 5, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-escape-posible-15
+  titulo: ¿Se puede escapar? (15)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+  marcas:
+    - { r: 6, c: 5, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-escape-posible-16
+  titulo: ¿Se puede escapar? (16)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+  marcas:
+    - { r: 6, c: 5, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-escape-posible-17
+  titulo: ¿Se puede escapar? (17)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 4, color: N }
+  marcas:
+    - { r: 6, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-escape-posible-18
+  titulo: ¿Se puede escapar? (18)
+  etiqueta: escape-posible
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco escapar con la cadena marcada?"
+  piedras:
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 4, color: N }
+  marcas:
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }

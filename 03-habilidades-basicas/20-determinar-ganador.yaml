@@ -1,0 +1,733 @@
+# Habilidades básicas › ¿Quién gana? — Decidir quién gana
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/determine-winner).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-determinar-ganador-01
+  titulo: ¿Quién gana? (1)
+  etiqueta: determinar-ganador
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Quién ganó?
+  piedras:
+    - { r: 0, c: 3, color: N }
+    - { r: 0, c: 4, color: B }
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 4, color: B }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: B }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: true }
+    - { texto: Igual, correcta: false }
+
+- id: ogs-determinar-ganador-02
+  titulo: ¿Quién gana? (2)
+  etiqueta: determinar-ganador
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Quién ganó?
+  piedras:
+    - { r: 0, c: 2, color: N }
+    - { r: 0, c: 4, color: N }
+    - { r: 0, c: 5, color: B }
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 4, color: N }
+    - { r: 1, c: 5, color: B }
+    - { r: 2, c: 0, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 5, color: B }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 4, c: 8, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: N }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: true }
+    - { texto: Igual, correcta: false }
+
+- id: ogs-determinar-ganador-03
+  titulo: ¿Quién gana? (3)
+  etiqueta: determinar-ganador
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Quién ganó?
+  piedras:
+    - { r: 0, c: 2, color: N }
+    - { r: 0, c: 4, color: N }
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 3, color: B }
+    - { r: 1, c: 4, color: N }
+    - { r: 1, c: 5, color: N }
+    - { r: 1, c: 6, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 2, c: 8, color: N }
+    - { r: 3, c: 0, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 2, color: B }
+  opciones:
+    - { texto: Negro, correcta: true }
+    - { texto: Blanco, correcta: false }
+    - { texto: Igual, correcta: false }
+
+- id: ogs-determinar-ganador-04
+  titulo: ¿Quién gana? (4)
+  etiqueta: determinar-ganador
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Quién ganó?
+  piedras:
+    - { r: 0, c: 2, color: B }
+    - { r: 0, c: 4, color: N }
+    - { r: 1, c: 1, color: N }
+    - { r: 1, c: 2, color: B }
+    - { r: 1, c: 4, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 4, color: N }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: N }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 0, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 4, c: 8, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: true }
+    - { texto: Igual, correcta: false }
+
+- id: ogs-determinar-ganador-05
+  titulo: ¿Quién gana? (5)
+  etiqueta: determinar-ganador
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Quién ganó?
+  piedras:
+    - { r: 0, c: 1, color: N }
+    - { r: 0, c: 2, color: N }
+    - { r: 0, c: 4, color: B }
+    - { r: 0, c: 5, color: B }
+    - { r: 0, c: 6, color: N }
+    - { r: 0, c: 7, color: B }
+    - { r: 1, c: 0, color: N }
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 3, color: B }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 8, color: N }
+    - { r: 2, c: 0, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 2, c: 7, color: N }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: N }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 4, c: 8, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 6, color: B }
+  opciones:
+    - { texto: Negro, correcta: true }
+    - { texto: Blanco, correcta: false }
+    - { texto: Igual, correcta: false }
+
+- id: ogs-determinar-ganador-06
+  titulo: ¿Quién gana? (6)
+  etiqueta: determinar-ganador
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Quién ganó?
+  piedras:
+    - { r: 0, c: 1, color: B }
+    - { r: 0, c: 2, color: N }
+    - { r: 0, c: 4, color: B }
+    - { r: 0, c: 6, color: B }
+    - { r: 1, c: 1, color: B }
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 7, color: B }
+    - { r: 2, c: 0, color: B }
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 0, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 3, c: 8, color: B }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 6, color: B }
+  opciones:
+    - { texto: Negro, correcta: true }
+    - { texto: Blanco, correcta: false }
+    - { texto: Igual, correcta: false }
+
+- id: ogs-determinar-ganador-07
+  titulo: ¿Quién gana? (7)
+  etiqueta: determinar-ganador
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Quién ganó?
+  piedras:
+    - { r: 0, c: 1, color: B }
+    - { r: 0, c: 4, color: B }
+    - { r: 0, c: 6, color: N }
+    - { r: 0, c: 7, color: N }
+    - { r: 1, c: 2, color: B }
+    - { r: 1, c: 3, color: B }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: N }
+    - { r: 1, c: 8, color: B }
+    - { r: 2, c: 0, color: B }
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: N }
+    - { r: 3, c: 0, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: N }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 6, color: N }
+    - { r: 8, c: 7, color: B }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: true }
+    - { texto: Igual, correcta: false }
+
+- id: ogs-determinar-ganador-08
+  titulo: ¿Quién gana? (8)
+  etiqueta: determinar-ganador
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Quién ganó?
+  piedras:
+    - { r: 0, c: 1, color: N }
+    - { r: 0, c: 2, color: B }
+    - { r: 0, c: 5, color: B }
+    - { r: 1, c: 0, color: N }
+    - { r: 1, c: 1, color: N }
+    - { r: 1, c: 2, color: B }
+    - { r: 1, c: 4, color: N }
+    - { r: 1, c: 5, color: N }
+    - { r: 1, c: 6, color: B }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 3, c: 0, color: N }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: B }
+    - { r: 3, c: 8, color: B }
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 4, c: 8, color: B }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: B }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: true }
+    - { texto: Igual, correcta: false }
+
+- id: ogs-determinar-ganador-09
+  titulo: ¿Quién gana? (9)
+  etiqueta: determinar-ganador
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Quién ganó?
+  piedras:
+    - { r: 0, c: 2, color: N }
+    - { r: 0, c: 4, color: N }
+    - { r: 0, c: 5, color: B }
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 4, color: N }
+    - { r: 1, c: 5, color: B }
+    - { r: 2, c: 0, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 4, c: 8, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: B }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: true }
+    - { texto: Igual, correcta: false }
+
+- id: ogs-determinar-ganador-10
+  titulo: ¿Quién gana? (10)
+  etiqueta: determinar-ganador
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Quién ganó?
+  piedras:
+    - { r: 0, c: 1, color: N }
+    - { r: 0, c: 2, color: B }
+    - { r: 0, c: 5, color: B }
+    - { r: 0, c: 6, color: N }
+    - { r: 0, c: 7, color: B }
+    - { r: 1, c: 1, color: N }
+    - { r: 1, c: 2, color: B }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 8, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: N }
+    - { r: 2, c: 8, color: N }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 8, color: B }
+    - { r: 4, c: 0, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 4, c: 8, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 7, color: B }
+  opciones:
+    - { texto: Negro, correcta: true }
+    - { texto: Blanco, correcta: false }
+    - { texto: Igual, correcta: false }
+
+- id: ogs-determinar-ganador-11
+  titulo: ¿Quién gana? (11)
+  etiqueta: determinar-ganador
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Quién ganó?
+  piedras:
+    - { r: 0, c: 1, color: B }
+    - { r: 0, c: 2, color: B }
+    - { r: 0, c: 3, color: N }
+    - { r: 0, c: 5, color: N }
+    - { r: 0, c: 7, color: N }
+    - { r: 1, c: 1, color: N }
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 4, color: N }
+    - { r: 1, c: 5, color: N }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: N }
+    - { r: 1, c: 8, color: N }
+    - { r: 2, c: 0, color: N }
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 2, c: 8, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 0, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 0, color: B }
+    - { r: 8, c: 3, color: B }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: true }
+    - { texto: Igual, correcta: false }
+
+- id: ogs-determinar-ganador-12
+  titulo: ¿Quién gana? (12)
+  etiqueta: determinar-ganador
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Quién ganó?
+  piedras:
+    - { r: 0, c: 1, color: B }
+    - { r: 0, c: 3, color: N }
+    - { r: 0, c: 4, color: B }
+    - { r: 0, c: 6, color: N }
+    - { r: 1, c: 0, color: B }
+    - { r: 1, c: 1, color: N }
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 6, color: N }
+    - { r: 2, c: 0, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 2, c: 7, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 3, c: 8, color: B }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 7, color: B }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: true }
+    - { texto: Igual, correcta: false }

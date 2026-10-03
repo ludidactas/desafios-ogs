@@ -1,0 +1,456 @@
+# Principiante, nivel 2 › Atari — Elegir el lado correcto para el atari
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl2-atari).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p2-atari-01
+  titulo: Atari (1)
+  etiqueta: p2-atari
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto y capturalas."
+  piedras:
+    - { r: 12, c: 1, color: N }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+  marcas:
+    - { r: 15, c: 0, tipo: triangulo }
+    - { r: 15, c: 1, tipo: triangulo }
+    - { r: 16, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [16, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [14, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [13, 0]
+
+- id: ogs-p2-atari-02
+  titulo: Atari (2)
+  etiqueta: p2-atari
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dale atari a la piedra marcada del lado correcto y capturala."
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+  marcas:
+    - { r: 15, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [14, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [15, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 3]
+
+- id: ogs-p2-atari-03
+  titulo: Atari (3)
+  etiqueta: p2-atari
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto y capturalas."
+  piedras:
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+  marcas:
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 17, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [17, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 1]
+
+- id: ogs-p2-atari-04
+  titulo: Atari (4)
+  etiqueta: p2-atari
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dale atari a la piedra marcada del lado correcto y capturala."
+  piedras:
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: N }
+  marcas:
+    - { r: 16, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [17, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 4]
+
+- id: ogs-p2-atari-05
+  titulo: Atari (5)
+  etiqueta: p2-atari
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto y capturalas."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+  marcas:
+    - { r: 16, c: 1, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [15, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 1]
+
+- id: ogs-p2-atari-06
+  titulo: Atari (6)
+  etiqueta: p2-atari
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto y capturalas."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+  marcas:
+    - { r: 14, c: 1, tipo: triangulo }
+    - { r: 15, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [13, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [14, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [13, 1]
+
+- id: ogs-p2-atari-07
+  titulo: Atari (7)
+  etiqueta: p2-atari
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto y capturalas."
+  piedras:
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 3, color: N }
+  marcas:
+    - { r: 17, c: 3, tipo: triangulo }
+    - { r: 18, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [18, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 1]
+
+- id: ogs-p2-atari-08
+  titulo: Atari (8)
+  etiqueta: p2-atari
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto y capturalas."
+  piedras:
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: B }
+    - { r: 13, c: 5, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+  marcas:
+    - { r: 13, c: 3, tipo: triangulo }
+    - { r: 14, c: 3, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [15, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [14, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 4]
+
+- id: ogs-p2-atari-09
+  titulo: Atari (9)
+  etiqueta: p2-atari
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto y capturalas."
+  piedras:
+    - { r: 11, c: 2, color: B }
+    - { r: 12, c: 2, color: N }
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 3, color: N }
+  marcas:
+    - { r: 12, c: 2, tipo: triangulo }
+    - { r: 13, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [12, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [12, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [12, 1]
+
+- id: ogs-p2-atari-10
+  titulo: Atari (10)
+  etiqueta: p2-atari
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto y capturalas."
+  piedras:
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+  marcas:
+    - { r: 14, c: 3, tipo: triangulo }
+    - { r: 14, c: 4, tipo: triangulo }
+    - { r: 15, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [13, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [13, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [13, 3]
+
+- id: ogs-p2-atari-11
+  titulo: Atari (11)
+  etiqueta: p2-atari
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto y capturalas."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 11, c: 3, color: N }
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+  marcas:
+    - { r: 15, c: 1, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [14, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [15, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 1]
+
+- id: ogs-p2-atari-12
+  titulo: Atari (12)
+  etiqueta: p2-atari
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto y capturalas."
+  piedras:
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+  marcas:
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [16, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [15, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 4]

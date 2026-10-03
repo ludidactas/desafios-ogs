@@ -1,0 +1,437 @@
+# Habilidades básicas › Territorio — Contar territorio
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/count-territory).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-contar-territorio-01
+  titulo: Territorio (1)
+  etiqueta: contar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "¿Cuántos puntos tiene el territorio blanco? Ojo: una piedra muerta cuenta doble."
+  piedras:
+    - { r: 4, c: 0, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 7, c: 0, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: N }
+  opciones:
+    - { texto: "2", correcta: false }
+    - { texto: "3", correcta: true }
+    - { texto: "4", correcta: false }
+
+- id: ogs-contar-territorio-02
+  titulo: Territorio (2)
+  etiqueta: contar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "¿Cuántos puntos tiene el territorio blanco? Ojo: una piedra muerta cuenta doble."
+  piedras:
+    - { r: 4, c: 0, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: B }
+  opciones:
+    - { texto: "3", correcta: false }
+    - { texto: "6", correcta: true }
+    - { texto: "7", correcta: false }
+
+- id: ogs-contar-territorio-03
+  titulo: Territorio (3)
+  etiqueta: contar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "¿Cuántos puntos tiene el territorio blanco? Ojo: una piedra muerta cuenta doble."
+  piedras:
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 6, color: B }
+  opciones:
+    - { texto: "3", correcta: false }
+    - { texto: "4", correcta: true }
+    - { texto: "5", correcta: false }
+
+- id: ogs-contar-territorio-04
+  titulo: Territorio (4)
+  etiqueta: contar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "¿Cuántos puntos tiene el territorio blanco? Ojo: una piedra muerta cuenta doble."
+  piedras:
+    - { r: 3, c: 0, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: N }
+  opciones:
+    - { texto: "5", correcta: false }
+    - { texto: "7", correcta: false }
+    - { texto: "9", correcta: true }
+
+- id: ogs-contar-territorio-05
+  titulo: Territorio (5)
+  etiqueta: contar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "¿Cuántos puntos tiene el territorio blanco? Ojo: una piedra muerta cuenta doble."
+  piedras:
+    - { r: 4, c: 0, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 5, color: B }
+  opciones:
+    - { texto: "12", correcta: false }
+    - { texto: "15", correcta: true }
+    - { texto: "18", correcta: false }
+
+- id: ogs-contar-territorio-06
+  titulo: Territorio (6)
+  etiqueta: contar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "¿Cuántos puntos tiene el territorio blanco? Ojo: una piedra muerta cuenta doble."
+  piedras:
+    - { r: 2, c: 0, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 8, c: 1, color: B }
+  opciones:
+    - { texto: "4", correcta: false }
+    - { texto: "6", correcta: false }
+    - { texto: "8", correcta: true }
+
+- id: ogs-contar-territorio-07
+  titulo: Territorio (7)
+  etiqueta: contar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "¿Cuántos puntos tiene el territorio blanco? Ojo: una piedra muerta cuenta doble."
+  piedras:
+    - { r: 4, c: 0, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 0, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+  opciones:
+    - { texto: "7", correcta: false }
+    - { texto: "10", correcta: false }
+    - { texto: "13", correcta: true }
+
+- id: ogs-contar-territorio-08
+  titulo: Territorio (8)
+  etiqueta: contar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "¿Cuántos puntos tiene el territorio blanco? Ojo: una piedra muerta cuenta doble."
+  piedras:
+    - { r: 2, c: 0, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: N }
+  opciones:
+    - { texto: "5", correcta: false }
+    - { texto: "8", correcta: false }
+    - { texto: "11", correcta: true }
+
+- id: ogs-contar-territorio-09
+  titulo: Territorio (9)
+  etiqueta: contar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "¿Cuántos puntos tiene el territorio blanco? Ojo: una piedra muerta cuenta doble."
+  piedras:
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: N }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 4, c: 8, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: N }
+  opciones:
+    - { texto: "8", correcta: true }
+    - { texto: "10", correcta: false }
+    - { texto: "22", correcta: false }
+
+- id: ogs-contar-territorio-10
+  titulo: Territorio (10)
+  etiqueta: contar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "¿Cuántos puntos tiene el territorio blanco? Ojo: una piedra muerta cuenta doble."
+  piedras:
+    - { r: 3, c: 1, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 7, c: 0, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: N }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }
+    - { texto: "3", correcta: false }
+
+- id: ogs-contar-territorio-11
+  titulo: Territorio (11)
+  etiqueta: contar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "¿Cuántos puntos tiene el territorio blanco? Ojo: una piedra muerta cuenta doble."
+  piedras:
+    - { r: 1, c: 3, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: N }
+  opciones:
+    - { texto: "8", correcta: true }
+    - { texto: "9", correcta: false }
+    - { texto: "10", correcta: false }
+
+- id: ogs-contar-territorio-12
+  titulo: Territorio (12)
+  etiqueta: contar-territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "¿Cuántos puntos tiene el territorio blanco? Ojo: una piedra muerta cuenta doble."
+  piedras:
+    - { r: 1, c: 1, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 7, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 3, color: B }
+  opciones:
+    - { texto: "5", correcta: false }
+    - { texto: "6", correcta: true }
+    - { texto: "7", correcta: false }

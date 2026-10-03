@@ -1,0 +1,414 @@
+# Principios básicos › Capturar una cadena — Capturar una cadena de piedras
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/capture_chain).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-capturar-cadena-01
+  titulo: Capturar una cadena (1)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: la cadena blanca marcada está en atari. Capturá esas piedras."
+  piedras:
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 6, color: B }
+  marcas:
+    - { r: 3, c: 3, tipo: triangulo }
+    - { r: 3, c: 4, tipo: triangulo }
+    - { r: 3, c: 5, tipo: triangulo }
+  desenlaces:
+    - en: [3, 6]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-02
+  titulo: Capturar una cadena (2)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá una o más piedras blancas."
+  piedras:
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: N }
+    - { r: 1, c: 6, color: B }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 5, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: B }
+  desenlaces:
+    - en: [0, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-03
+  titulo: Capturar una cadena (3)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá una o más piedras blancas."
+  piedras:
+    - { r: 0, c: 3, color: N }
+    - { r: 0, c: 4, color: B }
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 4, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: B }
+  desenlaces:
+    - en: [0, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-04
+  titulo: Capturar una cadena (4)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá una o más piedras blancas."
+  piedras:
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 4, color: B }
+  desenlaces:
+    - en: [7, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-05
+  titulo: Capturar una cadena (5)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá una o más piedras blancas."
+  piedras:
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+  desenlaces:
+    - en: [6, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-06
+  titulo: Capturar una cadena (6)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá una o más piedras blancas."
+  piedras:
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 7, c: 0, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 8, c: 0, color: B }
+    - { r: 8, c: 1, color: N }
+  desenlaces:
+    - en: [6, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-07
+  titulo: Capturar una cadena (7)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: capturá una o más piedras negras."
+  piedras:
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+  desenlaces:
+    - en: [8, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-08
+  titulo: Capturar una cadena (8)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: capturá una o más piedras negras."
+  piedras:
+    - { r: 5, c: 2, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 0, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 2, color: N }
+  desenlaces:
+    - en: [7, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-09
+  titulo: Capturar una cadena (9)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: capturá una o más piedras negras."
+  piedras:
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+  desenlaces:
+    - en: [5, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-10
+  titulo: Capturar una cadena (10)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: capturá una o más piedras negras."
+  piedras:
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+  desenlaces:
+    - en: [5, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-11
+  titulo: Capturar una cadena (11)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: capturá una o más piedras negras."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 6, c: 6, color: N }
+  desenlaces:
+    - en: [1, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-12
+  titulo: Capturar una cadena (12)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: capturá una o más piedras negras."
+  piedras:
+    - { r: 2, c: 5, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 7, color: N }
+  desenlaces:
+    - en: [8, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-13
+  titulo: Capturar una cadena (13)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: los dos bandos están en atari. Capturá una o más piedras negras."
+  piedras:
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 6, color: N }
+  desenlaces:
+    - en: [8, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-14
+  titulo: Capturar una cadena (14)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: los dos bandos están en atari. Capturá una o más piedras negras."
+  piedras:
+    - { r: 3, c: 6, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: B }
+  desenlaces:
+    - en: [8, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-15
+  titulo: Capturar una cadena (15)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: los dos bandos están en atari. Capturá una o más piedras negras."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+  desenlaces:
+    - en: [6, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-cadena-16
+  titulo: Capturar una cadena (16)
+  etiqueta: capturar-cadena
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: los dos bandos están en atari. Capturá una o más piedras negras."
+  piedras:
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 6, color: N }
+  desenlaces:
+    - en: [6, 4]
+      correcto: true
+      texto: ¡Correcto!

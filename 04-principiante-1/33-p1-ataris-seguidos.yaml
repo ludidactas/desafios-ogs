@@ -1,0 +1,1014 @@
+# Principiante, nivel 1 › Atari en serie — Capturar con atari en serie
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl1-serial-atari).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p1-ataris-seguidos-01
+  titulo: Atari en serie (1)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Una forma conocida de capturar piedras es el atari en serie (oi-otoshi). Acá Blanco
+    puede capturar las piedras marcadas con un atari: si Negro intenta salvarlas conectando, Blanco
+    vuelve a dar atari. Jugás con blancas. Capturá las piedras marcadas con un atari en serie."
+  piedras:
+    - { r: 11, c: 1, color: B }
+    - { r: 12, c: 0, color: N }
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 0, color: N }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+  marcas:
+    - { r: 12, c: 0, tipo: triangulo }
+    - { r: 12, c: 1, tipo: triangulo }
+    - { r: 13, c: 0, tipo: triangulo }
+    - { r: 11, c: 0, tipo: cruz }
+  secuencia:
+    ramas:
+      - en: [11, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [14, 0]
+        siguiente:
+          ramas:
+            - en: [16, 1]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-02
+  titulo: Atari en serie (2)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 12, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 18, c: 0, color: N }
+    - { r: 18, c: 1, color: N }
+  marcas:
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 18, c: 0, tipo: triangulo }
+    - { r: 18, c: 1, tipo: triangulo }
+  desenlaces:
+    - en: [18, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-03
+  titulo: Atari en serie (3)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 11, c: 0, color: B }
+    - { r: 11, c: 1, color: B }
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 0, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 1, color: N }
+  marcas:
+    - { r: 12, c: 1, tipo: triangulo }
+    - { r: 13, c: 0, tipo: triangulo }
+    - { r: 13, c: 1, tipo: triangulo }
+    - { r: 14, c: 0, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [12, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 0]
+
+- id: ogs-p1-ataris-seguidos-04
+  titulo: Atari en serie (4)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 13, c: 5, color: B }
+    - { r: 13, c: 6, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 6, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+  marcas:
+    - { r: 14, c: 3, tipo: triangulo }
+    - { r: 14, c: 4, tipo: triangulo }
+    - { r: 14, c: 5, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 15, c: 5, tipo: triangulo }
+  desenlaces:
+    - en: [16, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-05
+  titulo: Atari en serie (5)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 11, c: 1, color: B }
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 17, c: 1, color: N }
+  marcas:
+    - { r: 12, c: 1, tipo: triangulo }
+    - { r: 13, c: 1, tipo: triangulo }
+    - { r: 13, c: 2, tipo: triangulo }
+    - { r: 13, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [12, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [13, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [12, 0]
+        siguiente:
+          ramas:
+            - en: [11, 0]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-06
+  titulo: Atari en serie (6)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 13, c: 5, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 5, color: B }
+  marcas:
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 16, c: 4, tipo: triangulo }
+  desenlaces:
+    - en: [17, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-07
+  titulo: Atari en serie (7)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 18, c: 0, color: N }
+    - { r: 18, c: 1, color: N }
+  marcas:
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 18, c: 0, tipo: triangulo }
+    - { r: 18, c: 1, tipo: triangulo }
+  desenlaces:
+    - en: [18, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-08
+  titulo: Atari en serie (8)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: N }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 5, color: N }
+    - { r: 18, c: 6, color: N }
+  marcas:
+    - { r: 17, c: 6, tipo: triangulo }
+    - { r: 18, c: 5, tipo: triangulo }
+    - { r: 18, c: 6, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [18, 7]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 4]
+        siguiente:
+          ramas:
+            - en: [17, 2]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [18, 2]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [17, 2]
+
+- id: ogs-p1-ataris-seguidos-09
+  titulo: Atari en serie (9)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 0, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 2, color: N }
+  marcas:
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 18, c: 0, tipo: triangulo }
+    - { r: 18, c: 1, tipo: triangulo }
+    - { r: 18, c: 2, tipo: triangulo }
+  desenlaces:
+    - en: [18, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-10
+  titulo: Atari en serie (10)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 6, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 0, color: N }
+    - { r: 18, c: 2, color: N }
+  marcas:
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 16, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [14, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [15, 4]
+        siguiente:
+          ramas:
+            - en: [13, 4]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [14, 5]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [13, 4]
+      - en: [14, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 2]
+
+- id: ogs-p1-ataris-seguidos-11
+  titulo: Atari en serie (11)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 11, c: 5, color: B }
+    - { r: 12, c: 0, color: N }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 0, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 4, color: N }
+  marcas:
+    - { r: 12, c: 0, tipo: triangulo }
+    - { r: 13, c: 0, tipo: triangulo }
+    - { r: 13, c: 1, tipo: triangulo }
+    - { r: 14, c: 1, tipo: triangulo }
+  desenlaces:
+    - en: [11, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-12
+  titulo: Atari en serie (12)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 12, c: 3, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+  marcas:
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 16, c: 1, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [14, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [15, 1]
+        siguiente:
+          ramas:
+            - en: [13, 1]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [14, 0]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [13, 0]
+
+- id: ogs-p1-ataris-seguidos-13
+  titulo: Atari en serie (13)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 0, color: B }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: N }
+  marcas:
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 17, c: 2, tipo: triangulo }
+    - { r: 18, c: 0, tipo: triangulo }
+  desenlaces:
+    - en: [18, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-14
+  titulo: Atari en serie (14)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 11, c: 0, color: N }
+    - { r: 11, c: 1, color: N }
+    - { r: 11, c: 2, color: N }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 0, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 4, color: B }
+  marcas:
+    - { r: 12, c: 1, tipo: triangulo }
+    - { r: 13, c: 0, tipo: triangulo }
+    - { r: 13, c: 1, tipo: triangulo }
+    - { r: 14, c: 1, tipo: triangulo }
+  desenlaces:
+    - en: [12, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-15
+  titulo: Atari en serie (15)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 6, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: N }
+  marcas:
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 16, c: 4, tipo: triangulo }
+    - { r: 16, c: 5, tipo: triangulo }
+    - { r: 17, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [18, 4]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [17, 5]
+        siguiente:
+          ramas:
+            - en: [18, 6]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [18, 5]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [18, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 3]
+      - en: [18, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 3]
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 4]
+
+- id: ogs-p1-ataris-seguidos-16
+  titulo: Atari en serie (16)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 0, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+  marcas:
+    - { r: 13, c: 0, tipo: triangulo }
+    - { r: 13, c: 1, tipo: triangulo }
+    - { r: 14, c: 1, tipo: triangulo }
+    - { r: 14, c: 2, tipo: triangulo }
+  desenlaces:
+    - en: [12, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-17
+  titulo: Atari en serie (17)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 13, c: 0, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+  marcas:
+    - { r: 14, c: 1, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [16, 2]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [15, 1]
+        siguiente:
+          ramas:
+            - en: [17, 1]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [16, 0]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [17, 1]
+      - en: [15, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [16, 2]
+      - en: [16, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [15, 1]
+
+- id: ogs-p1-ataris-seguidos-18
+  titulo: Atari en serie (18)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 0, color: B }
+    - { r: 18, c: 2, color: B }
+  marcas:
+    - { r: 16, c: 0, tipo: triangulo }
+    - { r: 17, c: 0, tipo: triangulo }
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 18, c: 0, tipo: triangulo }
+  desenlaces:
+    - en: [16, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-19
+  titulo: Atari en serie (19)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 5, color: N }
+  marcas:
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 16, c: 4, tipo: triangulo }
+    - { r: 17, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [18, 4]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [17, 3]
+        siguiente:
+          ramas:
+            - en: [17, 1]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [17, 1]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [18, 1]
+        siguiente:
+          ramas:
+            - en: [18, 4]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-20
+  titulo: Atari en serie (20)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 18, c: 0, color: B }
+    - { r: 18, c: 2, color: N }
+  marcas:
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 18, c: 0, tipo: triangulo }
+  desenlaces:
+    - en: [18, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-21
+  titulo: Atari en serie (21)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 0, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 5, color: N }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 17, c: 4, color: B }
+  marcas:
+    - { r: 14, c: 1, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [14, 2]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [15, 1]
+        siguiente:
+          ramas:
+            - en: [17, 1]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [17, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [14, 2]
+
+- id: ogs-p1-ataris-seguidos-22
+  titulo: Atari en serie (22)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: N }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 5, color: N }
+  marcas:
+    - { r: 17, c: 2, tipo: triangulo }
+    - { r: 18, c: 2, tipo: triangulo }
+    - { r: 18, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [18, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 4]
+
+- id: ogs-p1-ataris-seguidos-23
+  titulo: Atari en serie (23)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 0, color: B }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: N }
+  marcas:
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 17, c: 2, tipo: triangulo }
+    - { r: 18, c: 0, tipo: triangulo }
+  desenlaces:
+    - en: [18, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ataris-seguidos-24
+  titulo: Atari en serie (24)
+  etiqueta: p1-ataris-seguidos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: dales atari a las piedras marcadas y capturalas."
+  piedras:
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+  marcas:
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 16, c: 1, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [16, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [13, 0]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [12, 0]
+        siguiente:
+          ramas:
+            - en: [16, 0]
+              correcto: true
+              texto: ¡Correcto!

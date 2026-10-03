@@ -1,0 +1,163 @@
+# Principios básicos › Atari — En atari
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/in_atari).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-en-atari-01
+  titulo: Atari (1)
+  etiqueta: en-atari
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: Si a una cadena le queda una sola libertad, está en atari. ¿La cadena marcada está en atari?
+  piedras:
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 4, color: B }
+  marcas:
+    - { r: 5, c: 3, tipo: triangulo }
+    - { r: 6, c: 3, tipo: cruz }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-en-atari-02
+  titulo: Atari (2)
+  etiqueta: en-atari
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿La cadena marcada está en atari?
+  piedras:
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+  marcas:
+    - { r: 8, c: 3, tipo: triangulo }
+    - { r: 8, c: 4, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-en-atari-03
+  titulo: Atari (3)
+  etiqueta: en-atari
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿La cadena marcada está en atari?
+  piedras:
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: N }
+  marcas:
+    - { r: 8, c: 3, tipo: triangulo }
+    - { r: 8, c: 4, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-en-atari-04
+  titulo: Atari (4)
+  etiqueta: en-atari
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿La cadena marcada está en atari?
+  piedras:
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 7, c: 0, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 2, color: N }
+  marcas:
+    - { r: 7, c: 0, tipo: triangulo }
+    - { r: 8, c: 1, tipo: triangulo }
+    - { r: 7, c: 1, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-en-atari-05
+  titulo: Atari (5)
+  etiqueta: en-atari
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿La cadena marcada está en atari?
+  piedras:
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+  marcas:
+    - { r: 6, c: 3, tipo: triangulo }
+    - { r: 5, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-en-atari-06
+  titulo: Atari (6)
+  etiqueta: en-atari
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿La cadena marcada está en atari?
+  piedras:
+    - { r: 2, c: 3, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 3, color: B }
+  marcas:
+    - { r: 6, c: 3, tipo: triangulo }
+    - { r: 5, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }

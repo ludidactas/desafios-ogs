@@ -1,0 +1,1201 @@
+# Habilidades básicas › Carrera de capturas — Ganar la carrera de capturas
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/capturing_race).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-carrera-de-capturas-01
+  titulo: Carrera de capturas (1)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: Las dos cadenas marcadas tienen dos libertades cada una. Blanco puede capturar la
+    cadena negra quitándole libertades, y Negro podría hacer lo mismo si le tocara jugar. Eso se
+    llama «carrera de capturas». Si los dos tienen la misma cantidad de libertades, gana el que
+    juega primero. Jugás con blancas. Ganá la carrera de capturas.
+  piedras:
+    - { r: 2, c: 7, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 7, color: B }
+  marcas:
+    - { r: 6, c: 7, tipo: triangulo }
+    - { r: 5, c: 7, tipo: triangulo }
+    - { r: 4, c: 7, tipo: triangulo }
+    - { r: 3, c: 7, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [6, 8]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [4, 8]
+        siguiente:
+          ramas:
+            - en: [5, 8]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [3, 8]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [2, 8]
+      - en: [5, 8]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [3, 8]
+        siguiente:
+          ramas:
+            - en: [6, 8]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [4, 8]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [6, 8]
+
+- id: ogs-carrera-de-capturas-02
+  titulo: Carrera de capturas (2)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+  marcas:
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 7, c: 2, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 1]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [8, 3]
+        siguiente:
+          ramas:
+            - en: [8, 2]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [8, 4]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [8, 5]
+      - en: [8, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 1]
+
+- id: ogs-carrera-de-capturas-03
+  titulo: Carrera de capturas (3)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+  marcas:
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [8, 4]
+        siguiente:
+          ramas:
+            - en: [8, 3]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [8, 5]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [8, 6]
+      - en: [8, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [7, 2]
+        siguiente:
+          ramas:
+            - en: [7, 1]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [8, 5]
+              siguiente:
+                ramas:
+                  - en: [8, 2]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [8, 4]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [8, 2]
+            - en: [8, 2]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [7, 1]
+
+- id: ogs-carrera-de-capturas-04
+  titulo: Carrera de capturas (4)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 1, c: 1, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 0, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 2, color: B }
+  marcas:
+    - { r: 4, c: 1, tipo: triangulo }
+    - { r: 4, c: 0, tipo: triangulo }
+    - { r: 3, c: 1, tipo: triangulo }
+    - { r: 3, c: 0, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [5, 1]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [2, 1]
+        siguiente:
+          ramas:
+            - en: [5, 0]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [2, 0]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [1, 0]
+      - en: [5, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [2, 1]
+        siguiente:
+          ramas:
+            - en: [5, 1]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [2, 0]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [1, 0]
+      - en: [2, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [1, 0]
+
+- id: ogs-carrera-de-capturas-05
+  titulo: Carrera de capturas (5)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+  marcas:
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+    - { r: 6, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [7, 5]
+        siguiente:
+          ramas:
+            - en: [8, 3]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [8, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [7, 2]
+        siguiente:
+          ramas:
+            - en: [7, 1]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [7, 5]
+              siguiente:
+                ramas:
+                  - en: [8, 2]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [8, 2]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [7, 1]
+      - en: [7, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 2]
+
+- id: ogs-carrera-de-capturas-06
+  titulo: Carrera de capturas (6)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 5, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 2, color: N }
+  marcas:
+    - { r: 8, c: 2, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 7, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 1]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [8, 5]
+        siguiente:
+          ramas:
+            - en: [8, 3]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [8, 4]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [8, 3]
+      - en: [8, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [8, 1]
+        siguiente:
+          ramas:
+            - en: [7, 0]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [6, 0]
+              siguiente:
+                ramas:
+                  - en: [6, 1]
+                    correcto: true
+                    texto: "Bien. Negro respondió: seguí."
+                    respuestaRival: [8, 6]
+                    siguiente:
+                      ramas:
+                        - en: [8, 0]
+                          correcto: true
+                          texto: "Bien. Negro respondió: seguí."
+                          respuestaRival: [8, 5]
+                          siguiente:
+                            ramas:
+                              - en: [8, 3]
+                                correcto: true
+                                texto: ¡Correcto!
+                        - en: [5, 0]
+                          correcto: false
+                          texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                          respuestaRival: [8, 5]
+                  - en: [5, 0]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [8, 6]
+            - en: [8, 0]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [7, 0]
+            - en: [8, 3]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [8, 5]
+      - en: [8, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 4]
+      - en: [8, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 6]
+
+- id: ogs-carrera-de-capturas-07
+  titulo: Carrera de capturas (7)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 3, c: 0, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: N }
+  marcas:
+    - { r: 5, c: 2, tipo: triangulo }
+    - { r: 5, c: 1, tipo: triangulo }
+    - { r: 4, c: 1, tipo: triangulo }
+    - { r: 3, c: 1, tipo: triangulo }
+    - { r: 3, c: 0, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [2, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [5, 0]
+        siguiente:
+          ramas:
+            - en: [4, 0]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [4, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 0]
+      - en: [5, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 0]
+
+- id: ogs-carrera-de-capturas-08
+  titulo: Carrera de capturas (8)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: B }
+  marcas:
+    - { r: 8, c: 4, tipo: triangulo }
+    - { r: 7, c: 6, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 7, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 5]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [8, 2]
+        siguiente:
+          ramas:
+            - en: [8, 3]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [8, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 2]
+      - en: [8, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 1]
+
+- id: ogs-carrera-de-capturas-09
+  titulo: Carrera de capturas (9)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 0, c: 5, color: N }
+    - { r: 0, c: 7, color: B }
+    - { r: 1, c: 1, color: N }
+    - { r: 1, c: 2, color: B }
+    - { r: 1, c: 3, color: B }
+    - { r: 1, c: 4, color: N }
+    - { r: 1, c: 5, color: N }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: B }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 4, c: 3, color: N }
+  marcas:
+    - { r: 1, c: 6, tipo: triangulo }
+    - { r: 1, c: 5, tipo: triangulo }
+    - { r: 1, c: 4, tipo: triangulo }
+    - { r: 1, c: 3, tipo: triangulo }
+    - { r: 1, c: 2, tipo: triangulo }
+    - { r: 0, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [0, 6]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [0, 3]
+        siguiente:
+          ramas:
+            - en: [0, 4]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [0, 2]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [0, 1]
+      - en: [0, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [0, 1]
+        siguiente:
+          ramas:
+            - en: [0, 6]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [0, 2]
+              siguiente:
+                ramas:
+                  - en: [0, 4]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [0, 4]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [0, 2]
+      - en: [0, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [0, 3]
+      - en: [0, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [0, 1]
+
+- id: ogs-carrera-de-capturas-10
+  titulo: Carrera de capturas (10)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+  marcas:
+    - { r: 8, c: 6, tipo: triangulo }
+    - { r: 8, c: 5, tipo: triangulo }
+    - { r: 7, c: 8, tipo: triangulo }
+    - { r: 7, c: 7, tipo: triangulo }
+    - { r: 7, c: 6, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 8]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [8, 3]
+        siguiente:
+          ramas:
+            - en: [8, 7]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [8, 7]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [8, 8]
+        siguiente:
+          ramas:
+            - en: [8, 7]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [8, 3]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [8, 2]
+              siguiente:
+                ramas:
+                  - en: [8, 7]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [8, 2]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [8, 4]
+      - en: [8, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 2]
+      - en: [8, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 4]
+
+- id: ogs-carrera-de-capturas-11
+  titulo: Carrera de capturas (11)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 7, color: B }
+  marcas:
+    - { r: 6, c: 6, tipo: triangulo }
+    - { r: 6, c: 5, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+    - { r: 5, c: 6, tipo: triangulo }
+    - { r: 5, c: 5, tipo: triangulo }
+    - { r: 5, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [4, 6]
+        siguiente:
+          ramas:
+            - en: [7, 6]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [4, 4]
+              siguiente:
+                ramas:
+                  - en: [7, 5]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [7, 5]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [4, 4]
+              siguiente:
+                ramas:
+                  - en: [7, 6]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [4, 5]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [3, 5]
+      - en: [7, 6]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [7, 3]
+        siguiente:
+          ramas:
+            - en: [7, 4]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [7, 5]
+              siguiente:
+                ramas:
+                  - en: [8, 5]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [7, 5]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [7, 4]
+              siguiente:
+                ramas:
+                  - en: [7, 2]
+                    correcto: true
+                    texto: "Bien. Negro respondió: seguí."
+                    respuestaRival: [8, 2]
+                    siguiente:
+                      ramas:
+                        - en: [8, 3]
+                          correcto: true
+                          texto: "Bien. Negro respondió: seguí."
+                          respuestaRival: [8, 4]
+                          siguiente:
+                            ramas:
+                              - en: [8, 5]
+                                correcto: true
+                                texto: ¡Correcto!
+                  - en: [8, 4]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [7, 2]
+      - en: [7, 5]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [7, 4]
+        siguiente:
+          ramas:
+            - en: [7, 6]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [7, 3]
+              siguiente:
+                ramas:
+                  - en: [7, 2]
+                    correcto: true
+                    texto: "Bien. Negro respondió: seguí."
+                    respuestaRival: [8, 2]
+                    siguiente:
+                      ramas:
+                        - en: [8, 4]
+                          correcto: true
+                          texto: "Bien. Negro respondió: seguí."
+                          respuestaRival: [4, 4]
+                          siguiente:
+                            ramas:
+                              - en: [8, 3]
+                                correcto: true
+                                texto: ¡Correcto!
+                              - en: [4, 5]
+                                correcto: true
+                                texto: "Bien. Negro respondió: seguí."
+                                respuestaRival: [3, 5]
+                                siguiente:
+                                  ramas:
+                                    - en: [8, 3]
+                                      correcto: true
+                                      texto: ¡Correcto!
+                              - en: [4, 6]
+                                correcto: true
+                                texto: "Bien. Negro respondió: seguí."
+                                respuestaRival: [3, 6]
+                                siguiente:
+                                  ramas:
+                                    - en: [8, 3]
+                                      correcto: true
+                                      texto: ¡Correcto!
+                        - en: [8, 1]
+                          correcto: true
+                          texto: "Bien. Negro respondió: seguí."
+                          respuestaRival: [4, 6]
+                          siguiente:
+                            ramas:
+                              - en: [8, 3]
+                                correcto: true
+                                texto: "Bien. Negro respondió: seguí."
+                                respuestaRival: [4, 4]
+                                siguiente:
+                                  ramas:
+                                    - en: [8, 4]
+                                      correcto: true
+                                      texto: ¡Correcto!
+                              - en: [8, 4]
+                                correcto: true
+                                texto: "Bien. Negro respondió: seguí."
+                                respuestaRival: [4, 4]
+                                siguiente:
+                                  ramas:
+                                    - en: [8, 3]
+                                      correcto: true
+                                      texto: ¡Correcto!
+            - en: [7, 3]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [7, 6]
+              siguiente:
+                ramas:
+                  - en: [8, 4]
+                    correcto: true
+                    texto: "Bien. Negro respondió: seguí."
+                    respuestaRival: [8, 5]
+                    siguiente:
+                      ramas:
+                        - en: [8, 3]
+                          correcto: true
+                          texto: ¡Correcto!
+                  - en: [8, 5]
+                    correcto: true
+                    texto: "Bien. Negro respondió: seguí."
+                    respuestaRival: [8, 4]
+                    siguiente:
+                      ramas:
+                        - en: [8, 3]
+                          correcto: true
+                          texto: "Bien. Negro respondió: seguí."
+                          respuestaRival: [8, 6]
+                          siguiente:
+                            ramas:
+                              - en: [8, 7]
+                                correcto: true
+                                texto: "Bien. Negro respondió: seguí."
+                                respuestaRival: [4, 6]
+                                siguiente:
+                                  ramas:
+                                    - en: [8, 5]
+                                      correcto: true
+                                      texto: "Bien. Negro respondió: seguí."
+                                      respuestaRival: [7, 5]
+                                      siguiente:
+                                        ramas:
+                                          - en: [8, 5]
+                                            correcto: true
+                                            texto: ¡Correcto!
+                        - en: [8, 6]
+                          correcto: false
+                          texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                          respuestaRival: [8, 7]
+                  - en: [8, 6]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [8, 5]
+
+- id: ogs-carrera-de-capturas-12
+  titulo: Carrera de capturas (12)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 0, c: 4, color: B }
+    - { r: 0, c: 5, color: N }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+  marcas:
+    - { r: 2, c: 5, tipo: triangulo }
+    - { r: 2, c: 4, tipo: triangulo }
+    - { r: 1, c: 5, tipo: triangulo }
+    - { r: 1, c: 4, tipo: triangulo }
+    - { r: 0, c: 5, tipo: triangulo }
+    - { r: 0, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [2, 6]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [2, 3]
+        siguiente:
+          ramas:
+            - en: [1, 6]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [1, 3]
+              siguiente:
+                ramas:
+                  - en: [0, 6]
+                    correcto: true
+                    texto: ¡Correcto!
+      - en: [1, 6]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [2, 6]
+        siguiente:
+          ramas:
+            - en: [2, 7]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [1, 7]
+              siguiente:
+                ramas:
+                  - en: [0, 6]
+                    correcto: true
+                    texto: ¡Correcto!
+      - en: [0, 6]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [1, 6]
+        siguiente:
+          ramas:
+            - en: [1, 7]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [0, 7]
+              siguiente:
+                ramas:
+                  - en: [2, 6]
+                    correcto: true
+                    texto: "Bien. Negro respondió: seguí."
+                    respuestaRival: [2, 7]
+                    siguiente:
+                      ramas:
+                        - en: [0, 6]
+                          correcto: true
+                          texto: ¡Correcto!
+                  - en: [2, 7]
+                    correcto: true
+                    texto: "Bien. Negro respondió: seguí."
+                    respuestaRival: [2, 3]
+                    siguiente:
+                      ramas:
+                        - en: [2, 6]
+                          correcto: true
+                          texto: "Bien. Negro respondió: seguí."
+                          respuestaRival: [1, 3]
+                          siguiente:
+                            ramas:
+                              - en: [0, 6]
+                                correcto: true
+                                texto: ¡Correcto!
+            - en: [2, 6]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [1, 7]
+
+- id: ogs-carrera-de-capturas-13
+  titulo: Carrera de capturas (13)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: ganá la carrera de capturas y capturá las piedras marcadas sin
+    quedar en atari."
+  piedras:
+    - { r: 4, c: 1, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+  marcas:
+    - { r: 7, c: 2, tipo: triangulo }
+    - { r: 6, c: 3, tipo: triangulo }
+    - { r: 6, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [7, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 3]
+
+- id: ogs-carrera-de-capturas-14
+  titulo: Carrera de capturas (14)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: ganá la carrera de capturas y capturá las piedras marcadas sin
+    quedar en atari."
+  piedras:
+    - { r: 5, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 6, color: N }
+    - { r: 8, c: 7, color: N }
+  marcas:
+    - { r: 8, c: 4, tipo: triangulo }
+    - { r: 7, c: 6, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 2]
+      - en: [8, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 3]
+
+- id: ogs-carrera-de-capturas-15
+  titulo: Carrera de capturas (15)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: ganá la carrera de capturas y capturá las piedras marcadas sin
+    quedar en atari."
+  piedras:
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 8, c: 1, color: B }
+  marcas:
+    - { r: 8, c: 1, tipo: triangulo }
+    - { r: 7, c: 1, tipo: triangulo }
+    - { r: 6, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 0]
+
+- id: ogs-carrera-de-capturas-16
+  titulo: Carrera de capturas (16)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: ganá la carrera de capturas y capturá las piedras marcadas sin
+    quedar en atari."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 7, color: N }
+  marcas:
+    - { r: 8, c: 5, tipo: triangulo }
+    - { r: 7, c: 6, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 6]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 2]
+
+- id: ogs-carrera-de-capturas-17
+  titulo: Carrera de capturas (17)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: ganá la carrera de capturas y capturá las piedras marcadas sin
+    quedar en atari."
+  piedras:
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 4, color: B }
+  marcas:
+    - { r: 8, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+    - { r: 6, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 1]
+
+- id: ogs-carrera-de-capturas-18
+  titulo: Carrera de capturas (18)
+  etiqueta: carrera-de-capturas
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: ganá la carrera de capturas y capturá las piedras marcadas sin
+    quedar en atari."
+  piedras:
+    - { r: 3, c: 1, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 8, c: 0, color: N }
+    - { r: 8, c: 2, color: B }
+  marcas:
+    - { r: 8, c: 2, tipo: triangulo }
+    - { r: 7, c: 2, tipo: triangulo }
+    - { r: 6, c: 2, tipo: triangulo }
+    - { r: 6, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 0]

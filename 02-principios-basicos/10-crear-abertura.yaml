@@ -1,0 +1,416 @@
+# Principios básicos › Abrir una salida — Abrir una salida y escapar
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/create_opening).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-crear-abertura-01
+  titulo: Abrir una salida (1)
+  etiqueta: crear-abertura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: la cadena blanca marcada no puede escapar alargándose en A. Pero
+    Blanco puede escapar abriendo una salida. Capturá la piedra negra marcada para abrir esa
+    salida."
+  piedras:
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 3, color: N }
+  marcas:
+    - { r: 6, c: 3, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+    - { r: 8, c: 4, tipo: letra, texto: A }
+  desenlaces:
+    - en: [6, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-crear-abertura-02
+  titulo: Abrir una salida (2)
+  etiqueta: crear-abertura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: escapá con la cadena en atari abriendo una salida."
+  piedras:
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: N }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: N }
+  desenlaces:
+    - en: [4, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-crear-abertura-03
+  titulo: Abrir una salida (3)
+  etiqueta: crear-abertura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: escapá con la cadena en atari abriendo una salida."
+  piedras:
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+  desenlaces:
+    - en: [5, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-crear-abertura-04
+  titulo: Abrir una salida (4)
+  etiqueta: crear-abertura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: escapá con la cadena en atari abriendo una salida."
+  piedras:
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 3, color: N }
+  desenlaces:
+    - en: [4, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-crear-abertura-05
+  titulo: Abrir una salida (5)
+  etiqueta: crear-abertura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: escapá con la cadena en atari abriendo una salida."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 7, c: 3, color: B }
+  desenlaces:
+    - en: [5, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-crear-abertura-06
+  titulo: Abrir una salida (6)
+  etiqueta: crear-abertura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: escapá con la cadena en atari abriendo una salida."
+  piedras:
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 5, color: B }
+  desenlaces:
+    - en: [5, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-crear-abertura-07
+  titulo: Abrir una salida (7)
+  etiqueta: crear-abertura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: escapá con la cadena en atari abriendo una salida."
+  piedras:
+    - { r: 2, c: 3, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 2, color: N }
+  desenlaces:
+    - en: [6, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-crear-abertura-08
+  titulo: Abrir una salida (8)
+  etiqueta: crear-abertura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: escapá con la cadena en atari abriendo una salida."
+  piedras:
+    - { r: 2, c: 3, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 7, c: 1, color: N }
+  desenlaces:
+    - en: [4, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-crear-abertura-09
+  titulo: Abrir una salida (9)
+  etiqueta: crear-abertura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: escapá con la cadena en atari abriendo una salida."
+  piedras:
+    - { r: 0, c: 5, color: B }
+    - { r: 0, c: 6, color: B }
+    - { r: 0, c: 7, color: B }
+    - { r: 0, c: 8, color: N }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: N }
+    - { r: 1, c: 8, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 7, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: N }
+  desenlaces:
+    - en: [7, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-crear-abertura-10
+  titulo: Abrir una salida (10)
+  etiqueta: crear-abertura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: escapá con la cadena en atari abriendo una salida."
+  piedras:
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+  desenlaces:
+    - en: [7, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-crear-abertura-11
+  titulo: Abrir una salida (11)
+  etiqueta: crear-abertura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: escapá con la cadena en atari abriendo una salida."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+  desenlaces:
+    - en: [6, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-crear-abertura-12
+  titulo: Abrir una salida (12)
+  etiqueta: crear-abertura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: escapá con la cadena en atari abriendo una salida."
+  piedras:
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 6, color: B }
+    - { r: 1, c: 7, color: B }
+    - { r: 1, c: 8, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 2, c: 7, color: N }
+    - { r: 2, c: 8, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+  desenlaces:
+    - en: [6, 3]
+      correcto: true
+      texto: ¡Correcto!

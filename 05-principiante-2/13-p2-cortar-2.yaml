@@ -1,0 +1,349 @@
+# Principiante, nivel 2 › Cortar 2 — ¿Podés cortar?
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl2-cut-2).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p2-cortar-2-01
+  titulo: Cortar 2 (1)
+  etiqueta: p2-cortar-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro intenta cortar las piedras blancas con la piedra marcada.
+    ¿Las piedras blancas quedaron realmente cortadas, o Blanco puede conectarlas?"
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 14, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: cortadas, correcta: false }
+    - { texto: no cortadas, correcta: true }
+
+- id: ogs-p2-cortar-2-02
+  titulo: Cortar 2 (2)
+  etiqueta: p2-cortar-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro intenta cortar las piedras blancas con la piedra marcada.
+    ¿Las piedras blancas quedaron realmente cortadas, o Blanco puede conectarlas?"
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 3, color: B }
+  marcas:
+    - { r: 17, c: 2, tipo: triangulo }
+  opciones:
+    - { texto: cortadas, correcta: false }
+    - { texto: no cortadas, correcta: true }
+
+- id: ogs-p2-cortar-2-03
+  titulo: Cortar 2 (3)
+  etiqueta: p2-cortar-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro intenta cortar las piedras blancas con la piedra marcada.
+    ¿Las piedras blancas quedaron realmente cortadas, o Blanco puede conectarlas?"
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: B }
+    - { r: 13, c: 5, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 3, color: N }
+  marcas:
+    - { r: 14, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: cortadas, correcta: true }
+    - { texto: no cortadas, correcta: false }
+
+- id: ogs-p2-cortar-2-04
+  titulo: Cortar 2 (4)
+  etiqueta: p2-cortar-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro intenta cortar las piedras blancas con la piedra marcada.
+    ¿Las piedras blancas quedaron realmente cortadas, o Blanco puede conectarlas?"
+  piedras:
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 4, color: N }
+  marcas:
+    - { r: 17, c: 2, tipo: triangulo }
+  opciones:
+    - { texto: cortadas, correcta: true }
+    - { texto: no cortadas, correcta: false }
+
+- id: ogs-p2-cortar-2-05
+  titulo: Cortar 2 (5)
+  etiqueta: p2-cortar-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro intenta cortar las piedras blancas con la piedra marcada.
+    ¿Las piedras blancas quedaron realmente cortadas, o Blanco puede conectarlas?"
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 13, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: cortadas, correcta: false }
+    - { texto: no cortadas, correcta: true }
+
+- id: ogs-p2-cortar-2-06
+  titulo: Cortar 2 (6)
+  etiqueta: p2-cortar-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro intenta cortar las piedras blancas con la piedra marcada.
+    ¿Las piedras blancas quedaron realmente cortadas, o Blanco puede conectarlas?"
+  piedras:
+    - { r: 14, c: 1, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: B }
+  marcas:
+    - { r: 17, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: cortadas, correcta: false }
+    - { texto: no cortadas, correcta: true }
+
+- id: ogs-p2-cortar-2-07
+  titulo: Cortar 2 (7)
+  etiqueta: p2-cortar-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro intenta cortar las piedras blancas con la piedra marcada.
+    ¿Las piedras blancas quedaron realmente cortadas, o Blanco puede conectarlas?"
+  piedras:
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 4, color: B }
+  marcas:
+    - { r: 15, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: cortadas, correcta: false }
+    - { texto: no cortadas, correcta: true }
+
+- id: ogs-p2-cortar-2-08
+  titulo: Cortar 2 (8)
+  etiqueta: p2-cortar-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro intenta cortar las piedras blancas con la piedra marcada.
+    ¿Las piedras blancas quedaron realmente cortadas, o Blanco puede conectarlas?"
+  piedras:
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 7, color: N }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 4, color: N }
+    - { r: 18, c: 5, color: B }
+  marcas:
+    - { r: 17, c: 5, tipo: triangulo }
+  opciones:
+    - { texto: cortadas, correcta: false }
+    - { texto: no cortadas, correcta: true }
+
+- id: ogs-p2-cortar-2-09
+  titulo: Cortar 2 (9)
+  etiqueta: p2-cortar-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro intenta cortar las piedras blancas con la piedra marcada.
+    ¿Las piedras blancas quedaron realmente cortadas, o Blanco puede conectarlas?"
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+  marcas:
+    - { r: 14, c: 2, tipo: triangulo }
+  opciones:
+    - { texto: cortadas, correcta: false }
+    - { texto: no cortadas, correcta: true }
+
+- id: ogs-p2-cortar-2-10
+  titulo: Cortar 2 (10)
+  etiqueta: p2-cortar-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro intenta cortar las piedras blancas con la piedra marcada.
+    ¿Las piedras blancas quedaron realmente cortadas, o Blanco puede conectarlas?"
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 7, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 4, color: N }
+    - { r: 18, c: 5, color: B }
+  marcas:
+    - { r: 17, c: 5, tipo: triangulo }
+  opciones:
+    - { texto: cortadas, correcta: false }
+    - { texto: no cortadas, correcta: true }
+
+- id: ogs-p2-cortar-2-11
+  titulo: Cortar 2 (11)
+  etiqueta: p2-cortar-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro intenta cortar las piedras blancas con la piedra marcada.
+    ¿Las piedras blancas quedaron realmente cortadas, o Blanco puede conectarlas?"
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 2, color: N }
+  marcas:
+    - { r: 15, c: 2, tipo: triangulo }
+  opciones:
+    - { texto: cortadas, correcta: true }
+    - { texto: no cortadas, correcta: false }
+
+- id: ogs-p2-cortar-2-12
+  titulo: Cortar 2 (12)
+  etiqueta: p2-cortar-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro intenta cortar las piedras blancas con la piedra marcada.
+    ¿Las piedras blancas quedaron realmente cortadas, o Blanco puede conectarlas?"
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 4, color: N }
+    - { r: 18, c: 5, color: B }
+  marcas:
+    - { r: 17, c: 5, tipo: triangulo }
+  opciones:
+    - { texto: cortadas, correcta: true }
+    - { texto: no cortadas, correcta: false }

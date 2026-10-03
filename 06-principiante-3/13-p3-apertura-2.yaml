@@ -1,0 +1,257 @@
+# Principiante, nivel 3 › Apertura — Base
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl3-opening-2).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p3-apertura-2-01
+  titulo: Apertura (1)
+  etiqueta: p3-apertura-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 9 }
+  instruccion: "En la apertura tratás de marcar todo el territorio que puedas, sobre todo en las
+    esquinas y los laterales, poniendo tus piedras como mojones en puntos bien elegidos. No conviene
+    ponerlos demasiado separados, porque el rival podría meter una piedra en el medio; pero tampoco
+    demasiado juntos. Hay reglas prácticas que ayudan, y una importante es la base: dos piedras
+    separadas en la tercera línea, con dos intersecciones vacías entre ellas. Acá Negro puede hacer
+    una base jugando en A, y Blanco no va a jugar entre esas dos piedras negras por un buen rato.
+    Con una base, en general lográs hacer vivir el grupo. Jugás con negras. Hacé una base."
+  piedras:
+    - { r: 14, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+  marcas:
+    - { r: 16, c: 8, tipo: letra, texto: A }
+  desenlaces:
+    - en: [16, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-2-02
+  titulo: Apertura (2)
+  etiqueta: p3-apertura-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 7, abajo: 18, izquierda: 0, derecha: 14 }
+  instruccion: "Jugás con blancas: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 9, c: 3, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 5, color: B }
+  marcas:
+    - { r: 16, c: 7, tipo: letra, texto: A }
+    - { r: 17, c: 3, tipo: letra, texto: B }
+    - { r: 17, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [17, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-2-03
+  titulo: Apertura (3)
+  etiqueta: p3-apertura-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 7, abajo: 18, izquierda: 0, derecha: 14 }
+  instruccion: "Jugás con blancas: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 9, color: B }
+    - { r: 16, c: 5, color: B }
+  marcas:
+    - { r: 16, c: 1, tipo: letra, texto: A }
+    - { r: 16, c: 2, tipo: letra, texto: B }
+    - { r: 17, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-2-04
+  titulo: Apertura (4)
+  etiqueta: p3-apertura-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 7, abajo: 18, izquierda: 0, derecha: 14 }
+  instruccion: "Jugás con blancas: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 9, c: 3, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 9, color: B }
+    - { r: 16, c: 12, color: B }
+  marcas:
+    - { r: 13, c: 2, tipo: letra, texto: A }
+    - { r: 13, c: 3, tipo: letra, texto: B }
+    - { r: 16, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-2-05
+  titulo: Apertura (5)
+  etiqueta: p3-apertura-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 7, abajo: 18, izquierda: 0, derecha: 14 }
+  instruccion: "Jugás con blancas: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 9, c: 3, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 10, color: N }
+  marcas:
+    - { r: 15, c: 8, tipo: letra, texto: A }
+    - { r: 16, c: 7, tipo: letra, texto: B }
+    - { r: 16, c: 8, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-2-06
+  titulo: Apertura (6)
+  etiqueta: p3-apertura-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 7, abajo: 18, izquierda: 0, derecha: 14 }
+  instruccion: "Jugás con blancas: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 8, color: B }
+    - { r: 16, c: 10, color: N }
+    - { r: 16, c: 13, color: N }
+  marcas:
+    - { r: 14, c: 8, tipo: letra, texto: A }
+    - { r: 16, c: 5, tipo: letra, texto: B }
+    - { r: 16, c: 6, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-2-07
+  titulo: Apertura (7)
+  etiqueta: p3-apertura-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 15, color: N }
+    - { r: 15, c: 15, color: N }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 2, c: 13, tipo: letra, texto: A }
+    - { r: 9, c: 9, tipo: letra, texto: B }
+    - { r: 14, c: 3, tipo: letra, texto: C }
+  desenlaces:
+    - en: [14, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-2-08
+  titulo: Apertura (8)
+  etiqueta: p3-apertura-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 15, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 15, color: N }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 10, c: 2, tipo: letra, texto: A }
+    - { r: 13, c: 4, tipo: letra, texto: B }
+    - { r: 16, c: 9, tipo: letra, texto: C }
+  desenlaces:
+    - en: [10, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-2-09
+  titulo: Apertura (9)
+  etiqueta: p3-apertura-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 1, c: 3, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 15, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 9, c: 3, color: B }
+    - { r: 9, c: 15, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 15, color: N }
+  marcas:
+    - { r: 2, c: 7, tipo: letra, texto: A }
+    - { r: 2, c: 8, tipo: letra, texto: B }
+    - { r: 4, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [2, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-2-10
+  titulo: Apertura (10)
+  etiqueta: p3-apertura-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 12, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 15, color: N }
+    - { r: 3, c: 17, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 16, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 9, c: 16, color: B }
+    - { r: 11, c: 16, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 15, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 16, c: 14, color: N }
+    - { r: 17, c: 3, color: N }
+  marcas:
+    - { r: 2, c: 9, tipo: letra, texto: A }
+    - { r: 8, c: 4, tipo: letra, texto: B }
+    - { r: 11, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [11, 2]
+      correcto: true
+      texto: ¡Correcto!

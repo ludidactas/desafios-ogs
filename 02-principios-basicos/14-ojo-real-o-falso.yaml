@@ -1,0 +1,181 @@
+# Principios básicos › Ojos — ¿Ojo verdadero o falso?
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/real-false-eye).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-ojo-real-o-falso-01
+  titulo: Ojos (1)
+  etiqueta: ojo-real-o-falso
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: Si un ojo se puede atacar, no es un ojo verdadero sino falso. ¿A es un ojo verdadero o falso?
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: N }
+  marcas:
+    - { r: 7, c: 5, tipo: letra, texto: A }
+  opciones:
+    - { texto: Verdadero, correcta: false }
+    - { texto: Falso, correcta: true }
+
+- id: ogs-ojo-real-o-falso-02
+  titulo: Ojos (2)
+  etiqueta: ojo-real-o-falso
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿A es un ojo verdadero o falso?
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 7, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: B }
+  marcas:
+    - { r: 7, c: 5, tipo: letra, texto: A }
+  opciones:
+    - { texto: Verdadero, correcta: false }
+    - { texto: Falso, correcta: true }
+
+- id: ogs-ojo-real-o-falso-03
+  titulo: Ojos (3)
+  etiqueta: ojo-real-o-falso
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿A es un ojo verdadero o falso?
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 7, color: B }
+  marcas:
+    - { r: 8, c: 6, tipo: letra, texto: A }
+  opciones:
+    - { texto: Verdadero, correcta: true }
+    - { texto: Falso, correcta: false }
+
+- id: ogs-ojo-real-o-falso-04
+  titulo: Ojos (4)
+  etiqueta: ojo-real-o-falso
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿A es un ojo verdadero o falso?
+  piedras:
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 7, color: B }
+  marcas:
+    - { r: 8, c: 6, tipo: letra, texto: A }
+  opciones:
+    - { texto: Verdadero, correcta: false }
+    - { texto: Falso, correcta: true }
+
+- id: ogs-ojo-real-o-falso-05
+  titulo: Ojos (5)
+  etiqueta: ojo-real-o-falso
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿A es un ojo verdadero o falso?
+  piedras:
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 7, color: B }
+  marcas:
+    - { r: 8, c: 6, tipo: letra, texto: A }
+  opciones:
+    - { texto: Verdadero, correcta: false }
+    - { texto: Falso, correcta: true }
+
+- id: ogs-ojo-real-o-falso-06
+  titulo: Ojos (6)
+  etiqueta: ojo-real-o-falso
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿A es un ojo verdadero o falso?
+  piedras:
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 7, color: N }
+  marcas:
+    - { r: 8, c: 6, tipo: letra, texto: A }
+  opciones:
+    - { texto: Verdadero, correcta: true }
+    - { texto: Falso, correcta: false }

@@ -1,0 +1,98 @@
+# Fundamentos › El tablero — Esquinas, lados y centro, tamaños y puntos estrella
+
+# Escrito a mano (no lo genera extraer-ogs.mjs) a partir de la sección "Fundamentals" del tutorial
+# "Learn to Play Go" de online-go.com (https://online-go.com/learn-to-play-go/).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com
+# Cambios respecto del original: adaptación al formato Desafio, coordenadas a [fila, columna],
+# textos en castellano rioplatense y feedback propio por rama.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: fundamentos-esquinas-lados-centro
+  titulo: "Esquinas, lados y centro"
+  etiqueta: el-tablero
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Poné una piedra en la esquina superior derecha."
+  piedras: []
+  jugadasCorrectas:
+    - [0, 5]
+    - [0, 6]
+    - [0, 7]
+    - [0, 8]
+    - [1, 5]
+    - [1, 6]
+    - [1, 7]
+    - [1, 8]
+    - [2, 5]
+    - [2, 6]
+    - [2, 7]
+    - [2, 8]
+    - [3, 5]
+    - [3, 6]
+    - [3, 7]
+    - [3, 8]
+  mensajeError: "Buscá la esquina de arriba a la derecha."
+  explicacion: >
+    Se puede jugar en cualquier lugar, pero una buena estrategia general es
+    empezar por las esquinas, seguir por los lados y dejar el centro para
+    después.
+
+- id: fundamentos-tamanos-de-tablero
+  titulo: "Tableros de distintos tamaños"
+  etiqueta: el-tablero
+  dificultad: 1
+  tamañoTablero: 13
+  turno: N
+  instruccion: "Jugá en el lado derecho del tablero, sin ser una esquina."
+  piedras: []
+  jugadasCorrectas:
+    - [4, 9]
+    - [4, 10]
+    - [4, 11]
+    - [4, 12]
+    - [5, 9]
+    - [5, 10]
+    - [5, 11]
+    - [5, 12]
+    - [6, 9]
+    - [6, 10]
+    - [6, 11]
+    - [6, 12]
+    - [7, 9]
+    - [7, 10]
+    - [7, 11]
+    - [7, 12]
+    - [8, 9]
+    - [8, 10]
+    - [8, 11]
+    - [8, 12]
+  mensajeError: "Buscá un punto sobre el lado derecho, lejos de las esquinas."
+  explicacion: >
+    Go se puede jugar en tableros de cualquier tamaño. Los más comunes son 9x9
+    (con el que conviene empezar), 13x13 y el más popular, 19x19.
+
+- id: fundamentos-puntos-estrella
+  titulo: "Los puntos estrella"
+  etiqueta: el-tablero
+  dificultad: 1
+  tamañoTablero: 19
+  turno: N
+  instruccion: "Jugá en un punto estrella."
+  piedras: []
+  jugadasCorrectas:
+    - [3, 3]
+    - [3, 9]
+    - [3, 15]
+    - [9, 3]
+    - [9, 9]
+    - [9, 15]
+    - [15, 3]
+    - [15, 9]
+    - [15, 15]
+  mensajeError: "Elegí uno de los círculos del tablero."
+  explicacion: >
+    Los círculos que se ven en el tablero se llaman puntos estrella. No tienen
+    nada de especial: sirven para orientarse en el tablero.

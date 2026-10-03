@@ -1,0 +1,190 @@
+# Fundamentos › Fin del juego — Pasar, retirar piedras muertas y contar puntos
+
+# Escrito a mano (no lo genera extraer-ogs.mjs) a partir de la sección "Fundamentals" del tutorial
+# "Learn to Play Go" de online-go.com (https://online-go.com/learn-to-play-go/).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com
+# Cambios respecto del original: adaptación al formato Desafio, coordenadas a [fila, columna],
+# textos en castellano rioplatense y feedback propio por rama.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: fundamentos-pasar
+  titulo: "Pasar"
+  etiqueta: fin-del-juego
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Tocá «Pasar» para terminar la partida."
+  piedras:
+    - { r: 0, c: 4, color: B }
+    - { r: 0, c: 5, color: N }
+    - { r: 0, c: 7, color: B }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: N }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: N }
+    - { r: 1, c: 8, color: B }
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 2, c: 8, color: B }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: N }
+    - { r: 3, c: 8, color: B }
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+  opciones:
+    - { texto: "Pasar", correcta: true }
+  mensajeExito: "¡Los dos pasaron! La partida terminó."
+  explicacion: >
+    No estás obligado a poner una piedra en tu turno: podés pasar. Cuando
+    ninguno de los dos cree que queden buenas jugadas, los dos pasan y la
+    partida termina. Esta partida ya está terminada.
+
+- id: fundamentos-retirar-muertas
+  titulo: "Retirar piedras muertas"
+  etiqueta: fin-del-juego
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: retirar
+  instruccion: "Tocá las piedras negras muertas para retirarlas del tablero."
+  piedras:
+    - { r: 0, c: 4, color: B }
+    - { r: 0, c: 5, color: N }
+    - { r: 0, c: 7, color: B }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: N }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: N }
+    - { r: 1, c: 8, color: B }
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 2, c: 8, color: B }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: N }
+    - { r: 3, c: 8, color: B }
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+  piedrasMuertas:
+    - [0, 5]
+  mensajeExito: "¡Bien! Esas piedras negras estaban muertas y se retiran del tablero."
+  mensajeError: >
+    Esa piedra está viva. Buscá las piedras negras que quedaron sin salida
+    dentro del territorio de Blanco.
+  explicacion: >
+    Después de que los dos jugadores pasan empieza la fase de retiro: se sacan
+    del tablero las piedras que evidentemente están muertas, es decir, las que
+    ya no pueden salvarse.
+
+- id: fundamentos-contar-puntos
+  titulo: "Contar los puntos"
+  etiqueta: fin-del-juego
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Tocá «Terminar» para cerrar la partida."
+  piedras:
+    - { r: 0, c: 4, color: B }
+    - { r: 0, c: 7, color: B }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 8, color: B }
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 2, c: 8, color: B }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: N }
+    - { r: 3, c: 8, color: B }
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+  opciones:
+    - { texto: "Terminar", correcta: true }
+  mensajeExito: "¡Partida terminada! Negro ganó con 24 puntos contra 22."
+  explicacion: >
+    Después de retirar las piedras muertas se cuenta el territorio de cada
+    jugador. El territorio de Negro es de 24 puntos. Blanco tiene 18 puntos de
+    territorio, y a eso se le suman las 4 piedras muertas capturadas: en total
+    22 puntos. Gana Negro.

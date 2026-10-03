@@ -1,0 +1,483 @@
+# Principiante, nivel 3 › Haengma
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl3-haengma-1).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p3-haengma-1-01
+  titulo: Haengma (1)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 9 }
+  instruccion: "En este ejemplo, jugar en A es buen haengma: pegás una piedra a la tuya y la estirás.
+    Es una jugada lenta pero muy sólida, y muchas veces defensiva. Acá Negro defiende la esquina.
+    Jugás con negras. Elegí la mejor continuación después de la jugada 1 de Blanco."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 8, color: N }
+  marcas:
+    - { r: 16, c: 6, tipo: letra, texto: "1" }
+    - { r: 16, c: 4, tipo: letra, texto: A }
+  secuencia:
+    ramas:
+      - en: [16, 4]
+        correcto: true
+        texto: ¡Correcto!
+        respuestaRival: [14, 6]
+
+- id: ogs-p3-haengma-1-02
+  titulo: Haengma (2)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Blanco ataca la piedra negra con 1. Una jugada en diagonal (kosumi) en A refuerza la
+    posición de Negro, ataca la piedra 1 e impide que Blanco se conecte por abajo. Jugás con negras.
+    Jugá una diagonal para defender la piedra negra.
+  piedras:
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 6, color: B }
+  marcas:
+    - { r: 16, c: 6, tipo: letra, texto: "1" }
+    - { r: 14, c: 5, tipo: letra, texto: A }
+  desenlaces:
+    - en: [14, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-03
+  titulo: Haengma (3)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Blanco ataca la piedra negra con 1. Una jugada más rápida que la diagonal es el salto
+    de un punto (ikken-tobi) en A. Sigue siendo sólida: a Blanco le cuesta mucho separar las dos
+    piedras. Muchas veces se usa para escapar hacia el centro. Jugás con negras. Jugá un salto de un
+    punto para escapar hacia el centro."
+  piedras:
+    - { r: 14, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 7, color: B }
+  marcas:
+    - { r: 16, c: 7, tipo: letra, texto: "1" }
+    - { r: 14, c: 5, tipo: letra, texto: A }
+  desenlaces:
+    - en: [14, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-04
+  titulo: Haengma (4)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Una jugada todavía más rápida es el salto de dos puntos. Negro puede jugarla en A para
+    extenderse por el lateral y armar una base. Con una base, en general lográs hacer vivir el
+    grupo. Jugás con negras. Hacé una base.
+  piedras:
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 4, color: N }
+  marcas:
+    - { r: 14, c: 3, tipo: letra, texto: "1" }
+    - { r: 16, c: 7, tipo: letra, texto: A }
+  desenlaces:
+    - en: [16, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-05
+  titulo: Haengma (5)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: El salto de caballo (keima) es una jugada fuerte y rápida; el nombre viene del
+    movimiento del caballo en el ajedrez. Muchas veces se usa para atacar. Jugás con negras. Jugá un
+    keima para atacar la esquina después del keima de Blanco en 1.
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+  marcas:
+    - { r: 13, c: 2, tipo: letra, texto: "1" }
+    - { r: 17, c: 3, tipo: letra, texto: A }
+  desenlaces:
+    - en: [17, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-06
+  titulo: Haengma (6)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "El salto diagonal en general no es una buena jugada. En chino se lo llama salto de
+    elefante, por cómo se mueve el elefante en el ajedrez chino. Acá Negro juega un salto diagonal
+    en 2 después de la 1 de Blanco. La gran desventaja del salto diagonal es que las piedras se
+    pueden separar con facilidad: jugando en A, Blanco mantiene separadas las piedras negras. Jugás
+    con blancas. Separá las piedras negras."
+  piedras:
+    - { r: 13, c: 5, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 5, color: B }
+  marcas:
+    - { r: 16, c: 5, tipo: letra, texto: "1" }
+    - { r: 13, c: 5, tipo: letra, texto: "2" }
+    - { r: 14, c: 4, tipo: letra, texto: A }
+  desenlaces:
+    - en: [14, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-07
+  titulo: Haengma (7)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Las piedras blancas están rodeadas por dos grupos negros fuertes. Si Blanco dobla en A
+    después de la 1 de Negro, Negro corta en C, y en la pelea que sigue seguramente una de las tres
+    piedras blancas quede separada de las otras. Como Negro es fuerte a los dos lados, Blanco tiene
+    que evitar la pelea: su mejor respuesta al contacto 1 es estirar en B o en C, lo que fortalece
+    al grupo blanco. Jugás con blancas. Respondé bien al contacto de Negro."
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 16, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 10, color: N }
+    - { r: 15, c: 15, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 7, color: B }
+    - { r: 16, c: 10, color: B }
+    - { r: 16, c: 13, color: B }
+    - { r: 16, c: 15, color: N }
+  marcas:
+    - { r: 15, c: 10, tipo: letra, texto: "1" }
+    - { r: 15, c: 11, tipo: letra, texto: A }
+    - { r: 16, c: 9, tipo: letra, texto: B }
+    - { r: 16, c: 11, tipo: letra, texto: C }
+  secuencia:
+    ramas:
+      - en: [16, 9]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 11]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [15, 11]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 11]
+
+- id: ogs-p3-haengma-1-08
+  titulo: Haengma (8)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor continuación después de la jugada 1 de Negro: A o B."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+  marcas:
+    - { r: 15, c: 2, tipo: letra, texto: "1" }
+    - { r: 14, c: 2, tipo: letra, texto: A }
+    - { r: 16, c: 2, tipo: letra, texto: B }
+  desenlaces:
+    - en: [14, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-09
+  titulo: Haengma (9)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor continuación después de la jugada 1 de Negro: A o B."
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: N }
+  marcas:
+    - { r: 12, c: 2, tipo: letra, texto: "1" }
+    - { r: 12, c: 3, tipo: letra, texto: A }
+    - { r: 15, c: 1, tipo: letra, texto: B }
+  desenlaces:
+    - en: [15, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-10
+  titulo: Haengma (10)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor continuación después de la jugada 1 de Negro: A o B."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 13, c: 2, tipo: letra, texto: "1" }
+    - { r: 12, c: 2, tipo: letra, texto: A }
+    - { r: 14, c: 2, tipo: letra, texto: B }
+  desenlaces:
+    - en: [14, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-11
+  titulo: Haengma (11)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor continuación después de la jugada 1 de Negro: A o B."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 12, c: 3, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 12, c: 3, tipo: letra, texto: "1" }
+    - { r: 12, c: 4, tipo: letra, texto: A }
+    - { r: 13, c: 1, tipo: letra, texto: B }
+  desenlaces:
+    - en: [13, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-12
+  titulo: Haengma (12)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor continuación después de la jugada 1 de Negro: A o B."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 12, c: 2, color: N }
+    - { r: 12, c: 3, color: N }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 12, c: 2, tipo: letra, texto: "1" }
+    - { r: 12, c: 1, tipo: letra, texto: B }
+    - { r: 13, c: 4, tipo: letra, texto: A }
+  desenlaces:
+    - en: [13, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-13
+  titulo: Haengma (13)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor continuación después de la jugada 1 de Negro: A o B."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 12, c: 3, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 12, c: 3, tipo: letra, texto: "1" }
+    - { r: 13, c: 2, tipo: letra, texto: A }
+    - { r: 14, c: 3, tipo: letra, texto: B }
+  desenlaces:
+    - en: [13, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-14
+  titulo: Haengma (14)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor continuación después de la jugada 1 de Negro: A o B."
+  piedras:
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+  marcas:
+    - { r: 16, c: 3, tipo: letra, texto: "1" }
+    - { r: 15, c: 4, tipo: letra, texto: A }
+    - { r: 15, c: 5, tipo: letra, texto: B }
+  desenlaces:
+    - en: [15, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-15
+  titulo: Haengma (15)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor continuación después de la jugada 1 de Negro: A o B."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 13, c: 3, tipo: letra, texto: "1" }
+    - { r: 15, c: 3, tipo: letra, texto: A }
+    - { r: 16, c: 5, tipo: letra, texto: B }
+  desenlaces:
+    - en: [16, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-16
+  titulo: Haengma (16)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor continuación después de la jugada 1 de Negro: A o B."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 14, c: 3, tipo: letra, texto: "1" }
+    - { r: 15, c: 4, tipo: letra, texto: A }
+    - { r: 15, c: 5, tipo: letra, texto: B }
+  desenlaces:
+    - en: [15, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-17
+  titulo: Haengma (17)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor continuación después de la jugada 1 de Negro: A o B."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+  marcas:
+    - { r: 11, c: 2, tipo: letra, texto: "1" }
+    - { r: 13, c: 4, tipo: letra, texto: A }
+    - { r: 13, c: 5, tipo: letra, texto: B }
+  desenlaces:
+    - en: [13, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-18
+  titulo: Haengma (18)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor continuación después de la jugada 1 de Negro: A o B."
+  piedras:
+    - { r: 14, c: 3, color: N }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 14, c: 3, tipo: letra, texto: "1" }
+    - { r: 15, c: 4, tipo: letra, texto: A }
+    - { r: 15, c: 5, tipo: letra, texto: B }
+  desenlaces:
+    - en: [15, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-haengma-1-19
+  titulo: Haengma (19)
+  etiqueta: p3-haengma-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor continuación después de la jugada 1 de Negro: A o B."
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+  marcas:
+    - { r: 14, c: 1, tipo: letra, texto: "1" }
+    - { r: 16, c: 2, tipo: letra, texto: A }
+    - { r: 17, c: 1, tipo: letra, texto: B }
+  desenlaces:
+    - en: [17, 1]
+      correcto: true
+      texto: ¡Correcto!

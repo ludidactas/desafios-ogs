@@ -1,0 +1,190 @@
+# Principios básicos › Ko — ¿Es ko?
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bp-ko).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-pb-ko-01
+  titulo: Ko (1)
+  etiqueta: pb-ko
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: Negro captura con la piedra 1 la piedra blanca marcada con un triángulo. Si al
+    recapturar Blanco el tablero quedara igual que justo antes de la jugada 1 de Negro, esa
+    recaptura no está permitida. ¿Puede Blanco recapturar la piedra 1 de inmediato?
+  piedras:
+    - { r: 2, c: 4, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 2, color: N }
+  marcas:
+    - { r: 4, c: 2, tipo: letra, texto: "1" }
+    - { r: 5, c: 2, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-pb-ko-02
+  titulo: Ko (2)
+  etiqueta: pb-ko
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: Negro captura con la piedra 1 la cadena blanca marcada con triángulos. ¿Puede Blanco
+    recapturar de inmediato?
+  piedras:
+    - { r: 0, c: 3, color: N }
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 3, color: B }
+    - { r: 1, c: 4, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 2, color: B }
+  marcas:
+    - { r: 3, c: 3, tipo: letra, texto: "1" }
+    - { r: 1, c: 3, tipo: triangulo }
+    - { r: 2, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-pb-ko-03
+  titulo: Ko (3)
+  etiqueta: pb-ko
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: Negro captura con 1 la piedra blanca marcada con un triángulo. ¿Puede Blanco recapturar
+    de inmediato?
+  piedras:
+    - { r: 1, c: 5, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 6, c: 6, color: N }
+  marcas:
+    - { r: 3, c: 4, tipo: letra, texto: "1" }
+    - { r: 3, c: 5, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-pb-ko-04
+  titulo: Ko (4)
+  etiqueta: pb-ko
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: Negro captura con 1 la piedra blanca marcada con un triángulo. ¿Puede Blanco recapturar
+    de inmediato?
+  piedras:
+    - { r: 0, c: 6, color: B }
+    - { r: 0, c: 7, color: B }
+    - { r: 0, c: 8, color: N }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 7, color: N }
+    - { r: 1, c: 8, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 7, color: N }
+    - { r: 2, c: 8, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 6, c: 6, color: N }
+  marcas:
+    - { r: 0, c: 8, tipo: letra, texto: "1" }
+    - { r: 1, c: 8, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-pb-ko-05
+  titulo: Ko (5)
+  etiqueta: pb-ko
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: Negro captura con 1 la piedra blanca marcada con un triángulo. ¿Puede Blanco recapturar
+    de inmediato?
+  piedras:
+    - { r: 1, c: 0, color: N }
+    - { r: 1, c: 1, color: N }
+    - { r: 1, c: 2, color: N }
+    - { r: 2, c: 0, color: N }
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 4, c: 0, color: N }
+    - { r: 4, c: 1, color: B }
+    - { r: 5, c: 1, color: N }
+  marcas:
+    - { r: 3, c: 1, tipo: letra, texto: "1" }
+    - { r: 3, c: 0, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-pb-ko-06
+  titulo: Ko (6)
+  etiqueta: pb-ko
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: Negro captura con 1 la piedra blanca marcada con un triángulo. ¿Puede Blanco recapturar
+    de inmediato?
+  piedras:
+    - { r: 0, c: 6, color: N }
+    - { r: 0, c: 7, color: N }
+    - { r: 0, c: 8, color: B }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: B }
+    - { r: 1, c: 8, color: N }
+    - { r: 2, c: 5, color: N }
+    - { r: 2, c: 7, color: B }
+    - { r: 2, c: 8, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 3, c: 8, color: B }
+  marcas:
+    - { r: 1, c: 8, tipo: letra, texto: "1" }
+    - { r: 0, c: 8, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }

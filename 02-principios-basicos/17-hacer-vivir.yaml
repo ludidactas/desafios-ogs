@@ -1,0 +1,183 @@
+# Principios básicos › Dos ojos — Hacer dos ojos
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/make-alive).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-hacer-vivir-01
+  titulo: Dos ojos (1)
+  etiqueta: hacer-vivir
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "El grupo blanco todavía no está a salvo: Negro puede impedir que haga dos ojos jugando
+    en A. Jugás con blancas. Hacé vivir al grupo blanco formando dos ojos."
+  piedras:
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 7, c: 8, color: B }
+    - { r: 8, c: 7, color: B }
+  marcas:
+    - { r: 8, c: 5, tipo: letra, texto: A }
+  secuencia:
+    ramas:
+      - en: [8, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 5]
+
+- id: ogs-hacer-vivir-02
+  titulo: Dos ojos (2)
+  etiqueta: hacer-vivir
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos."
+  piedras:
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 7, c: 8, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 7, color: B }
+  desenlaces:
+    - en: [8, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-vivir-03
+  titulo: Dos ojos (3)
+  etiqueta: hacer-vivir
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos."
+  piedras:
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 7, c: 8, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+  desenlaces:
+    - en: [8, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-vivir-04
+  titulo: Dos ojos (4)
+  etiqueta: hacer-vivir
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos."
+  piedras:
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: N }
+  desenlaces:
+    - en: [8, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-vivir-05
+  titulo: Dos ojos (5)
+  etiqueta: hacer-vivir
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos."
+  piedras:
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: N }
+  desenlaces:
+    - en: [7, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-vivir-06
+  titulo: Dos ojos (6)
+  etiqueta: hacer-vivir
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos."
+  piedras:
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 7, color: N }
+  desenlaces:
+    - en: [8, 6]
+      correcto: true
+      texto: ¡Correcto!

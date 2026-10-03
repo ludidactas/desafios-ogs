@@ -1,0 +1,365 @@
+# Principiante, nivel 2 › Forma — Forma fuerte
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl2-shape-2).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p2-forma-2-01
+  titulo: Forma (1)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Un grupo de piedras es fuerte si no tiene puntos débiles y se puede aprovechar bien en
+    una pelea. En este ejemplo Blanco tiene un muro fuerte; en comparación, Negro se ve bastante
+    débil. ¿El grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 4, color: B }
+  opciones:
+    - { texto: forma fuerte, correcta: true }
+    - { texto: forma débil, correcta: false }
+
+- id: ogs-p2-forma-2-02
+  titulo: Forma (2)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Un grupo es débil si se lo puede atacar fácilmente y capturar o cortar. Un grupo débil
+    no tiene buena forma de ojos. En este ejemplo el muro blanco tiene dos puntos de corte. ¿El
+    grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+  opciones:
+    - { texto: forma fuerte, correcta: false }
+    - { texto: forma débil, correcta: true }
+
+- id: ogs-p2-forma-2-03
+  titulo: Forma (3)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+  opciones:
+    - { texto: forma fuerte, correcta: true }
+    - { texto: forma débil, correcta: false }
+
+- id: ogs-p2-forma-2-04
+  titulo: Forma (4)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 6, color: B }
+  opciones:
+    - { texto: forma fuerte, correcta: true }
+    - { texto: forma débil, correcta: false }
+
+- id: ogs-p2-forma-2-05
+  titulo: Forma (5)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 1, color: N }
+  opciones:
+    - { texto: forma fuerte, correcta: true }
+    - { texto: forma débil, correcta: false }
+
+- id: ogs-p2-forma-2-06
+  titulo: Forma (6)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+  opciones:
+    - { texto: forma fuerte, correcta: false }
+    - { texto: forma débil, correcta: true }
+
+- id: ogs-p2-forma-2-07
+  titulo: Forma (7)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+  opciones:
+    - { texto: forma fuerte, correcta: true }
+    - { texto: forma débil, correcta: false }
+
+- id: ogs-p2-forma-2-08
+  titulo: Forma (8)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+  opciones:
+    - { texto: forma fuerte, correcta: false }
+    - { texto: forma débil, correcta: true }
+
+- id: ogs-p2-forma-2-09
+  titulo: Forma (9)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 2, color: N }
+  opciones:
+    - { texto: forma fuerte, correcta: false }
+    - { texto: forma débil, correcta: true }
+
+- id: ogs-p2-forma-2-10
+  titulo: Forma (10)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 4, color: N }
+  opciones:
+    - { texto: forma fuerte, correcta: false }
+    - { texto: forma débil, correcta: true }
+
+- id: ogs-p2-forma-2-11
+  titulo: Forma (11)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+  opciones:
+    - { texto: forma fuerte, correcta: true }
+    - { texto: forma débil, correcta: false }
+
+- id: ogs-p2-forma-2-12
+  titulo: Forma (12)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+  opciones:
+    - { texto: forma fuerte, correcta: true }
+    - { texto: forma débil, correcta: false }
+
+- id: ogs-p2-forma-2-13
+  titulo: Forma (13)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+  opciones:
+    - { texto: forma fuerte, correcta: false }
+    - { texto: forma débil, correcta: true }
+
+- id: ogs-p2-forma-2-14
+  titulo: Forma (14)
+  etiqueta: p2-forma-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo blanco tiene una forma fuerte o débil?
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+  opciones:
+    - { texto: forma fuerte, correcta: true }
+    - { texto: forma débil, correcta: false }

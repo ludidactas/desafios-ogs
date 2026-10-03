@@ -1,0 +1,546 @@
+# Principiante, nivel 2 › Carrera de capturas — Jugada de aproximación
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl2-capturing-race-1).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p2-carrera-de-capturas-1-01
+  titulo: Carrera de capturas (1)
+  etiqueta: p2-carrera-de-capturas-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Al contar libertades, tené en cuenta que no siempre se pueden llenar directamente: si
+    al llenar una libertad te ponés en atari, te capturan la piedra. Para evitarlo, primero tenés
+    que hacer una jugada de aproximación o conectar tus piedras. En este ejemplo Blanco no puede
+    jugar enseguida en C, porque quedaría en atari: primero tiene que aproximarse a C con una jugada
+    en D, y eso le cuesta una jugada extra. Por eso necesita tres jugadas para capturar la cadena
+    negra marcada: en la práctica, Negro tiene tres libertades. Del mismo modo, Negro no puede
+    llenar enseguida la libertad B de la cadena blanca marcada: primero tiene que conectar sus
+    piedras en A. Así que la cadena blanca marcada también tiene, en la práctica, tres libertades.
+    Jugás con blancas. Hacé una jugada de aproximación y ganá la carrera de capturas."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 3, color: N }
+  marcas:
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 18, c: 1, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 17, c: 2, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 17, c: 3, tipo: triangulo }
+    - { r: 18, c: 3, tipo: triangulo }
+    - { r: 17, c: 4, tipo: triangulo }
+    - { r: 16, c: 0, tipo: letra, texto: A }
+    - { r: 18, c: 0, tipo: letra, texto: B }
+    - { r: 18, c: 4, tipo: letra, texto: C }
+    - { r: 18, c: 5, tipo: letra, texto: D }
+  secuencia:
+    ramas:
+      - en: [18, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 5]
+      - en: [18, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 0]
+
+- id: ogs-p2-carrera-de-capturas-1-02
+  titulo: Carrera de capturas (2)
+  etiqueta: p2-carrera-de-capturas-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé una jugada de aproximación y ganá la carrera de capturas."
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 6, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 8, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 5, color: N }
+  desenlaces:
+    - en: [18, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-carrera-de-capturas-1-03
+  titulo: Carrera de capturas (3)
+  etiqueta: p2-carrera-de-capturas-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé una jugada de aproximación y ganá la carrera de capturas."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 12, c: 5, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 4, color: N }
+    - { r: 18, c: 5, color: B }
+  desenlaces:
+    - en: [18, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-carrera-de-capturas-1-04
+  titulo: Carrera de capturas (4)
+  etiqueta: p2-carrera-de-capturas-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé una jugada de aproximación y ganá la carrera de capturas."
+  piedras:
+    - { r: 11, c: 1, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 6, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 1, color: N }
+  desenlaces:
+    - en: [18, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-carrera-de-capturas-1-05
+  titulo: Carrera de capturas (5)
+  etiqueta: p2-carrera-de-capturas-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé una jugada de aproximación y ganá la carrera de capturas."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 7, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [16, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 5]
+
+- id: ogs-p2-carrera-de-capturas-1-06
+  titulo: Carrera de capturas (6)
+  etiqueta: p2-carrera-de-capturas-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé una jugada de aproximación y ganá la carrera de capturas."
+  piedras:
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 8, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 8, color: N }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 4, color: N }
+    - { r: 18, c: 5, color: N }
+    - { r: 18, c: 6, color: B }
+  desenlaces:
+    - en: [18, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-carrera-de-capturas-1-07
+  titulo: Carrera de capturas (7)
+  etiqueta: p2-carrera-de-capturas-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé una jugada de aproximación y ganá la carrera de capturas."
+  piedras:
+    - { r: 12, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 7, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: B }
+  desenlaces:
+    - en: [15, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-carrera-de-capturas-1-08
+  titulo: Carrera de capturas (8)
+  etiqueta: p2-carrera-de-capturas-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé una jugada de aproximación y ganá la carrera de capturas."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 2, color: B }
+  desenlaces:
+    - en: [14, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-carrera-de-capturas-1-09
+  titulo: Carrera de capturas (9)
+  etiqueta: p2-carrera-de-capturas-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé una jugada de aproximación y ganá la carrera de capturas."
+  piedras:
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 6, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [16, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 5]
+
+- id: ogs-p2-carrera-de-capturas-1-10
+  titulo: Carrera de capturas (10)
+  etiqueta: p2-carrera-de-capturas-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé una jugada de aproximación y ganá la carrera de capturas."
+  piedras:
+    - { r: 11, c: 3, color: N }
+    - { r: 12, c: 2, color: N }
+    - { r: 12, c: 5, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: B }
+    - { r: 17, c: 8, color: B }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 5, color: N }
+    - { r: 18, c: 6, color: B }
+  desenlaces:
+    - en: [15, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-carrera-de-capturas-1-11
+  titulo: Carrera de capturas (11)
+  etiqueta: p2-carrera-de-capturas-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé una jugada de aproximación y ganá la carrera de capturas."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 5, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 5, color: N }
+  desenlaces:
+    - en: [17, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-carrera-de-capturas-1-12
+  titulo: Carrera de capturas (12)
+  etiqueta: p2-carrera-de-capturas-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé una jugada de aproximación y ganá la carrera de capturas."
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 6, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: B }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 5, color: B }
+  desenlaces:
+    - en: [18, 6]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-carrera-de-capturas-1-13
+  titulo: Carrera de capturas (13)
+  etiqueta: p2-carrera-de-capturas-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé una jugada de aproximación y ganá la carrera de capturas."
+  piedras:
+    - { r: 11, c: 3, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 4, color: N }
+    - { r: 18, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [18, 6]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 0]

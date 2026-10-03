@@ -1,0 +1,679 @@
+# Principiante, nivel 3 › Conectar y cortar — Conectar
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl3-connect-cut-2).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p3-conectar-y-cortar-2-01
+  titulo: Conectar y cortar (1)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Una técnica de conexión muy frecuente es doblar por el lateral. Acá Negro conecta
+    doblando primero con 1. Si Blanco intenta frenarlo con 2, Negro puede jugar en A. Jugás con
+    negras. Completá la conexión.
+  piedras:
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: B }
+  marcas:
+    - { r: 17, c: 5, tipo: letra, texto: "1" }
+    - { r: 17, c: 6, tipo: letra, texto: "2" }
+    - { r: 16, c: 6, tipo: letra, texto: A }
+  secuencia:
+    ramas:
+      - en: [16, 6]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [15, 5]
+        siguiente:
+          ramas:
+            - en: [17, 7]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [17, 4]
+              siguiente:
+                ramas:
+                  - en: [18, 6]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [17, 3]
+                    siguiente:
+                      ramas:
+                        - en: [17, 2]
+                          correcto: true
+                          texto: ¡Correcto!
+            - en: [17, 4]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [17, 7]
+              siguiente:
+                ramas:
+                  - en: [17, 8]
+                    correcto: true
+                    texto: ¡Correcto!
+
+- id: ogs-p3-conectar-y-cortar-2-02
+  titulo: Conectar y cortar (2)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Negro puede conectar los dos grupos con un salto de un punto en A. Si Blanco intenta
+    separarlos, Negro puede conectar jugando en la primera línea. Conectá los dos grupos negros.
+  piedras:
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 17, c: 2, color: N }
+  marcas:
+    - { r: 17, c: 4, tipo: letra, texto: A }
+  secuencia:
+    ramas:
+      - en: [17, 4]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [17, 3]
+        siguiente:
+          ramas:
+            - en: [18, 3]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-p3-conectar-y-cortar-2-03
+  titulo: Conectar y cortar (3)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Muchas veces hay distintas formas de conectar tus piedras, pero no todas son igual de
+    eficientes. Negro puede conectar las dos piedras de manera simple jugando en B, pero jugando en
+    A también quedan conectadas, y A le da a Negro un mejor resultado en la esquina. Jugá la
+    conexión más eficiente para Negro.
+  piedras:
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 3, color: N }
+  marcas:
+    - { r: 17, c: 2, tipo: letra, texto: A }
+    - { r: 17, c: 4, tipo: letra, texto: B }
+  secuencia:
+    ramas:
+      - en: [17, 2]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [17, 4]
+        siguiente:
+          ramas:
+            - en: [16, 4]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [17, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [17, 2]
+
+- id: ogs-p3-conectar-y-cortar-2-04
+  titulo: Conectar y cortar (4)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 4, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 6, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+  secuencia:
+    ramas:
+      - en: [14, 1]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [16, 1]
+        siguiente:
+          ramas:
+            - en: [17, 1]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [15, 0]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [17, 1]
+      - en: [16, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [14, 1]
+
+- id: ogs-p3-conectar-y-cortar-2-05
+  titulo: Conectar y cortar (5)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 12, c: 1, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+  desenlaces:
+    - en: [17, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-conectar-y-cortar-2-06
+  titulo: Conectar y cortar (6)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: B }
+  desenlaces:
+    - en: [12, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-conectar-y-cortar-2-07
+  titulo: Conectar y cortar (7)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 10, c: 2, color: N }
+    - { r: 10, c: 3, color: N }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 2, color: B }
+  secuencia:
+    ramas:
+      - en: [12, 1]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [11, 1]
+        siguiente:
+          ramas:
+            - en: [11, 2]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [11, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [12, 1]
+
+- id: ogs-p3-conectar-y-cortar-2-08
+  titulo: Conectar y cortar (8)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+  secuencia:
+    ramas:
+      - en: [15, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [13, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [15, 0]
+
+- id: ogs-p3-conectar-y-cortar-2-09
+  titulo: Conectar y cortar (9)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [16, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [13, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [16, 1]
+      - en: [14, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [16, 1]
+
+- id: ogs-p3-conectar-y-cortar-2-10
+  titulo: Conectar y cortar (10)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: B }
+  desenlaces:
+    - en: [14, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-conectar-y-cortar-2-11
+  titulo: Conectar y cortar (11)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 2, color: B }
+  secuencia:
+    ramas:
+      - en: [15, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [15, 2]
+
+- id: ogs-p3-conectar-y-cortar-2-12
+  titulo: Conectar y cortar (12)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 7, color: N }
+  secuencia:
+    ramas:
+      - en: [15, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [15, 4]
+
+- id: ogs-p3-conectar-y-cortar-2-13
+  titulo: Conectar y cortar (13)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 13, c: 6, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 7, color: N }
+    - { r: 15, c: 8, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+  secuencia:
+    ramas:
+      - en: [16, 5]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [16, 6]
+        siguiente:
+          ramas:
+            - en: [15, 6]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [16, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [16, 5]
+
+- id: ogs-p3-conectar-y-cortar-2-14
+  titulo: Conectar y cortar (14)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 2, color: N }
+  secuencia:
+    ramas:
+      - en: [15, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [15, 4]
+
+- id: ogs-p3-conectar-y-cortar-2-15
+  titulo: Conectar y cortar (15)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 6, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 7, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 8, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 8, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 7, color: N }
+    - { r: 17, c: 8, color: B }
+  secuencia:
+    ramas:
+      - en: [17, 4]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [17, 5]
+        siguiente:
+          ramas:
+            - en: [16, 5]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [17, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [17, 4]
+
+- id: ogs-p3-conectar-y-cortar-2-16
+  titulo: Conectar y cortar (16)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 11, c: 5, color: B }
+    - { r: 12, c: 3, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [14, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [14, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [14, 3]
+
+- id: ogs-p3-conectar-y-cortar-2-17
+  titulo: Conectar y cortar (17)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 11, c: 4, color: B }
+    - { r: 12, c: 0, color: B }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 12, c: 7, color: B }
+    - { r: 13, c: 0, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 5, color: N }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 3, color: N }
+  secuencia:
+    ramas:
+      - en: [15, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [14, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [15, 2]
+
+- id: ogs-p3-conectar-y-cortar-2-18
+  titulo: Conectar y cortar (18)
+  etiqueta: p3-conectar-y-cortar-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: jugá la mejor conexión."
+  piedras:
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [14, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [15, 0]
+      - en: [16, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [15, 5]
+      - en: [17, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [15, 5]

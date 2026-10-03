@@ -1,0 +1,488 @@
+# Principiante, nivel 3 › Ojo falso — Hacer un ojo falso
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl3-false-eye-1).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p3-ojo-falso-1-01
+  titulo: Ojo falso (1)
+  etiqueta: p3-ojo-falso-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ojo falso."
+  piedras:
+    - { r: 11, c: 5, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 12, c: 5, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 13, c: 6, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 6, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 6, color: B }
+  desenlaces:
+    - en: [15, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-ojo-falso-1-02
+  titulo: Ojo falso (2)
+  etiqueta: p3-ojo-falso-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ojo falso."
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 13, c: 5, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 6, color: B }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [14, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [15, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 2]
+
+- id: ogs-p3-ojo-falso-1-03
+  titulo: Ojo falso (3)
+  etiqueta: p3-ojo-falso-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ojo falso."
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 0, color: N }
+    - { r: 18, c: 2, color: N }
+  desenlaces:
+    - en: [16, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-ojo-falso-1-04
+  titulo: Ojo falso (4)
+  etiqueta: p3-ojo-falso-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ojo falso."
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 13, c: 5, color: B }
+    - { r: 13, c: 6, color: B }
+    - { r: 13, c: 8, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 15, c: 8, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 8, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+  desenlaces:
+    - en: [15, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-ojo-falso-1-05
+  titulo: Ojo falso (5)
+  etiqueta: p3-ojo-falso-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ojo falso."
+  piedras:
+    - { r: 11, c: 2, color: B }
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 0, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 6, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 1, color: N }
+  secuencia:
+    ramas:
+      - en: [14, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [17, 0]
+        siguiente:
+          ramas:
+            - en: [14, 0]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-p3-ojo-falso-1-06
+  titulo: Ojo falso (6)
+  etiqueta: p3-ojo-falso-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ojo falso."
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 5, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 6, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 4, color: B }
+    - { r: 18, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [15, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 4]
+
+- id: ogs-p3-ojo-falso-1-07
+  titulo: Ojo falso (7)
+  etiqueta: p3-ojo-falso-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ojo falso."
+  piedras:
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 0, color: N }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 4, color: N }
+  desenlaces:
+    - en: [17, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-ojo-falso-1-08
+  titulo: Ojo falso (8)
+  etiqueta: p3-ojo-falso-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ojo falso."
+  piedras:
+    - { r: 14, c: 7, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 4, color: N }
+    - { r: 18, c: 6, color: N }
+  desenlaces:
+    - en: [18, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-ojo-falso-1-09
+  titulo: Ojo falso (9)
+  etiqueta: p3-ojo-falso-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ojo falso."
+  piedras:
+    - { r: 11, c: 5, color: B }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 12, c: 4, color: B }
+    - { r: 12, c: 6, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 13, c: 5, color: N }
+    - { r: 13, c: 6, color: B }
+    - { r: 13, c: 8, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 14, c: 7, color: N }
+    - { r: 14, c: 8, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 15, c: 8, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 8, color: B }
+  desenlaces:
+    - en: [15, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-ojo-falso-1-10
+  titulo: Ojo falso (10)
+  etiqueta: p3-ojo-falso-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ojo falso."
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 13, c: 5, color: B }
+    - { r: 13, c: 7, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [15, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 4]
+
+- id: ogs-p3-ojo-falso-1-11
+  titulo: Ojo falso (11)
+  etiqueta: p3-ojo-falso-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ojo falso."
+  piedras:
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 4, color: N }
+  secuencia:
+    ramas:
+      - en: [17, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [17, 0]
+        siguiente:
+          ramas:
+            - en: [18, 1]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-p3-ojo-falso-1-12
+  titulo: Ojo falso (12)
+  etiqueta: p3-ojo-falso-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ojo falso."
+  piedras:
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 4, color: B }
+    - { r: 12, c: 6, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 6, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: B }
+  desenlaces:
+    - en: [14, 2]
+      correcto: true
+      texto: ¡Correcto!

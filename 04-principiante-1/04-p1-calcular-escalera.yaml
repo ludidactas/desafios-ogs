@@ -1,0 +1,244 @@
+# Principiante, nivel 1 › Escalera — ¿Funciona la escalera?
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl1-calculate-ladder).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p1-calcular-escalera-01
+  titulo: Escalera (1)
+  etiqueta: p1-calcular-escalera
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: Si querés capturar en escalera, tenés que tener cuidado con los rompeescaleras. Negro
+    quiere capturar la piedra marcada en escalera, pero no va a funcionar porque la otra piedra
+    blanca rompe la escalera. Tratá de capturar la piedra marcada en escalera y fijate qué pasa.
+  piedras:
+    - { r: 3, c: 4, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 2, color: B }
+  marcas:
+    - { r: 4, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 3]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [5, 4]
+        siguiente:
+          ramas:
+            - en: [6, 4]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [5, 3]
+              siguiente:
+                ramas:
+                  - en: [5, 2]
+                    correcto: true
+                    texto: ¡Correcto!
+                    respuestaRival: [6, 3]
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [4, 3]
+
+- id: ogs-p1-calcular-escalera-02
+  titulo: Escalera (2)
+  etiqueta: p1-calcular-escalera
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  instruccion: A veces podés esquivar el rompeescaleras empezando del lado correcto. Negro puede
+    elegir entre jugar en A o en B. Capturá las piedras marcadas en escalera eligiendo el lado
+    correcto.
+  piedras:
+    - { r: 3, c: 4, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: N }
+  marcas:
+    - { r: 4, c: 4, tipo: triangulo }
+    - { r: 5, c: 4, tipo: triangulo }
+    - { r: 4, c: 3, tipo: letra, texto: A }
+    - { r: 5, c: 3, tipo: letra, texto: B }
+  desenlaces:
+    - en: [5, 3]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [4, 3]
+      correcto: false
+      texto: Esa jugada no resuelve el problema.
+
+- id: ogs-p1-calcular-escalera-03
+  titulo: Escalera (3)
+  etiqueta: p1-calcular-escalera
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con negras: ¿podés capturar las piedras marcadas con una escalera que funcione?"
+  piedras:
+    - { r: 2, c: 4, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 5, color: N }
+  marcas:
+    - { r: 4, c: 4, tipo: triangulo }
+    - { r: 4, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-p1-calcular-escalera-04
+  titulo: Escalera (4)
+  etiqueta: p1-calcular-escalera
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con negras: ¿podés capturar las piedras marcadas con una escalera que funcione?"
+  piedras:
+    - { r: 2, c: 5, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 7, c: 3, color: B }
+  marcas:
+    - { r: 4, c: 4, tipo: triangulo }
+    - { r: 4, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-p1-calcular-escalera-05
+  titulo: Escalera (5)
+  etiqueta: p1-calcular-escalera
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con negras: ¿podés capturar las piedras marcadas con una escalera que funcione?"
+  piedras:
+    - { r: 2, c: 5, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 7, c: 4, color: B }
+  marcas:
+    - { r: 4, c: 4, tipo: triangulo }
+    - { r: 4, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-p1-calcular-escalera-06
+  titulo: Escalera (6)
+  etiqueta: p1-calcular-escalera
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con negras: ¿podés capturar las piedras marcadas con una escalera que funcione?"
+  piedras:
+    - { r: 2, c: 6, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 7, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: B }
+  marcas:
+    - { r: 5, c: 4, tipo: triangulo }
+    - { r: 5, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-p1-calcular-escalera-07
+  titulo: Escalera (7)
+  etiqueta: p1-calcular-escalera
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con negras: ¿podés capturar las piedras marcadas con una escalera que funcione?"
+  piedras:
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 3, color: N }
+  marcas:
+    - { r: 6, c: 3, tipo: triangulo }
+    - { r: 5, c: 4, tipo: triangulo }
+    - { r: 5, c: 3, tipo: triangulo }
+    - { r: 5, c: 2, tipo: triangulo }
+    - { r: 4, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-p1-calcular-escalera-08
+  titulo: Escalera (8)
+  etiqueta: p1-calcular-escalera
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Jugás con negras: ¿podés capturar las piedras marcadas con una escalera que funcione?"
+  piedras:
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+  marcas:
+    - { r: 5, c: 4, tipo: triangulo }
+    - { r: 5, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }

@@ -1,0 +1,230 @@
+# Habilidades básicas › Atari hacia tus piedras — Atari hacia tus propias piedras
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/atari-to-stones).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-atari-hacia-piedras-01
+  titulo: Atari hacia tus piedras (1)
+  etiqueta: atari-hacia-piedras
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: empujar las piedras marcadas hacia tus propias piedras te ayuda a
+    capturarlas. Dales atari a las piedras marcadas."
+  piedras:
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 5, color: N }
+  marcas:
+    - { r: 5, c: 3, tipo: triangulo }
+    - { r: 5, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [6, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [6, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [6, 3]
+
+- id: ogs-atari-hacia-piedras-02
+  titulo: Atari hacia tus piedras (2)
+  etiqueta: atari-hacia-piedras
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: dale atari hacia tus propias piedras."
+  piedras:
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [7, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 5]
+
+- id: ogs-atari-hacia-piedras-03
+  titulo: Atari hacia tus piedras (3)
+  etiqueta: atari-hacia-piedras
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: dale atari hacia tus propias piedras."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [3, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [3, 3]
+
+- id: ogs-atari-hacia-piedras-04
+  titulo: Atari hacia tus piedras (4)
+  etiqueta: atari-hacia-piedras
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: dale atari hacia tus propias piedras."
+  piedras:
+    - { r: 3, c: 2, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+  secuencia:
+    ramas:
+      - en: [4, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [4, 4]
+
+- id: ogs-atari-hacia-piedras-05
+  titulo: Atari hacia tus piedras (5)
+  etiqueta: atari-hacia-piedras
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: dale atari hacia tus propias piedras."
+  piedras:
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [5, 5]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [5, 4]
+        siguiente:
+          ramas:
+            - en: [4, 4]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 5]
+
+- id: ogs-atari-hacia-piedras-06
+  titulo: Atari hacia tus piedras (6)
+  etiqueta: atari-hacia-piedras
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: dale atari hacia tus propias piedras."
+  piedras:
+    - { r: 3, c: 6, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [6, 3]
+        siguiente:
+          ramas:
+            - en: [7, 3]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [5, 3]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [7, 3]
+              siguiente:
+                ramas:
+                  - en: [7, 2]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [8, 3]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [7, 2]
+                    siguiente:
+                      ramas:
+                        - en: [7, 1]
+                          correcto: true
+                          texto: ¡Correcto!
+                        - en: [8, 2]
+                          correcto: false
+                          texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                          respuestaRival: [7, 1]
+      - en: [6, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 4]

@@ -1,0 +1,558 @@
+# Principiante, nivel 1 › Vida y muerte — Evitar el segundo ojo
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl1-life-death-2).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p1-vida-y-muerte-2-01
+  titulo: Vida y muerte (1)
+  etiqueta: p1-vida-y-muerte-2
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: impedí un segundo ojo y capturá el grupo negro."
+  piedras:
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 6, color: B }
+  secuencia:
+    ramas:
+      - en: [8, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 5]
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 5]
+
+- id: ogs-p1-vida-y-muerte-2-02
+  titulo: Vida y muerte (2)
+  etiqueta: p1-vida-y-muerte-2
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: impedí un segundo ojo y capturá el grupo negro."
+  piedras:
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 3]
+      - en: [8, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 3]
+      - en: [7, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 3]
+
+- id: ogs-p1-vida-y-muerte-2-03
+  titulo: Vida y muerte (3)
+  etiqueta: p1-vida-y-muerte-2
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: impedí un segundo ojo y capturá el grupo negro."
+  piedras:
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [8, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 4]
+      - en: [8, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 4]
+      - en: [8, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 4]
+      - en: [7, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 4]
+
+- id: ogs-p1-vida-y-muerte-2-04
+  titulo: Vida y muerte (4)
+  etiqueta: p1-vida-y-muerte-2
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: impedí un segundo ojo y capturá el grupo negro."
+  piedras:
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 5]
+      - en: [8, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 5]
+      - en: [7, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 5]
+      - en: [8, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 5]
+
+- id: ogs-p1-vida-y-muerte-2-05
+  titulo: Vida y muerte (5)
+  etiqueta: p1-vida-y-muerte-2
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: impedí un segundo ojo y capturá el grupo negro."
+  piedras:
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 7, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 8]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 8]
+      - en: [7, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 8]
+      - en: [8, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 8]
+
+- id: ogs-p1-vida-y-muerte-2-06
+  titulo: Vida y muerte (6)
+  etiqueta: p1-vida-y-muerte-2
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: impedí un segundo ojo y capturá el grupo negro."
+  piedras:
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 7, color: N }
+  secuencia:
+    ramas:
+      - en: [6, 7]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 7]
+      - en: [7, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 7]
+
+- id: ogs-p1-vida-y-muerte-2-07
+  titulo: Vida y muerte (7)
+  etiqueta: p1-vida-y-muerte-2
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: impedí un segundo ojo y capturá el grupo negro."
+  piedras:
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+    - { r: 8, c: 7, color: N }
+  secuencia:
+    ramas:
+      - en: [6, 7]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [6, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 7]
+      - en: [7, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 7]
+      - en: [5, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 7]
+
+- id: ogs-p1-vida-y-muerte-2-08
+  titulo: Vida y muerte (8)
+  etiqueta: p1-vida-y-muerte-2
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: impedí un segundo ojo y capturá el grupo negro."
+  piedras:
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+    - { r: 8, c: 7, color: N }
+  secuencia:
+    ramas:
+      - en: [6, 7]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [6, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 7]
+      - en: [7, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 7]
+
+- id: ogs-p1-vida-y-muerte-2-09
+  titulo: Vida y muerte (9)
+  etiqueta: p1-vida-y-muerte-2
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: impedí un segundo ojo y capturá el grupo negro."
+  piedras:
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [8, 7]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 7]
+
+- id: ogs-p1-vida-y-muerte-2-10
+  titulo: Vida y muerte (10)
+  etiqueta: p1-vida-y-muerte-2
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: impedí un segundo ojo y capturá el grupo negro."
+  piedras:
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 7, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+  secuencia:
+    ramas:
+      - en: [5, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 6]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [5, 2]
+        siguiente:
+          ramas:
+            - en: [6, 6]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [6, 2]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [4, 2]
+              siguiente:
+                ramas:
+                  - en: [6, 6]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [4, 2]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [6, 2]
+              siguiente:
+                ramas:
+                  - en: [6, 6]
+                    correcto: true
+                    texto: ¡Correcto!
+      - en: [6, 6]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [5, 2]
+        siguiente:
+          ramas:
+            - en: [4, 6]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [6, 2]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [4, 2]
+              siguiente:
+                ramas:
+                  - en: [4, 6]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [4, 2]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [6, 2]
+              siguiente:
+                ramas:
+                  - en: [4, 6]
+                    correcto: true
+                    texto: ¡Correcto!
+      - en: [6, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [5, 2]
+        siguiente:
+          ramas:
+            - en: [4, 2]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [6, 6]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [4, 6]
+              siguiente:
+                ramas:
+                  - en: [4, 2]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [4, 6]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [6, 6]
+              siguiente:
+                ramas:
+                  - en: [4, 2]
+                    correcto: true
+                    texto: ¡Correcto!
+      - en: [5, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 2]
+
+- id: ogs-p1-vida-y-muerte-2-11
+  titulo: Vida y muerte (11)
+  etiqueta: p1-vida-y-muerte-2
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: impedí un segundo ojo y capturá el grupo negro."
+  piedras:
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+    - { r: 8, c: 8, color: N }
+  secuencia:
+    ramas:
+      - en: [6, 8]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [7, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 8]
+
+- id: ogs-p1-vida-y-muerte-2-12
+  titulo: Vida y muerte (12)
+  etiqueta: p1-vida-y-muerte-2
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: impedí un segundo ojo y capturá el grupo negro."
+  piedras:
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 7, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 6]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 6]
+      - en: [7, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 6]

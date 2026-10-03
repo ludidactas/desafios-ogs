@@ -1,0 +1,151 @@
+# Principios básicos › Conectar — Conectar tus piedras
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/connect).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-conectar-01
+  titulo: Conectar (1)
+  etiqueta: conectar
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: Las piedras se pueden ayudar entre sí formando una cadena. Las cadenas son más
+    difíciles de capturar que las piedras sueltas, y una cadena se forma conectando tus piedras.
+    Conectá las piedras blancas.
+  piedras:
+    - { r: 2, c: 3, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+  marcas:
+    - { r: 4, c: 3, tipo: cruz }
+  desenlaces:
+    - en: [4, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-conectar-02
+  titulo: Conectar (2)
+  etiqueta: conectar
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: conectá las piedras blancas."
+  piedras:
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+  desenlaces:
+    - en: [3, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-conectar-03
+  titulo: Conectar (3)
+  etiqueta: conectar
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: conectá las piedras blancas."
+  piedras:
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 3, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 6, c: 2, color: N }
+  desenlaces:
+    - en: [2, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-conectar-04
+  titulo: Conectar (4)
+  etiqueta: conectar
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: conectá las piedras blancas."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+  desenlaces:
+    - en: [5, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-conectar-05
+  titulo: Conectar (5)
+  etiqueta: conectar
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: conectá las piedras blancas."
+  piedras:
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 6, color: N }
+  desenlaces:
+    - en: [5, 3]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [6, 3]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [5, 2]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [4, 2]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [6, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-conectar-06
+  titulo: Conectar (6)
+  etiqueta: conectar
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: conectá las piedras blancas."
+  piedras:
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+  desenlaces:
+    - en: [4, 5]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [4, 6]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [3, 5]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [5, 6]
+      correcto: true
+      texto: ¡Correcto!

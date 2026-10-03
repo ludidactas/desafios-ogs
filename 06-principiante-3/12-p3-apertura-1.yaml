@@ -1,0 +1,381 @@
+# Principiante, nivel 3 › Apertura — Esquina
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl3-opening-1).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p3-apertura-1-01
+  titulo: Apertura (1)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Las primeras jugadas de la apertura se hacen en las esquinas. Los puntos indicados
+    para jugar están marcados en este diagrama con las letras A a H. Lo más común es jugar en A, B,
+    C o D; jugar en E, F, G o H lleva a josekis complejos. A es el punto 3-3: jugás ahí para
+    quedarte con una esquina chica como territorio, y tu rival no lo puede impedir. B es el punto
+    4-4: no conviene jugar en 4-4 para controlar la esquina, porque tu rival puede invadirla
+    fácilmente jugando en el 3-3; jugás en 4-4 si querés desarrollar influencia hacia el centro. C y
+    D son los puntos 3-4: jugar en 3-4 apunta a hacer territorio en la esquina, y después podés
+    cerrarla con un shimari. Jugá en uno de los puntos marcados para continuar."
+  marcas:
+    - { r: 16, c: 2, tipo: letra, texto: A }
+    - { r: 15, c: 3, tipo: letra, texto: B }
+    - { r: 15, c: 2, tipo: letra, texto: C }
+    - { r: 16, c: 3, tipo: letra, texto: D }
+    - { r: 14, c: 2, tipo: letra, texto: E }
+    - { r: 14, c: 3, tipo: letra, texto: F }
+    - { r: 15, c: 4, tipo: letra, texto: G }
+    - { r: 16, c: 4, tipo: letra, texto: H }
+  desenlaces:
+    - en: [16, 2]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [15, 3]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [15, 2]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [16, 3]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [14, 2]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [14, 3]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [15, 4]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [16, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-02
+  titulo: Apertura (2)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Con un shimari podés cerrar una esquina, y es difícil atacar una esquina cerrada así.
+    Es una manera eficiente de hacer territorio, porque usás dos piedras en vez de un muro de cuatro
+    o cinco para protegerlo. Más adelante podés agregar piedras para protegerlo mejor o ampliarlo.
+    En este ejemplo Blanco ataca el shimari con 1 y 3, y Negro se defiende con 2 y 4. Jugás con
+    negras. Defendete del ataque blanco.
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 3, color: N }
+  marcas:
+    - { r: 15, c: 3, tipo: letra, texto: "1" }
+    - { r: 15, c: 2, tipo: letra, texto: "2" }
+    - { r: 16, c: 4, tipo: letra, texto: "3" }
+    - { r: 17, c: 3, tipo: letra, texto: "4" }
+  secuencia:
+    ramas:
+      - en: [15, 2]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [16, 4]
+        siguiente:
+          ramas:
+            - en: [17, 3]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-03
+  titulo: Apertura (3)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Si Blanco invade demasiado adentro de la esquina con 1, sus piedras van a ser
+    capturadas. Jugás con negras. Defendete de la invasión.
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+  marcas:
+    - { r: 15, c: 2, tipo: letra, texto: "1" }
+    - { r: 15, c: 3, tipo: letra, texto: "2" }
+    - { r: 14, c: 1, tipo: letra, texto: "3" }
+    - { r: 15, c: 1, tipo: letra, texto: "4" }
+  secuencia:
+    ramas:
+      - en: [15, 3]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [14, 1]
+        siguiente:
+          ramas:
+            - en: [15, 1]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-04
+  titulo: Apertura (4)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 14, c: 2, tipo: letra, texto: "1" }
+    - { r: 15, c: 4, tipo: letra, texto: A }
+    - { r: 16, c: 2, tipo: letra, texto: B }
+    - { r: 16, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [15, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-05
+  titulo: Apertura (5)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 13, c: 2, tipo: letra, texto: "1" }
+    - { r: 15, c: 2, tipo: letra, texto: A }
+    - { r: 16, c: 2, tipo: letra, texto: B }
+    - { r: 16, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [15, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-06
+  titulo: Apertura (6)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 16, c: 2, color: B }
+  marcas:
+    - { r: 13, c: 3, tipo: letra, texto: "1" }
+    - { r: 15, c: 2, tipo: letra, texto: A }
+    - { r: 15, c: 3, tipo: letra, texto: B }
+    - { r: 15, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [15, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-07
+  titulo: Apertura (7)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 14, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+  marcas:
+    - { r: 14, c: 3, tipo: letra, texto: "1" }
+    - { r: 15, c: 2, tipo: letra, texto: A }
+    - { r: 16, c: 1, tipo: letra, texto: B }
+    - { r: 16, c: 3, tipo: letra, texto: C }
+  desenlaces:
+    - en: [15, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-08
+  titulo: Apertura (8)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 14, c: 3, color: B }
+    - { r: 16, c: 3, color: N }
+  marcas:
+    - { r: 16, c: 3, tipo: letra, texto: "1" }
+    - { r: 15, c: 3, tipo: letra, texto: A }
+    - { r: 15, c: 4, tipo: letra, texto: B }
+    - { r: 15, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [15, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-09
+  titulo: Apertura (9)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 14, c: 3, color: N }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 14, c: 3, tipo: letra, texto: "1" }
+    - { r: 13, c: 2, tipo: letra, texto: A }
+    - { r: 14, c: 2, tipo: letra, texto: B }
+    - { r: 15, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [14, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-10
+  titulo: Apertura (10)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: B }
+  marcas:
+    - { r: 15, c: 3, tipo: letra, texto: "1" }
+    - { r: 16, c: 3, tipo: letra, texto: A }
+    - { r: 16, c: 4, tipo: letra, texto: B }
+    - { r: 16, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-11
+  titulo: Apertura (11)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 3, color: N }
+  marcas:
+    - { r: 16, c: 3, tipo: letra, texto: "1" }
+    - { r: 14, c: 3, tipo: letra, texto: A }
+    - { r: 15, c: 5, tipo: letra, texto: B }
+    - { r: 16, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-12
+  titulo: Apertura (12)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 4, color: N }
+  marcas:
+    - { r: 16, c: 4, tipo: letra, texto: "1" }
+    - { r: 15, c: 5, tipo: letra, texto: A }
+    - { r: 15, c: 6, tipo: letra, texto: B }
+    - { r: 16, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-13
+  titulo: Apertura (13)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: B }
+  marcas:
+    - { r: 14, c: 4, tipo: letra, texto: "1" }
+    - { r: 14, c: 5, tipo: letra, texto: A }
+    - { r: 15, c: 6, tipo: letra, texto: C }
+    - { r: 16, c: 5, tipo: letra, texto: B }
+  desenlaces:
+    - en: [14, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-14
+  titulo: Apertura (14)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 5, color: B }
+  marcas:
+    - { r: 15, c: 5, tipo: letra, texto: "1" }
+    - { r: 15, c: 6, tipo: letra, texto: A }
+    - { r: 16, c: 6, tipo: letra, texto: B }
+    - { r: 16, c: 7, tipo: letra, texto: C }
+  desenlaces:
+    - en: [15, 6]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-apertura-1-15
+  titulo: Apertura (15)
+  etiqueta: p3-apertura-1
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 14, c: 3, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 16, c: 2, tipo: letra, texto: "1" }
+    - { r: 15, c: 3, tipo: letra, texto: A }
+    - { r: 16, c: 4, tipo: letra, texto: C }
+    - { r: 17, c: 2, tipo: letra, texto: B }
+  desenlaces:
+    - en: [17, 2]
+      correcto: true
+      texto: ¡Correcto!

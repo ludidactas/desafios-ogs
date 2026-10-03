@@ -1,0 +1,487 @@
+# Principiante, nivel 2 › Carrera de capturas — ¿Podés ganar?
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl2-capturing-race-4).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p2-carrera-de-capturas-4-01
+  titulo: Carrera de capturas (1)
+  etiqueta: p2-carrera-de-capturas-4
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ¿puede Blanco ganar la carrera de capturas?"
+  piedras:
+    - { r: 11, c: 1, color: B }
+    - { r: 11, c: 2, color: B }
+    - { r: 11, c: 4, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 0, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: B }
+    - { r: 13, c: 5, color: B }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+  opciones:
+    - { texto: Gana Blanco, correcta: true }
+    - { texto: Gana Negro, correcta: false }
+
+- id: ogs-p2-carrera-de-capturas-4-02
+  titulo: Carrera de capturas (2)
+  etiqueta: p2-carrera-de-capturas-4
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ¿puede Blanco ganar la carrera de capturas?"
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 18, c: 1, color: N }
+  opciones:
+    - { texto: Gana Blanco, correcta: false }
+    - { texto: Gana Negro, correcta: true }
+
+- id: ogs-p2-carrera-de-capturas-4-03
+  titulo: Carrera de capturas (3)
+  etiqueta: p2-carrera-de-capturas-4
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ¿puede Blanco ganar la carrera de capturas?"
+  piedras:
+    - { r: 11, c: 2, color: B }
+    - { r: 12, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 0, color: B }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: N }
+  opciones:
+    - { texto: Gana Blanco, correcta: true }
+    - { texto: Gana Negro, correcta: false }
+
+- id: ogs-p2-carrera-de-capturas-4-04
+  titulo: Carrera de capturas (4)
+  etiqueta: p2-carrera-de-capturas-4
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ¿puede Blanco ganar la carrera de capturas?"
+  piedras:
+    - { r: 12, c: 0, color: N }
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: N }
+    - { r: 12, c: 4, color: N }
+    - { r: 13, c: 0, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 3, color: B }
+  opciones:
+    - { texto: Gana Blanco, correcta: true }
+    - { texto: Gana Negro, correcta: false }
+
+- id: ogs-p2-carrera-de-capturas-4-05
+  titulo: Carrera de capturas (5)
+  etiqueta: p2-carrera-de-capturas-4
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ¿puede Blanco ganar la carrera de capturas?"
+  piedras:
+    - { r: 10, c: 1, color: B }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 5, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 0, color: B }
+    - { r: 18, c: 1, color: B }
+  opciones:
+    - { texto: Gana Blanco, correcta: true }
+    - { texto: Gana Negro, correcta: false }
+
+- id: ogs-p2-carrera-de-capturas-4-06
+  titulo: Carrera de capturas (6)
+  etiqueta: p2-carrera-de-capturas-4
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ¿puede Blanco ganar la carrera de capturas?"
+  piedras:
+    - { r: 10, c: 3, color: B }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 7, color: N }
+  opciones:
+    - { texto: Gana Blanco, correcta: false }
+    - { texto: Gana Negro, correcta: true }
+
+- id: ogs-p2-carrera-de-capturas-4-07
+  titulo: Carrera de capturas (7)
+  etiqueta: p2-carrera-de-capturas-4
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ¿puede Blanco ganar la carrera de capturas?"
+  piedras:
+    - { r: 11, c: 1, color: B }
+    - { r: 11, c: 2, color: B }
+    - { r: 11, c: 3, color: B }
+    - { r: 11, c: 4, color: B }
+    - { r: 12, c: 0, color: B }
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: N }
+    - { r: 12, c: 5, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 5, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 7, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 1, color: B }
+  opciones:
+    - { texto: Gana Blanco, correcta: false }
+    - { texto: Gana Negro, correcta: true }
+
+- id: ogs-p2-carrera-de-capturas-4-08
+  titulo: Carrera de capturas (8)
+  etiqueta: p2-carrera-de-capturas-4
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ¿puede Blanco ganar la carrera de capturas?"
+  piedras:
+    - { r: 11, c: 1, color: B }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 1, color: B }
+  opciones:
+    - { texto: Gana Blanco, correcta: true }
+    - { texto: Gana Negro, correcta: false }
+
+- id: ogs-p2-carrera-de-capturas-4-09
+  titulo: Carrera de capturas (9)
+  etiqueta: p2-carrera-de-capturas-4
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ¿puede Blanco ganar la carrera de capturas?"
+  piedras:
+    - { r: 11, c: 1, color: B }
+    - { r: 11, c: 3, color: B }
+    - { r: 11, c: 4, color: B }
+    - { r: 11, c: 5, color: B }
+    - { r: 12, c: 0, color: B }
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: B }
+    - { r: 13, c: 5, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 7, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 1, color: B }
+  opciones:
+    - { texto: Gana Blanco, correcta: true }
+    - { texto: Gana Negro, correcta: false }
+
+- id: ogs-p2-carrera-de-capturas-4-10
+  titulo: Carrera de capturas (10)
+  etiqueta: p2-carrera-de-capturas-4
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ¿puede Blanco ganar la carrera de capturas?"
+  piedras:
+    - { r: 10, c: 3, color: N }
+    - { r: 11, c: 1, color: N }
+    - { r: 11, c: 2, color: N }
+    - { r: 11, c: 4, color: B }
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 6, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+  opciones:
+    - { texto: Gana Blanco, correcta: true }
+    - { texto: Gana Negro, correcta: false }
+
+- id: ogs-p2-carrera-de-capturas-4-11
+  titulo: Carrera de capturas (11)
+  etiqueta: p2-carrera-de-capturas-4
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ¿puede Blanco ganar la carrera de capturas?"
+  piedras:
+    - { r: 10, c: 4, color: N }
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: N }
+    - { r: 12, c: 3, color: N }
+    - { r: 12, c: 6, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 8, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 0, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 3, color: B }
+  opciones:
+    - { texto: Gana Blanco, correcta: true }
+    - { texto: Gana Negro, correcta: false }
+
+- id: ogs-p2-carrera-de-capturas-4-12
+  titulo: Carrera de capturas (12)
+  etiqueta: p2-carrera-de-capturas-4
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ¿puede Blanco ganar la carrera de capturas?"
+  piedras:
+    - { r: 10, c: 2, color: N }
+    - { r: 11, c: 2, color: N }
+    - { r: 12, c: 1, color: N }
+    - { r: 13, c: 0, color: N }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 6, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: N }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 3, color: B }
+  opciones:
+    - { texto: Gana Blanco, correcta: false }
+    - { texto: Gana Negro, correcta: true }

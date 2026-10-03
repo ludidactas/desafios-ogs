@@ -1,0 +1,254 @@
+# Principiante, nivel 4 › Apertura — Extenderse
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl4-opening-3).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p4-apertura-3-01
+  titulo: Apertura (1)
+  etiqueta: p4-apertura-3
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 9, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: Normalmente extendés tu piedra divisoria haciendo una base con una extensión de 2
+    puntos. A veces podés extender tu piedra y, al mismo tiempo, atacar una esquina; entonces una
+    extensión de 3 puntos puede ser más efectiva, como en este ejemplo. Jugás con negras. Elegí la
+    mejor jugada para extenderte y atacar la esquina después de la 2 de Blanco.
+  piedras:
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 15, color: B }
+    - { r: 16, c: 9, color: N }
+    - { r: 16, c: 11, color: B }
+  marcas:
+    - { r: 16, c: 9, tipo: letra, texto: "1" }
+    - { r: 16, c: 11, tipo: letra, texto: "2" }
+  desenlaces:
+    - en: [16, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-3-02
+  titulo: Apertura (2)
+  etiqueta: p4-apertura-3
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 9, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: Si no hay lugar para un salto de 2 puntos, jugá un salto de 1 punto, como en este
+    ejemplo. Jugás con negras. Elegí la mejor jugada para extenderte después de la 2 de Blanco.
+  piedras:
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 16, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 8, color: B }
+    - { r: 16, c: 10, color: N }
+    - { r: 16, c: 14, color: B }
+  marcas:
+    - { r: 16, c: 10, tipo: letra, texto: "1" }
+    - { r: 16, c: 8, tipo: letra, texto: "2" }
+  desenlaces:
+    - en: [16, 12]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-3-03
+  titulo: Apertura (3)
+  etiqueta: p4-apertura-3
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 9, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada para extenderte: A, B o C."
+  piedras:
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 16, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 16, c: 9, color: N }
+    - { r: 16, c: 15, color: B }
+  marcas:
+    - { r: 16, c: 11, tipo: letra, texto: A }
+    - { r: 16, c: 12, tipo: letra, texto: B }
+    - { r: 16, c: 13, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 12]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-3-04
+  titulo: Apertura (4)
+  etiqueta: p4-apertura-3
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 9, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada para extenderte: A, B o C."
+  piedras:
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 15, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 9, color: N }
+    - { r: 16, c: 11, color: B }
+  marcas:
+    - { r: 16, c: 5, tipo: letra, texto: A }
+    - { r: 16, c: 6, tipo: letra, texto: B }
+    - { r: 16, c: 7, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 6]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-3-05
+  titulo: Apertura (5)
+  etiqueta: p4-apertura-3
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 9, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada para extenderte: A, B o C."
+  piedras:
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 15, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 16, c: 9, color: N }
+  marcas:
+    - { r: 16, c: 11, tipo: letra, texto: A }
+    - { r: 16, c: 12, tipo: letra, texto: B }
+    - { r: 16, c: 13, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 13]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-3-06
+  titulo: Apertura (6)
+  etiqueta: p4-apertura-3
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 9, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada para extenderte: A, B o C."
+  piedras:
+    - { r: 14, c: 16, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 16, c: 9, color: N }
+    - { r: 16, c: 15, color: B }
+  marcas:
+    - { r: 16, c: 11, tipo: letra, texto: A }
+    - { r: 16, c: 12, tipo: letra, texto: B }
+    - { r: 16, c: 13, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 12]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-3-07
+  titulo: Apertura (7)
+  etiqueta: p4-apertura-3
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 9, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada para extenderte: A, B o C."
+  piedras:
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 13, color: B }
+    - { r: 15, c: 15, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 16, c: 9, color: N }
+  marcas:
+    - { r: 15, c: 11, tipo: letra, texto: A }
+    - { r: 16, c: 11, tipo: letra, texto: B }
+    - { r: 16, c: 12, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 11]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-3-08
+  titulo: Apertura (8)
+  etiqueta: p4-apertura-3
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 9, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada para extenderte: A, B o C."
+  piedras:
+    - { r: 10, c: 3, color: N }
+    - { r: 10, c: 16, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 16, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 16, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 9, color: N }
+    - { r: 16, c: 11, color: B }
+    - { r: 16, c: 14, color: B }
+  marcas:
+    - { r: 14, c: 9, tipo: letra, texto: A }
+    - { r: 16, c: 6, tipo: letra, texto: B }
+    - { r: 16, c: 7, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 6]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-3-09
+  titulo: Apertura (9)
+  etiqueta: p4-apertura-3
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 9, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada para extenderte: A, B o C."
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 16, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 8, color: B }
+    - { r: 16, c: 10, color: N }
+    - { r: 16, c: 15, color: B }
+  marcas:
+    - { r: 14, c: 10, tipo: letra, texto: A }
+    - { r: 16, c: 12, tipo: letra, texto: B }
+    - { r: 16, c: 13, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 13]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-3-10
+  titulo: Apertura (10)
+  etiqueta: p4-apertura-3
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 9, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada para extenderte: A, B o C."
+  piedras:
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 14, color: B }
+    - { r: 15, c: 16, color: B }
+    - { r: 16, c: 9, color: N }
+    - { r: 16, c: 11, color: B }
+  marcas:
+    - { r: 16, c: 5, tipo: letra, texto: A }
+    - { r: 16, c: 6, tipo: letra, texto: B }
+    - { r: 16, c: 7, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 5]
+      correcto: true
+      texto: ¡Correcto!

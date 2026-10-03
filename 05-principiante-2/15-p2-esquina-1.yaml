@@ -1,0 +1,238 @@
+# Principiante, nivel 2 › Esquina 1 — Cierre y aproximación a la esquina
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl2-corner-1).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p2-esquina-1-01
+  titulo: Esquina 1 (1)
+  etiqueta: p2-esquina-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: elegí el mejor cierre de esquina (shimari): A, B o C."
+  piedras:
+    - { r: 15, c: 2, color: N }
+  marcas:
+    - { r: 16, c: 2, tipo: letra, texto: A }
+    - { r: 16, c: 3, tipo: letra, texto: B }
+    - { r: 16, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-esquina-1-02
+  titulo: Esquina 1 (2)
+  etiqueta: p2-esquina-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: elegí el mejor cierre de esquina (shimari): A, B o C."
+  piedras:
+    - { r: 15, c: 2, color: N }
+  marcas:
+    - { r: 13, c: 4, tipo: letra, texto: C }
+    - { r: 14, c: 4, tipo: letra, texto: B }
+    - { r: 15, c: 4, tipo: letra, texto: A }
+  desenlaces:
+    - en: [15, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-esquina-1-03
+  titulo: Esquina 1 (3)
+  etiqueta: p2-esquina-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: elegí el mejor cierre de esquina (shimari): A, B o C."
+  piedras:
+    - { r: 16, c: 3, color: N }
+  marcas:
+    - { r: 13, c: 2, tipo: letra, texto: A }
+    - { r: 13, c: 4, tipo: letra, texto: B }
+    - { r: 13, c: 6, tipo: letra, texto: C }
+  desenlaces:
+    - en: [13, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-esquina-1-04
+  titulo: Esquina 1 (4)
+  etiqueta: p2-esquina-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: elegí el mejor cierre de esquina (shimari): A, B o C."
+  piedras:
+    - { r: 15, c: 3, color: N }
+  marcas:
+    - { r: 13, c: 2, tipo: letra, texto: A }
+    - { r: 13, c: 4, tipo: letra, texto: B }
+    - { r: 13, c: 6, tipo: letra, texto: C }
+  desenlaces:
+    - en: [13, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-esquina-1-05
+  titulo: Esquina 1 (5)
+  etiqueta: p2-esquina-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: elegí el mejor cierre de esquina (shimari): A, B o C."
+  piedras:
+    - { r: 15, c: 3, color: N }
+  marcas:
+    - { r: 15, c: 4, tipo: letra, texto: A }
+    - { r: 15, c: 5, tipo: letra, texto: B }
+    - { r: 17, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [15, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-esquina-1-06
+  titulo: Esquina 1 (6)
+  etiqueta: p2-esquina-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: elegí el mejor cierre de esquina (shimari): A, B o C."
+  piedras:
+    - { r: 15, c: 3, color: N }
+  marcas:
+    - { r: 12, c: 3, tipo: letra, texto: A }
+    - { r: 15, c: 1, tipo: letra, texto: B }
+    - { r: 15, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [12, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-esquina-1-07
+  titulo: Esquina 1 (7)
+  etiqueta: p2-esquina-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: elegí la mejor aproximación a la esquina (kakari): A, B o C."
+  piedras:
+    - { r: 15, c: 3, color: B }
+  marcas:
+    - { r: 13, c: 2, tipo: letra, texto: A }
+    - { r: 14, c: 3, tipo: letra, texto: B }
+    - { r: 15, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [13, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-esquina-1-08
+  titulo: Esquina 1 (8)
+  etiqueta: p2-esquina-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: elegí la mejor aproximación a la esquina (kakari): A, B o C."
+  piedras:
+    - { r: 15, c: 3, color: B }
+  marcas:
+    - { r: 13, c: 3, tipo: letra, texto: A }
+    - { r: 14, c: 3, tipo: letra, texto: B }
+    - { r: 15, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [13, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-esquina-1-09
+  titulo: Esquina 1 (9)
+  etiqueta: p2-esquina-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: elegí la mejor aproximación a la esquina (kakari): A, B o C."
+  piedras:
+    - { r: 15, c: 3, color: B }
+  marcas:
+    - { r: 13, c: 5, tipo: letra, texto: A }
+    - { r: 16, c: 2, tipo: letra, texto: B }
+    - { r: 17, c: 1, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-esquina-1-10
+  titulo: Esquina 1 (10)
+  etiqueta: p2-esquina-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: elegí la mejor aproximación a la esquina (kakari): A, B o C."
+  piedras:
+    - { r: 15, c: 2, color: B }
+  marcas:
+    - { r: 14, c: 3, tipo: letra, texto: A }
+    - { r: 15, c: 3, tipo: letra, texto: B }
+    - { r: 16, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-esquina-1-11
+  titulo: Esquina 1 (11)
+  etiqueta: p2-esquina-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: elegí la mejor aproximación a la esquina (kakari): A, B o C."
+  piedras:
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 14, c: 3, tipo: letra, texto: A }
+    - { r: 15, c: 2, tipo: letra, texto: B }
+    - { r: 16, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [14, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-esquina-1-12
+  titulo: Esquina 1 (12)
+  etiqueta: p2-esquina-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: elegí la mejor aproximación a la esquina (kakari): A, B o C."
+  piedras:
+    - { r: 15, c: 2, color: B }
+  marcas:
+    - { r: 16, c: 1, tipo: letra, texto: A }
+    - { r: 16, c: 2, tipo: letra, texto: B }
+    - { r: 16, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 5]
+      correcto: true
+      texto: ¡Correcto!

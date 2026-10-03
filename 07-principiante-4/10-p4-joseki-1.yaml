@@ -1,0 +1,543 @@
+# Principiante, nivel 4 › Joseki — Jugar joseki
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl4-joseki-1).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p4-joseki-1-01
+  titulo: Joseki (1)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 8, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: Blanco juega un kakari en 1 y Negro le hace una pinza en 2. Blanco puede saltar hacia
+    el centro o meterse en la esquina con 3. En este joseki, Negro separa la 1 y la 3 de Blanco.
+    Jugá este joseki con blancas, empezando por la 3.
+  piedras:
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: N }
+  marcas:
+    - { r: 16, c: 5, tipo: letra, texto: "1" }
+    - { r: 16, c: 7, tipo: letra, texto: "2" }
+    - { r: 16, c: 2, tipo: letra, texto: "3" }
+    - { r: 16, c: 3, tipo: letra, texto: "4" }
+    - { r: 15, c: 2, tipo: letra, texto: "5" }
+    - { r: 14, c: 3, tipo: letra, texto: "6" }
+    - { r: 17, c: 3, tipo: letra, texto: "7" }
+    - { r: 17, c: 4, tipo: letra, texto: "8" }
+    - { r: 17, c: 2, tipo: letra, texto: "9" }
+    - { r: 16, c: 4, tipo: letra, texto: "10" }
+    - { r: 13, c: 2, tipo: letra, texto: "11" }
+  secuencia:
+    ramas:
+      - en: [16, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 3]
+        siguiente:
+          ramas:
+            - en: [15, 2]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [14, 3]
+              siguiente:
+                ramas:
+                  - en: [17, 3]
+                    correcto: true
+                    texto: "Bien. Negro respondió: seguí."
+                    respuestaRival: [17, 4]
+                    siguiente:
+                      ramas:
+                        - en: [17, 2]
+                          correcto: true
+                          texto: "Bien. Negro respondió: seguí."
+                          respuestaRival: [16, 4]
+                          siguiente:
+                            ramas:
+                              - en: [13, 2]
+                                correcto: true
+                                texto: ¡Correcto!
+
+- id: ogs-p4-joseki-1-02
+  titulo: Joseki (2)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 8, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: Jugá este joseki con negras, empezando por la 4.
+  piedras:
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: N }
+  marcas:
+    - { r: 16, c: 5, tipo: letra, texto: "1" }
+    - { r: 16, c: 7, tipo: letra, texto: "2" }
+    - { r: 16, c: 2, tipo: letra, texto: "3" }
+    - { r: 16, c: 3, tipo: letra, texto: "4" }
+    - { r: 15, c: 2, tipo: letra, texto: "5" }
+    - { r: 14, c: 3, tipo: letra, texto: "6" }
+    - { r: 17, c: 3, tipo: letra, texto: "7" }
+    - { r: 17, c: 4, tipo: letra, texto: "8" }
+    - { r: 17, c: 2, tipo: letra, texto: "9" }
+    - { r: 16, c: 4, tipo: letra, texto: "10" }
+    - { r: 13, c: 2, tipo: letra, texto: "11" }
+  secuencia:
+    ramas:
+      - en: [16, 3]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [15, 2]
+        siguiente:
+          ramas:
+            - en: [14, 3]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [17, 3]
+              siguiente:
+                ramas:
+                  - en: [17, 4]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [17, 2]
+                    siguiente:
+                      ramas:
+                        - en: [16, 4]
+                          correcto: true
+                          texto: ¡Correcto!
+                          respuestaRival: [13, 2]
+
+- id: ogs-p4-joseki-1-03
+  titulo: Joseki (3)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 8, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: En este caso no es bueno jugar 1 en la cabeza de las dos piedras blancas. Blanco puede
+    amenazar con 2 conectar por abajo y, si Negro lo impide con 3, Blanco puede cortar las tres
+    piedras negras con 4. Jugá esta variante con blancas.
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: N }
+  marcas:
+    - { r: 14, c: 2, tipo: letra, texto: "1" }
+    - { r: 17, c: 2, tipo: letra, texto: "2" }
+    - { r: 17, c: 3, tipo: letra, texto: "3" }
+    - { r: 14, c: 3, tipo: letra, texto: "4" }
+    - { r: 13, c: 2, tipo: letra, texto: "5" }
+    - { r: 15, c: 4, tipo: letra, texto: "6" }
+    - { r: 17, c: 5, tipo: letra, texto: "7" }
+    - { r: 17, c: 4, tipo: letra, texto: "8" }
+  secuencia:
+    ramas:
+      - en: [17, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [17, 3]
+        siguiente:
+          ramas:
+            - en: [14, 3]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [13, 2]
+              siguiente:
+                ramas:
+                  - en: [15, 4]
+                    correcto: true
+                    texto: "Bien. Negro respondió: seguí."
+                    respuestaRival: [17, 5]
+                    siguiente:
+                      ramas:
+                        - en: [17, 4]
+                          correcto: true
+                          texto: ¡Correcto!
+
+- id: ogs-p4-joseki-1-04
+  titulo: Joseki (4)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 8, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: En este joseki, Blanco se mete en la esquina con 3 y Negro bloquea con 4. El joseki
+    reparte la esquina entre Negro y Blanco. Jugá este joseki con blancas.
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: B }
+  marcas:
+    - { r: 15, c: 4, tipo: letra, texto: "1" }
+    - { r: 13, c: 3, tipo: letra, texto: "2" }
+    - { r: 16, c: 2, tipo: letra, texto: "3" }
+    - { r: 16, c: 1, tipo: letra, texto: "4" }
+    - { r: 16, c: 3, tipo: letra, texto: "5" }
+    - { r: 14, c: 1, tipo: letra, texto: "6" }
+    - { r: 16, c: 8, tipo: letra, texto: "7" }
+  secuencia:
+    ramas:
+      - en: [16, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 1]
+        siguiente:
+          ramas:
+            - en: [16, 3]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [14, 1]
+              siguiente:
+                ramas:
+                  - en: [16, 8]
+                    correcto: true
+                    texto: ¡Correcto!
+
+- id: ogs-p4-joseki-1-05
+  titulo: Joseki (5)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 8, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: Jugá este joseki con negras, empezando por la 4.
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: B }
+  marcas:
+    - { r: 15, c: 4, tipo: letra, texto: "1" }
+    - { r: 13, c: 3, tipo: letra, texto: "2" }
+    - { r: 16, c: 2, tipo: letra, texto: "3" }
+    - { r: 16, c: 1, tipo: letra, texto: "4" }
+    - { r: 16, c: 3, tipo: letra, texto: "5" }
+    - { r: 14, c: 1, tipo: letra, texto: "6" }
+    - { r: 16, c: 8, tipo: letra, texto: "7" }
+  secuencia:
+    ramas:
+      - en: [16, 1]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [16, 3]
+        siguiente:
+          ramas:
+            - en: [14, 1]
+              correcto: true
+              texto: ¡Correcto!
+              respuestaRival: [16, 8]
+
+- id: ogs-p4-joseki-1-06
+  titulo: Joseki (6)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 4, color: B }
+  marcas:
+    - { r: 17, c: 1, tipo: letra, texto: "1" }
+    - { r: 16, c: 1, tipo: letra, texto: A }
+    - { r: 18, c: 1, tipo: letra, texto: B }
+    - { r: 18, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [18, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-joseki-1-07
+  titulo: Joseki (7)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 3, color: N }
+  marcas:
+    - { r: 17, c: 3, tipo: letra, texto: "1" }
+    - { r: 15, c: 2, tipo: letra, texto: A }
+    - { r: 15, c: 5, tipo: letra, texto: B }
+    - { r: 17, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [17, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-joseki-1-08
+  titulo: Joseki (8)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 3, color: N }
+  marcas:
+    - { r: 17, c: 3, tipo: letra, texto: "1" }
+    - { r: 15, c: 5, tipo: letra, texto: A }
+    - { r: 16, c: 2, tipo: letra, texto: B }
+    - { r: 17, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [15, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-joseki-1-09
+  titulo: Joseki (9)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+  marcas:
+    - { r: 16, c: 4, tipo: letra, texto: "1" }
+    - { r: 14, c: 2, tipo: letra, texto: A }
+    - { r: 14, c: 5, tipo: letra, texto: B }
+    - { r: 17, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [17, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-joseki-1-10
+  titulo: Joseki (10)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 7, color: B }
+  marcas:
+    - { r: 14, c: 5, tipo: letra, texto: "1" }
+    - { r: 13, c: 3, tipo: letra, texto: A }
+    - { r: 15, c: 2, tipo: letra, texto: B }
+    - { r: 15, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [15, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-joseki-1-11
+  titulo: Joseki (11)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 11, c: 2, color: B }
+    - { r: 12, c: 3, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: N }
+  marcas:
+    - { r: 12, c: 3, tipo: letra, texto: "1" }
+    - { r: 11, c: 3, tipo: letra, texto: A }
+    - { r: 12, c: 2, tipo: letra, texto: B }
+    - { r: 13, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [12, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-joseki-1-12
+  titulo: Joseki (12)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 7, color: B }
+  marcas:
+    - { r: 14, c: 2, tipo: letra, texto: "1" }
+    - { r: 13, c: 2, tipo: letra, texto: A }
+    - { r: 15, c: 5, tipo: letra, texto: B }
+    - { r: 17, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [13, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-joseki-1-13
+  titulo: Joseki (13)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 7, color: B }
+  marcas:
+    - { r: 13, c: 2, tipo: letra, texto: "1" }
+    - { r: 13, c: 3, tipo: letra, texto: A }
+    - { r: 14, c: 2, tipo: letra, texto: B }
+    - { r: 17, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [14, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-joseki-1-14
+  titulo: Joseki (14)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+  marcas:
+    - { r: 14, c: 2, tipo: letra, texto: "1" }
+    - { r: 14, c: 1, tipo: letra, texto: A }
+    - { r: 16, c: 4, tipo: letra, texto: B }
+    - { r: 17, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-joseki-1-15
+  titulo: Joseki (15)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+  marcas:
+    - { r: 17, c: 1, tipo: letra, texto: "1" }
+    - { r: 11, c: 2, tipo: letra, texto: A }
+    - { r: 16, c: 1, tipo: letra, texto: B }
+    - { r: 16, c: 7, tipo: letra, texto: C }
+  desenlaces:
+    - en: [11, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-joseki-1-16
+  titulo: Joseki (16)
+  etiqueta: p4-joseki-1
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 10 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta a la jugada 1 de Negro: A, B o C."
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+  marcas:
+    - { r: 15, c: 4, tipo: letra, texto: "1" }
+    - { r: 13, c: 2, tipo: letra, texto: A }
+    - { r: 14, c: 1, tipo: letra, texto: B }
+    - { r: 15, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [13, 2]
+      correcto: true
+      texto: ¡Correcto!

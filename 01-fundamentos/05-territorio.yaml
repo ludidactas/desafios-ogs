@@ -1,0 +1,502 @@
+# Fundamentos › Territorio — Qué es el territorio y cómo se cuenta
+
+# Escrito a mano (no lo genera extraer-ogs.mjs) a partir de la sección "Fundamentals" del tutorial
+# "Learn to Play Go" de online-go.com (https://online-go.com/learn-to-play-go/).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com
+# Cambios respecto del original: adaptación al formato Desafio, coordenadas a [fila, columna],
+# textos en castellano rioplatense y feedback propio por rama.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: fundamentos-territorio-que-es
+  titulo: "Qué es el territorio"
+  etiqueta: territorio
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: >
+    ¿Cuántos puntos de territorio tiene Negro en la zona cerrada de abajo del
+    tablero?
+  piedras:
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 6, color: N }
+  opciones:
+    - { texto: "3", correcta: false }
+    - { texto: "4", correcta: true }
+    - { texto: "5", correcta: false }
+  mensajeExito: "¡Correcto! Son 4 puntos."
+  mensajeError: >
+    No es esa cantidad. Contá de nuevo los puntos vacíos que están dentro de
+    la zona cerrada.
+  explicacion: >
+    Si rodeás una parte del tablero con tus piedras, esa parte es tu
+    territorio. Cada punto vacío de tu territorio cuenta como un punto. Los
+    puntos se consiguen con territorio y con capturas, y al final de la
+    partida gana quien tiene más.
+
+- id: fundamentos-territorio-1
+  titulo: "Contar territorio (1)"
+  etiqueta: territorio
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: >
+    ¿Cuántos puntos de territorio tiene Blanco en la zona cerrada de abajo del
+    tablero?
+  piedras:
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 7, color: B }
+  opciones:
+    - { texto: "6", correcta: true }
+    - { texto: "7", correcta: false }
+    - { texto: "8", correcta: false }
+  mensajeExito: "¡Correcto! Son 6 puntos."
+  mensajeError: >
+    No es esa cantidad. Contá de nuevo los puntos vacíos que están dentro de
+    la zona cerrada.
+  explicacion: >
+    Cada punto vacío rodeado solo por piedras de un mismo color es un punto de
+    territorio de ese color. Contalos uno por uno.
+
+- id: fundamentos-territorio-2
+  titulo: "Contar territorio (2)"
+  etiqueta: territorio
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: >
+    ¿Cuántos puntos de territorio tiene Blanco en la zona cerrada de abajo del
+    tablero?
+  piedras:
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 7, color: B }
+  opciones:
+    - { texto: "5", correcta: false }
+    - { texto: "6", correcta: true }
+    - { texto: "7", correcta: false }
+  mensajeExito: "¡Correcto! Son 6 puntos."
+  mensajeError: >
+    No es esa cantidad. Contá de nuevo los puntos vacíos que están dentro de
+    la zona cerrada.
+  explicacion: >
+    Cada punto vacío rodeado solo por piedras de un mismo color es un punto de
+    territorio de ese color. Contalos uno por uno.
+
+- id: fundamentos-territorio-3
+  titulo: "Contar territorio (3)"
+  etiqueta: territorio
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: >
+    ¿Cuántos puntos de territorio tiene Negro en la zona cerrada de abajo del
+    tablero?
+  piedras:
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 4, c: 8, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: N }
+  opciones:
+    - { texto: "7", correcta: false }
+    - { texto: "8", correcta: true }
+    - { texto: "9", correcta: false }
+  mensajeExito: "¡Correcto! Son 8 puntos."
+  mensajeError: >
+    No es esa cantidad. Contá de nuevo los puntos vacíos que están dentro de
+    la zona cerrada.
+  explicacion: >
+    Cada punto vacío rodeado solo por piedras de un mismo color es un punto de
+    territorio de ese color. Contalos uno por uno.
+
+- id: fundamentos-territorio-4
+  titulo: "Contar territorio (4)"
+  etiqueta: territorio
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: >
+    ¿Cuántos puntos de territorio tiene Blanco en la zona cerrada de abajo del
+    tablero?
+  piedras:
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+  opciones:
+    - { texto: "7", correcta: true }
+    - { texto: "8", correcta: false }
+    - { texto: "9", correcta: false }
+  mensajeExito: "¡Correcto! Son 7 puntos."
+  mensajeError: >
+    No es esa cantidad. Contá de nuevo los puntos vacíos que están dentro de
+    la zona cerrada.
+  explicacion: >
+    Cada punto vacío rodeado solo por piedras de un mismo color es un punto de
+    territorio de ese color. Contalos uno por uno.
+
+- id: fundamentos-territorio-5
+  titulo: "Contar territorio (5)"
+  etiqueta: territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: >
+    ¿Cuántos puntos de territorio tiene Negro en la zona cerrada de abajo del
+    tablero?
+  piedras:
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 7, color: N }
+  opciones:
+    - { texto: "6", correcta: false }
+    - { texto: "7", correcta: true }
+    - { texto: "8", correcta: false }
+  mensajeExito: "¡Correcto! Son 7 puntos."
+  mensajeError: >
+    No es esa cantidad. Contá de nuevo los puntos vacíos que están dentro de
+    la zona cerrada.
+  explicacion: >
+    Cada punto vacío rodeado solo por piedras de un mismo color es un punto de
+    territorio de ese color. Contalos uno por uno.
+
+- id: fundamentos-territorio-6
+  titulo: "Contar territorio (6)"
+  etiqueta: territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: >
+    ¿Cuántos puntos de territorio tiene Negro en la zona cerrada de abajo del
+    tablero?
+  piedras:
+    - { r: 4, c: 7, color: B }
+    - { r: 4, c: 8, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: N }
+  opciones:
+    - { texto: "8", correcta: false }
+    - { texto: "9", correcta: true }
+    - { texto: "10", correcta: false }
+  mensajeExito: "¡Correcto! Son 9 puntos."
+  mensajeError: >
+    No es esa cantidad. Contá de nuevo los puntos vacíos que están dentro de
+    la zona cerrada.
+  explicacion: >
+    Cada punto vacío rodeado solo por piedras de un mismo color es un punto de
+    territorio de ese color. Contalos uno por uno.
+
+- id: fundamentos-territorio-7
+  titulo: "Contar territorio (7)"
+  etiqueta: territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: >
+    ¿Cuántos puntos de territorio tiene Blanco en la zona cerrada de abajo del
+    tablero?
+  piedras:
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 8, color: B }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 7, color: B }
+  opciones:
+    - { texto: "7", correcta: false }
+    - { texto: "8", correcta: true }
+    - { texto: "9", correcta: false }
+  mensajeExito: "¡Correcto! Son 8 puntos."
+  mensajeError: >
+    No es esa cantidad. Contá de nuevo los puntos vacíos que están dentro de
+    la zona cerrada.
+  explicacion: >
+    Cada punto vacío rodeado solo por piedras de un mismo color es un punto de
+    territorio de ese color. Contalos uno por uno.
+
+- id: fundamentos-territorio-8
+  titulo: "Contar territorio (8)"
+  etiqueta: territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: >
+    ¿Cuántos puntos de territorio tiene Blanco en la zona cerrada de abajo del
+    tablero?
+  piedras:
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: B }
+  opciones:
+    - { texto: "12", correcta: false }
+    - { texto: "14", correcta: true }
+    - { texto: "15", correcta: false }
+  mensajeExito: "¡Correcto! Son 14 puntos."
+  mensajeError: >
+    No es esa cantidad. Contá de nuevo los puntos vacíos que están dentro de
+    la zona cerrada.
+  explicacion: >
+    Cada punto vacío rodeado solo por piedras de un mismo color es un punto de
+    territorio de ese color. Contalos uno por uno.
+
+- id: fundamentos-territorio-9
+  titulo: "Contar territorio (9)"
+  etiqueta: territorio
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: >
+    ¿Cuántos puntos de territorio tiene Negro en la zona cerrada de abajo del
+    tablero?
+  piedras:
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: N }
+  opciones:
+    - { texto: "8", correcta: false }
+    - { texto: "10", correcta: true }
+    - { texto: "12", correcta: false }
+  mensajeExito: "¡Correcto! Son 10 puntos."
+  mensajeError: >
+    No es esa cantidad. Contá de nuevo los puntos vacíos que están dentro de
+    la zona cerrada.
+  explicacion: >
+    Cada punto vacío rodeado solo por piedras de un mismo color es un punto de
+    territorio de ese color. Contalos uno por uno.
+
+- id: fundamentos-territorio-muertas-1
+  titulo: "Piedras muertas y territorio (1)"
+  etiqueta: territorio
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: >
+    ¿Cuántos puntos de territorio tiene Negro en la zona cerrada de abajo del
+    tablero?
+  piedras:
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 4, c: 8, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: N }
+  opciones:
+    - { texto: "6", correcta: false }
+    - { texto: "7", correcta: false }
+    - { texto: "8", correcta: true }
+  mensajeExito: "¡Correcto! Son 8 puntos."
+  mensajeError: >
+    No es esa cantidad. Recordá que cada piedra muerta vale dos puntos:
+    prisionera y territorio.
+  explicacion: >
+    Las piedras del rival dentro de tu territorio se pierden si no tienen dos
+    ojos: se llaman piedras muertas. Al final de la partida se sacan del
+    tablero como prisioneras y dejan vacío su punto de territorio. Por eso una
+    piedra muerta vale dos puntos: uno como prisionera y otro como territorio.
+
+- id: fundamentos-territorio-muertas-2
+  titulo: "Piedras muertas y territorio (2)"
+  etiqueta: territorio
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: >
+    ¿Cuántos puntos de territorio tiene Blanco en la zona cerrada de abajo del
+    tablero?
+  piedras:
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: B }
+  opciones:
+    - { texto: "7", correcta: false }
+    - { texto: "9", correcta: false }
+    - { texto: "11", correcta: true }
+  mensajeExito: "¡Correcto! Son 11 puntos."
+  mensajeError: >
+    No es esa cantidad. Recordá que cada piedra muerta vale dos puntos:
+    prisionera y territorio.
+  explicacion: >
+    Las piedras del rival dentro de tu territorio se pierden si no tienen dos
+    ojos. Cada piedra muerta vale dos puntos: uno como prisionera y otro como
+    territorio, porque su punto queda vacío al retirarla.

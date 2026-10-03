@@ -1,0 +1,498 @@
+# Principiante, nivel 1 › Contracaptura — Capturar con contracaptura
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl1-snapback).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p1-tirar-y-recapturar-01
+  titulo: Contracaptura (1)
+  etiqueta: p1-tirar-y-recapturar
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una contracaptura."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+  marcas:
+    - { r: 6, c: 5, tipo: triangulo }
+    - { r: 5, c: 6, tipo: triangulo }
+    - { r: 5, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [6, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 4]
+
+- id: ogs-p1-tirar-y-recapturar-02
+  titulo: Contracaptura (2)
+  etiqueta: p1-tirar-y-recapturar
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una contracaptura."
+  piedras:
+    - { r: 1, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+  marcas:
+    - { r: 5, c: 5, tipo: triangulo }
+    - { r: 5, c: 4, tipo: triangulo }
+    - { r: 5, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 3]
+
+- id: ogs-p1-tirar-y-recapturar-03
+  titulo: Contracaptura (3)
+  etiqueta: p1-tirar-y-recapturar
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una contracaptura."
+  piedras:
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 7, color: N }
+  marcas:
+    - { r: 6, c: 5, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+    - { r: 5, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [6, 6]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 6]
+
+- id: ogs-p1-tirar-y-recapturar-04
+  titulo: Contracaptura (4)
+  etiqueta: p1-tirar-y-recapturar
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una contracaptura."
+  piedras:
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+  marcas:
+    - { r: 5, c: 3, tipo: triangulo }
+    - { r: 4, c: 3, tipo: triangulo }
+    - { r: 3, c: 4, tipo: triangulo }
+    - { r: 3, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+
+- id: ogs-p1-tirar-y-recapturar-05
+  titulo: Contracaptura (5)
+  etiqueta: p1-tirar-y-recapturar
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una contracaptura."
+  piedras:
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: N }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 7, c: 8, color: B }
+    - { r: 8, c: 6, color: B }
+  marcas:
+    - { r: 6, c: 7, tipo: triangulo }
+    - { r: 6, c: 6, tipo: triangulo }
+    - { r: 5, c: 7, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [5, 8]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [6, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 8]
+
+- id: ogs-p1-tirar-y-recapturar-06
+  titulo: Contracaptura (6)
+  etiqueta: p1-tirar-y-recapturar
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una contracaptura."
+  piedras:
+    - { r: 2, c: 0, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 3, c: 0, color: N }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 7, c: 0, color: B }
+  marcas:
+    - { r: 6, c: 0, tipo: triangulo }
+    - { r: 5, c: 1, tipo: triangulo }
+    - { r: 4, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 0]
+
+- id: ogs-p1-tirar-y-recapturar-07
+  titulo: Contracaptura (7)
+  etiqueta: p1-tirar-y-recapturar
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una contracaptura."
+  piedras:
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+    - { r: 8, c: 7, color: N }
+  marcas:
+    - { r: 8, c: 7, tipo: triangulo }
+    - { r: 8, c: 6, tipo: triangulo }
+    - { r: 7, c: 7, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 8]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 8]
+
+- id: ogs-p1-tirar-y-recapturar-08
+  titulo: Contracaptura (8)
+  etiqueta: p1-tirar-y-recapturar
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una contracaptura."
+  piedras:
+    - { r: 2, c: 1, color: N }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 5, color: B }
+  marcas:
+    - { r: 5, c: 1, tipo: triangulo }
+    - { r: 5, c: 0, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 1]
+
+- id: ogs-p1-tirar-y-recapturar-09
+  titulo: Contracaptura (9)
+  etiqueta: p1-tirar-y-recapturar
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una contracaptura."
+  piedras:
+    - { r: 2, c: 5, color: N }
+    - { r: 2, c: 6, color: N }
+    - { r: 2, c: 7, color: N }
+    - { r: 2, c: 8, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: B }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 7, color: B }
+  marcas:
+    - { r: 6, c: 7, tipo: triangulo }
+    - { r: 5, c: 7, tipo: triangulo }
+    - { r: 4, c: 7, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 8]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 8]
+
+- id: ogs-p1-tirar-y-recapturar-10
+  titulo: Contracaptura (10)
+  etiqueta: p1-tirar-y-recapturar
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una contracaptura."
+  piedras:
+    - { r: 2, c: 3, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+  marcas:
+    - { r: 6, c: 3, tipo: triangulo }
+    - { r: 5, c: 4, tipo: triangulo }
+    - { r: 4, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 3]
+
+- id: ogs-p1-tirar-y-recapturar-11
+  titulo: Contracaptura (11)
+  etiqueta: p1-tirar-y-recapturar
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una contracaptura."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 5, color: N }
+  marcas:
+    - { r: 6, c: 5, tipo: triangulo }
+    - { r: 5, c: 5, tipo: triangulo }
+    - { r: 4, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 6]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 6]
+
+- id: ogs-p1-tirar-y-recapturar-12
+  titulo: Contracaptura (12)
+  etiqueta: p1-tirar-y-recapturar
+  dificultad: 3
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una contracaptura."
+  piedras:
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+  marcas:
+    - { r: 8, c: 4, tipo: triangulo }
+    - { r: 8, c: 3, tipo: triangulo }
+    - { r: 8, c: 2, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 2, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+    - { r: 6, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [6, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [7, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 3]

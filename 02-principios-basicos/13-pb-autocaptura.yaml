@@ -1,0 +1,363 @@
+# Principios básicos › Autocaptura — ¿Es autocaptura?
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bp-self-capture).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-pb-autocaptura-01
+  titulo: Autocaptura (1)
+  etiqueta: pb-autocaptura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: No se puede jugar en un punto donde tu piedra quede sin libertades. Pero si con esa
+    jugada capturás piedras rivales y así tu piedra gana libertades, sí se puede. Jugás con blancas.
+    ¿Puede Blanco jugar en A?
+  piedras:
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: N }
+  marcas:
+    - { r: 8, c: 5, tipo: letra, texto: A }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-pb-autocaptura-02
+  titulo: Autocaptura (2)
+  etiqueta: pb-autocaptura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco jugar en A?"
+  piedras:
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 5, color: N }
+  marcas:
+    - { r: 4, c: 5, tipo: letra, texto: A }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-pb-autocaptura-03
+  titulo: Autocaptura (3)
+  etiqueta: pb-autocaptura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco jugar en A?"
+  piedras:
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 5, color: N }
+  marcas:
+    - { r: 5, c: 5, tipo: letra, texto: A }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-pb-autocaptura-04
+  titulo: Autocaptura (4)
+  etiqueta: pb-autocaptura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco jugar en A?"
+  piedras:
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 5, color: N }
+  marcas:
+    - { r: 4, c: 5, tipo: letra, texto: A }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-pb-autocaptura-05
+  titulo: Autocaptura (5)
+  etiqueta: pb-autocaptura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco jugar en A?"
+  piedras:
+    - { r: 2, c: 4, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 4, color: B }
+  marcas:
+    - { r: 4, c: 4, tipo: letra, texto: A }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-pb-autocaptura-06
+  titulo: Autocaptura (6)
+  etiqueta: pb-autocaptura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco jugar en A?"
+  piedras:
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 8, c: 0, color: B }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+  marcas:
+    - { r: 8, c: 1, tipo: letra, texto: A }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-pb-autocaptura-07
+  titulo: Autocaptura (7)
+  etiqueta: pb-autocaptura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco jugar en A?"
+  piedras:
+    - { r: 3, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: B }
+  marcas:
+    - { r: 7, c: 1, tipo: letra, texto: A }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-pb-autocaptura-08
+  titulo: Autocaptura (8)
+  etiqueta: pb-autocaptura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco jugar en A?"
+  piedras:
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: B }
+  marcas:
+    - { r: 7, c: 1, tipo: letra, texto: A }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-pb-autocaptura-09
+  titulo: Autocaptura (9)
+  etiqueta: pb-autocaptura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco jugar en A?"
+  piedras:
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 3, color: N }
+  marcas:
+    - { r: 5, c: 4, tipo: letra, texto: A }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-pb-autocaptura-10
+  titulo: Autocaptura (10)
+  etiqueta: pb-autocaptura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco jugar en A?"
+  piedras:
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 5, color: N }
+    - { r: 1, c: 6, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 6, color: B }
+  marcas:
+    - { r: 6, c: 3, tipo: letra, texto: A }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-pb-autocaptura-11
+  titulo: Autocaptura (11)
+  etiqueta: pb-autocaptura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco jugar en A?"
+  piedras:
+    - { r: 1, c: 4, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+  marcas:
+    - { r: 8, c: 3, tipo: letra, texto: A }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-pb-autocaptura-12
+  titulo: Autocaptura (12)
+  etiqueta: pb-autocaptura
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: "Jugás con blancas: ¿puede Blanco jugar en A?"
+  piedras:
+    - { r: 1, c: 3, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 4, color: N }
+  marcas:
+    - { r: 5, c: 4, tipo: letra, texto: A }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }

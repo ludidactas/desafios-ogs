@@ -1,0 +1,134 @@
+# Principios básicos › Capturar una piedra — Capturar una piedra
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/capture_stone).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-capturar-piedra-01
+  titulo: Capturar una piedra (1)
+  etiqueta: capturar-piedra
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá la piedra blanca marcada."
+  piedras:
+    - { r: 7, c: 0, color: N }
+    - { r: 8, c: 0, color: B }
+  marcas:
+    - { r: 8, c: 0, tipo: triangulo }
+  desenlaces:
+    - en: [8, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-piedra-02
+  titulo: Capturar una piedra (2)
+  etiqueta: capturar-piedra
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá la piedra blanca marcada."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 3, color: N }
+  marcas:
+    - { r: 5, c: 3, tipo: triangulo }
+  desenlaces:
+    - en: [4, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-piedra-03
+  titulo: Capturar una piedra (3)
+  etiqueta: capturar-piedra
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá la piedra blanca marcada."
+  piedras:
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+  marcas:
+    - { r: 8, c: 4, tipo: triangulo }
+  desenlaces:
+    - en: [8, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-piedra-04
+  titulo: Capturar una piedra (4)
+  etiqueta: capturar-piedra
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá la piedra blanca marcada."
+  piedras:
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+  marcas:
+    - { r: 4, c: 4, tipo: triangulo }
+  desenlaces:
+    - en: [5, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-piedra-05
+  titulo: Capturar una piedra (5)
+  etiqueta: capturar-piedra
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá la piedra blanca marcada."
+  piedras:
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 7, color: N }
+    - { r: 8, c: 8, color: B }
+  marcas:
+    - { r: 8, c: 8, tipo: triangulo }
+  desenlaces:
+    - en: [7, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-capturar-piedra-06
+  titulo: Capturar una piedra (6)
+  etiqueta: capturar-piedra
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá la piedra blanca marcada."
+  piedras:
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: N }
+  marcas:
+    - { r: 2, c: 5, tipo: triangulo }
+  desenlaces:
+    - en: [1, 5]
+      correcto: true
+      texto: ¡Correcto!

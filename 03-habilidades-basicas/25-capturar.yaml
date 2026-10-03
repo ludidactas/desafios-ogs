@@ -1,0 +1,1147 @@
+# Habilidades básicas › Capturar — Capturar piedras
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/capture).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-capturar-01
+  titulo: Capturar (1)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá la piedra blanca marcada."
+  piedras:
+    - { r: 3, c: 8, color: B }
+    - { r: 4, c: 8, color: N }
+  marcas:
+    - { r: 3, c: 8, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [3, 7]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [2, 8]
+        siguiente:
+          ramas:
+            - en: [2, 7]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [1, 8]
+              siguiente:
+                ramas:
+                  - en: [1, 7]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [0, 8]
+                    siguiente:
+                      ramas:
+                        - en: [0, 7]
+                          correcto: true
+                          texto: ¡Correcto!
+                  - en: [0, 8]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [1, 7]
+                    siguiente:
+                      ramas:
+                        - en: [1, 6]
+                          correcto: true
+                          texto: "Bien. Blanco respondió: seguí."
+                          respuestaRival: [0, 7]
+                          siguiente:
+                            ramas:
+                              - en: [0, 6]
+                                correcto: true
+                                texto: ¡Correcto!
+            - en: [1, 8]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [2, 7]
+
+- id: ogs-capturar-02
+  titulo: Capturar (2)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá la piedra blanca marcada."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+  marcas:
+    - { r: 6, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [6, 6]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [7, 5]
+        siguiente:
+          ramas:
+            - en: [7, 6]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [7, 4]
+              siguiente:
+                ramas:
+                  - en: [8, 5]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [8, 4]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [8, 5]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [7, 6]
+            - en: [7, 4]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [7, 6]
+      - en: [7, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [6, 6]
+
+- id: ogs-capturar-03
+  titulo: Capturar (3)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá las piedras blancas marcadas."
+  piedras:
+    - { r: 1, c: 1, color: B }
+    - { r: 1, c: 2, color: B }
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+  marcas:
+    - { r: 5, c: 2, tipo: triangulo }
+    - { r: 4, c: 2, tipo: triangulo }
+    - { r: 3, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [5, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 1]
+
+- id: ogs-capturar-04
+  titulo: Capturar (4)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá las piedras blancas marcadas."
+  piedras:
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 4, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+  marcas:
+    - { r: 5, c: 3, tipo: triangulo }
+    - { r: 4, c: 3, tipo: triangulo }
+    - { r: 3, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [5, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 4]
+
+- id: ogs-capturar-05
+  titulo: Capturar (5)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá las piedras blancas marcadas."
+  piedras:
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 2, color: B }
+  marcas:
+    - { r: 5, c: 4, tipo: triangulo }
+    - { r: 4, c: 4, tipo: triangulo }
+    - { r: 4, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [3, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [3, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [3, 3]
+
+- id: ogs-capturar-06
+  titulo: Capturar (6)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá las piedras blancas marcadas."
+  piedras:
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 5, color: N }
+  marcas:
+    - { r: 5, c: 5, tipo: triangulo }
+    - { r: 4, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 6]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [5, 6]
+        siguiente:
+          ramas:
+            - en: [5, 7]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [6, 6]
+              siguiente:
+                ramas:
+                  - en: [7, 6]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [6, 7]
+                    siguiente:
+                      ramas:
+                        - en: [7, 7]
+                          correcto: true
+                          texto: ¡Correcto!
+                        - en: [6, 8]
+                          correcto: true
+                          texto: ¡Correcto!
+                  - en: [6, 7]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                    respuestaRival: [7, 6]
+            - en: [6, 6]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [5, 7]
+      - en: [5, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [4, 6]
+
+- id: ogs-capturar-07
+  titulo: Capturar (7)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá las piedras blancas marcadas."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 6, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 7, color: B }
+  marcas:
+    - { r: 8, c: 5, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 6]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 6]
+
+- id: ogs-capturar-08
+  titulo: Capturar (8)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá las piedras blancas marcadas."
+  piedras:
+    - { r: 1, c: 1, color: B }
+    - { r: 1, c: 2, color: B }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 3, color: B }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 6, color: N }
+  marcas:
+    - { r: 5, c: 1, tipo: triangulo }
+    - { r: 4, c: 2, tipo: triangulo }
+    - { r: 4, c: 1, tipo: triangulo }
+    - { r: 4, c: 0, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [5, 2]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [2, 0]
+        siguiente:
+          ramas:
+            - en: [5, 0]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [3, 0]
+              siguiente:
+                ramas:
+                  - en: [1, 0]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [3, 0]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [2, 2]
+      - en: [5, 0]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [2, 0]
+        siguiente:
+          ramas:
+            - en: [5, 2]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [3, 0]
+              siguiente:
+                ramas:
+                  - en: [1, 0]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [3, 0]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [2, 2]
+      - en: [3, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [2, 2]
+
+- id: ogs-capturar-09
+  titulo: Capturar (9)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá las piedras blancas marcadas."
+  piedras:
+    - { r: 1, c: 4, color: B }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 3, color: B }
+  marcas:
+    - { r: 5, c: 3, tipo: triangulo }
+    - { r: 5, c: 2, tipo: triangulo }
+    - { r: 4, c: 3, tipo: triangulo }
+    - { r: 4, c: 1, tipo: triangulo }
+    - { r: 3, c: 3, tipo: triangulo }
+    - { r: 3, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [5, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [6, 1]
+      - en: [6, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [2, 1]
+      - en: [3, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [6, 1]
+
+- id: ogs-capturar-10
+  titulo: Capturar (10)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá la piedra blanca marcada."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+  marcas:
+    - { r: 6, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 5]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [6, 6]
+        siguiente:
+          ramas:
+            - en: [6, 7]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [7, 6]
+              siguiente:
+                ramas:
+                  - en: [7, 7]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [8, 6]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [7, 6]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [6, 7]
+      - en: [6, 6]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [7, 5]
+        siguiente:
+          ramas:
+            - en: [7, 6]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [7, 4]
+              siguiente:
+                ramas:
+                  - en: [7, 3]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [8, 3]
+                    siguiente:
+                      ramas:
+                        - en: [8, 5]
+                          correcto: true
+                          texto: ¡Correcto!
+                        - en: [8, 4]
+                          correcto: true
+                          texto: "Bien. Blanco respondió: seguí."
+                          respuestaRival: [8, 5]
+                          siguiente:
+                            ramas:
+                              - en: [8, 6]
+                                correcto: true
+                                texto: ¡Correcto!
+                  - en: [8, 5]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                    respuestaRival: [7, 3]
+            - en: [7, 4]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [7, 6]
+              siguiente:
+                ramas:
+                  - en: [7, 7]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [8, 4]
+                    siguiente:
+                      ramas:
+                        - en: [8, 6]
+                          correcto: true
+                          texto: ¡Correcto!
+                        - en: [8, 3]
+                          correcto: true
+                          texto: ¡Correcto!
+                  - en: [8, 5]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                    respuestaRival: [7, 7]
+
+- id: ogs-capturar-11
+  titulo: Capturar (11)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá la piedra blanca marcada."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 3, color: N }
+  marcas:
+    - { r: 5, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 3]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [5, 4]
+        siguiente:
+          ramas:
+            - en: [4, 4]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [6, 4]
+              siguiente:
+                ramas:
+                  - en: [7, 4]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [6, 5]
+                    siguiente:
+                      ramas:
+                        - en: [6, 6]
+                          correcto: true
+                          texto: "Bien. Blanco respondió: seguí."
+                          respuestaRival: [7, 5]
+                          siguiente:
+                            ramas:
+                              - en: [7, 6]
+                                correcto: true
+                                texto: ¡Correcto!
+                              - en: [8, 5]
+                                correcto: true
+                                texto: "Bien. Blanco respondió: seguí."
+                                respuestaRival: [7, 6]
+                                siguiente:
+                                  ramas:
+                                    - en: [7, 7]
+                                      correcto: true
+                                      texto: ¡Correcto!
+                                    - en: [8, 6]
+                                      correcto: false
+                                      texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                                      respuestaRival: [7, 7]
+                        - en: [7, 5]
+                          correcto: false
+                          texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                          respuestaRival: [6, 6]
+                  - en: [6, 5]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [7, 4]
+                    siguiente:
+                      ramas:
+                        - en: [7, 5]
+                          correcto: true
+                          texto: "Bien. Blanco respondió: seguí."
+                          respuestaRival: [7, 3]
+                          siguiente:
+                            ramas:
+                              - en: [6, 2]
+                                correcto: true
+                                texto: "Bien. Blanco respondió: seguí."
+                                respuestaRival: [7, 2]
+                                siguiente:
+                                  ramas:
+                                    - en: [7, 1]
+                                      correcto: true
+                                      texto: ¡Correcto!
+                              - en: [7, 2]
+                                correcto: true
+                                texto: "Bien. Blanco respondió: seguí."
+                                respuestaRival: [6, 2]
+                                siguiente:
+                                  ramas:
+                                    - en: [6, 1]
+                                      correcto: true
+                                      texto: "Bien. Blanco respondió: seguí."
+                                      respuestaRival: [6, 3]
+                                      siguiente:
+                                        ramas:
+                                          - en: [8, 3]
+                                            correcto: true
+                                            texto: ¡Correcto!
+                                          - en: [8, 4]
+                                            correcto: true
+                                            texto: ¡Correcto!
+                        - en: [7, 3]
+                          correcto: true
+                          texto: "Bien. Blanco respondió: seguí."
+                          respuestaRival: [7, 5]
+                          siguiente:
+                            ramas:
+                              - en: [7, 6]
+                                correcto: true
+                                texto: ¡Correcto!
+            - en: [6, 4]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [4, 4]
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [4, 3]
+
+- id: ogs-capturar-12
+  titulo: Capturar (12)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá la piedra blanca marcada."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 6, color: B }
+  marcas:
+    - { r: 5, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [6, 4]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [5, 3]
+        siguiente:
+          ramas:
+            - en: [4, 3]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [6, 3]
+              siguiente:
+                ramas:
+                  - en: [7, 3]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [6, 2]
+                    siguiente:
+                      ramas:
+                        - en: [6, 1]
+                          correcto: true
+                          texto: "Bien. Blanco respondió: seguí."
+                          respuestaRival: [7, 2]
+                          siguiente:
+                            ramas:
+                              - en: [7, 1]
+                                correcto: true
+                                texto: ¡Correcto!
+                              - en: [8, 2]
+                                correcto: true
+                                texto: ¡Correcto!
+                        - en: [7, 2]
+                          correcto: false
+                          texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                          respuestaRival: [6, 1]
+                  - en: [6, 2]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                    respuestaRival: [7, 3]
+            - en: [6, 3]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [4, 3]
+      - en: [5, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [6, 4]
+
+- id: ogs-capturar-13
+  titulo: Capturar (13)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: capturá piedras blancas sin quedar en atari."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 4, color: B }
+  secuencia:
+    ramas:
+      - en: [17, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 1]
+      - en: [18, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 1]
+
+- id: ogs-capturar-14
+  titulo: Capturar (14)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: capturá piedras blancas sin quedar en atari."
+  piedras:
+    - { r: 12, c: 3, color: B }
+    - { r: 12, c: 6, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 4, color: B }
+    - { r: 18, c: 5, color: B }
+    - { r: 18, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [18, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 2]
+
+- id: ogs-capturar-15
+  titulo: Capturar (15)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: capturá piedras blancas sin quedar en atari."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 7, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 4, color: N }
+    - { r: 18, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [18, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 3]
+
+- id: ogs-capturar-16
+  titulo: Capturar (16)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: capturá piedras blancas sin quedar en atari."
+  piedras:
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 7, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 8, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 6, color: B }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 4, color: B }
+  secuencia:
+    ramas:
+      - en: [18, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [17, 5]
+      - en: [17, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [17, 0]
+      - en: [17, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 5]
+
+- id: ogs-capturar-17
+  titulo: Capturar (17)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: capturá piedras blancas sin quedar en atari."
+  piedras:
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 18, c: 1, color: B }
+  secuencia:
+    ramas:
+      - en: [18, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [16, 0]
+      - en: [17, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [17, 4]
+
+- id: ogs-capturar-18
+  titulo: Capturar (18)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: capturá piedras blancas sin quedar en atari."
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 4, color: B }
+  secuencia:
+    ramas:
+      - en: [18, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [16, 2]
+      - en: [18, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [16, 2]
+
+- id: ogs-capturar-19
+  titulo: Capturar (19)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: capturá piedras blancas sin quedar en atari."
+  piedras:
+    - { r: 13, c: 4, color: N }
+    - { r: 13, c: 6, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 4, color: N }
+  secuencia:
+    ramas:
+      - en: [16, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 5]
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 5]
+
+- id: ogs-capturar-20
+  titulo: Capturar (20)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: capturá piedras blancas sin quedar en atari."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: B }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [18, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 4]
+      - en: [18, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 3]
+
+- id: ogs-capturar-21
+  titulo: Capturar (21)
+  etiqueta: capturar
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: capturá piedras blancas sin quedar en atari."
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 7, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: B }
+    - { r: 18, c: 4, color: N }
+    - { r: 18, c: 5, color: B }
+    - { r: 18, c: 6, color: B }
+  secuencia:
+    ramas:
+      - en: [18, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 3]
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [18, 2]

@@ -1,0 +1,368 @@
+# Habilidades básicas › Escapar
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bs-escape).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-hb-escapar-01
+  titulo: Escapar (1)
+  etiqueta: hb-escapar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: ¿dónde conviene jugar para escapar con las piedras marcadas, A o B?"
+  piedras:
+    - { r: 5, c: 2, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 8, c: 3, color: N }
+  marcas:
+    - { r: 7, c: 5, tipo: letra, texto: A }
+    - { r: 8, c: 4, tipo: letra, texto: B }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+  desenlaces:
+    - en: [7, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-escapar-02
+  titulo: Escapar (2)
+  etiqueta: hb-escapar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: ¿dónde conviene jugar para escapar con las piedras marcadas, A o B?"
+  piedras:
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+  marcas:
+    - { r: 3, c: 0, tipo: letra, texto: A }
+    - { r: 3, c: 3, tipo: letra, texto: B }
+    - { r: 4, c: 1, tipo: triangulo }
+    - { r: 3, c: 2, tipo: triangulo }
+    - { r: 3, c: 1, tipo: triangulo }
+  desenlaces:
+    - en: [3, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-escapar-03
+  titulo: Escapar (3)
+  etiqueta: hb-escapar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: ¿dónde conviene jugar para escapar con las piedras marcadas, A o B?"
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+  marcas:
+    - { r: 7, c: 5, tipo: letra, texto: A }
+    - { r: 8, c: 4, tipo: letra, texto: B }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+  desenlaces:
+    - en: [7, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-escapar-04
+  titulo: Escapar (4)
+  etiqueta: hb-escapar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: ¿dónde conviene jugar para escapar con las piedras marcadas, A o B?"
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 6, color: B }
+  marcas:
+    - { r: 3, c: 2, tipo: letra, texto: A }
+    - { r: 4, c: 1, tipo: letra, texto: B }
+    - { r: 5, c: 2, tipo: triangulo }
+    - { r: 4, c: 2, tipo: triangulo }
+  desenlaces:
+    - en: [3, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-escapar-05
+  titulo: Escapar (5)
+  etiqueta: hb-escapar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: ¿dónde conviene jugar para escapar con las piedras marcadas, A o B?"
+  piedras:
+    - { r: 1, c: 2, color: B }
+    - { r: 2, c: 1, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 7, c: 2, color: N }
+  marcas:
+    - { r: 5, c: 1, tipo: letra, texto: A }
+    - { r: 6, c: 2, tipo: letra, texto: B }
+    - { r: 5, c: 3, tipo: triangulo }
+    - { r: 5, c: 2, tipo: triangulo }
+    - { r: 4, c: 2, tipo: triangulo }
+  desenlaces:
+    - en: [5, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-escapar-06
+  titulo: Escapar (6)
+  etiqueta: hb-escapar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: ¿dónde conviene jugar para escapar con las piedras marcadas, A o B?"
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+  marcas:
+    - { r: 5, c: 2, tipo: letra, texto: A }
+    - { r: 5, c: 4, tipo: letra, texto: B }
+    - { r: 5, c: 3, tipo: triangulo }
+  desenlaces:
+    - en: [5, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-escapar-07
+  titulo: Escapar (7)
+  etiqueta: hb-escapar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: ¿dónde conviene jugar para escapar con las piedras marcadas, A o B?"
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 3, color: B }
+  marcas:
+    - { r: 5, c: 6, tipo: letra, texto: A }
+    - { r: 6, c: 5, tipo: letra, texto: B }
+    - { r: 5, c: 5, tipo: triangulo }
+  desenlaces:
+    - en: [6, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-escapar-08
+  titulo: Escapar (8)
+  etiqueta: hb-escapar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: ¿dónde conviene jugar para escapar con las piedras marcadas, A o B?"
+  piedras:
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 3, color: N }
+  marcas:
+    - { r: 4, c: 1, tipo: letra, texto: A }
+    - { r: 5, c: 0, tipo: letra, texto: B }
+    - { r: 6, c: 1, tipo: triangulo }
+    - { r: 5, c: 1, tipo: triangulo }
+  desenlaces:
+    - en: [4, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-escapar-09
+  titulo: Escapar (9)
+  etiqueta: hb-escapar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: ¿dónde conviene jugar para escapar con las piedras marcadas, A o B?"
+  piedras:
+    - { r: 3, c: 5, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 3, color: B }
+  marcas:
+    - { r: 7, c: 2, tipo: letra, texto: A }
+    - { r: 7, c: 4, tipo: letra, texto: B }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 6, c: 3, tipo: triangulo }
+  desenlaces:
+    - en: [7, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-escapar-10
+  titulo: Escapar (10)
+  etiqueta: hb-escapar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: ¿dónde conviene jugar para escapar con las piedras marcadas, A o B?"
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 2, color: N }
+  marcas:
+    - { r: 4, c: 1, tipo: letra, texto: A }
+    - { r: 7, c: 1, tipo: letra, texto: B }
+    - { r: 6, c: 1, tipo: triangulo }
+    - { r: 5, c: 2, tipo: triangulo }
+    - { r: 5, c: 1, tipo: triangulo }
+  desenlaces:
+    - en: [7, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-escapar-11
+  titulo: Escapar (11)
+  etiqueta: hb-escapar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: ¿dónde conviene jugar para escapar con las piedras marcadas, A o B?"
+  piedras:
+    - { r: 3, c: 6, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+  marcas:
+    - { r: 7, c: 4, tipo: letra, texto: A }
+    - { r: 8, c: 5, tipo: letra, texto: B }
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 6, c: 5, tipo: triangulo }
+  desenlaces:
+    - en: [7, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-escapar-12
+  titulo: Escapar (12)
+  etiqueta: hb-escapar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: ¿dónde conviene jugar para escapar con las piedras marcadas, A o B?"
+  piedras:
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 4, color: N }
+    - { r: 1, c: 5, color: B }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 6, color: B }
+  marcas:
+    - { r: 3, c: 3, tipo: letra, texto: A }
+    - { r: 3, c: 5, tipo: letra, texto: B }
+    - { r: 2, c: 4, tipo: triangulo }
+    - { r: 2, c: 3, tipo: triangulo }
+  desenlaces:
+    - en: [3, 5]
+      correcto: true
+      texto: ¡Correcto!

@@ -1,0 +1,544 @@
+# Principiante, nivel 3 › Atari preparatorio — Jugar una escalera
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl3-preparatory-atari-2).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p3-atari-preparatorio-2-01
+  titulo: Atari preparatorio (1)
+  etiqueta: p3-atari-preparatorio-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Blanco puede dar atari a una piedra jugando en A y después capturar otra piedra en
+    escalera. Jugás con blancas. Jugá una escalera después de un atari preparatorio.
+  piedras:
+    - { r: 12, c: 7, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 6, color: N }
+  marcas:
+    - { r: 16, c: 4, tipo: letra, texto: A }
+  secuencia:
+    ramas:
+      - en: [16, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [17, 2]
+        siguiente:
+          ramas:
+            - en: [15, 5]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-p3-atari-preparatorio-2-02
+  titulo: Atari preparatorio (2)
+  etiqueta: p3-atari-preparatorio-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: jugá una escalera después de un atari preparatorio."
+  piedras:
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [15, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 5]
+        siguiente:
+          ramas:
+            - en: [14, 3]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [14, 2]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [14, 3]
+      - en: [17, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 4]
+
+- id: ogs-p3-atari-preparatorio-2-03
+  titulo: Atari preparatorio (3)
+  etiqueta: p3-atari-preparatorio-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: jugá una escalera después de un atari preparatorio."
+  piedras:
+    - { r: 11, c: 5, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [14, 1]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 0]
+        siguiente:
+          ramas:
+            - en: [13, 1]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [12, 3]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [13, 1]
+
+- id: ogs-p3-atari-preparatorio-2-04
+  titulo: Atari preparatorio (4)
+  etiqueta: p3-atari-preparatorio-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: jugá una escalera después de un atari preparatorio."
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 14, c: 8, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+  secuencia:
+    ramas:
+      - en: [17, 5]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 3]
+        siguiente:
+          ramas:
+            - en: [17, 6]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [15, 6]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [17, 6]
+
+- id: ogs-p3-atari-preparatorio-2-05
+  titulo: Atari preparatorio (5)
+  etiqueta: p3-atari-preparatorio-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: jugá una escalera después de un atari preparatorio."
+  piedras:
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 4, color: B }
+  secuencia:
+    ramas:
+      - en: [14, 5]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [13, 4]
+        siguiente:
+          ramas:
+            - en: [15, 6]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [13, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 5]
+
+- id: ogs-p3-atari-preparatorio-2-06
+  titulo: Atari preparatorio (6)
+  etiqueta: p3-atari-preparatorio-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: jugá una escalera después de un atari preparatorio."
+  piedras:
+    - { r: 13, c: 5, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 3, color: N }
+  secuencia:
+    ramas:
+      - en: [15, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 5]
+        siguiente:
+          ramas:
+            - en: [13, 2]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [14, 1]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [13, 2]
+      - en: [18, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 5]
+      - en: [18, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 4]
+
+- id: ogs-p3-atari-preparatorio-2-07
+  titulo: Atari preparatorio (7)
+  etiqueta: p3-atari-preparatorio-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: jugá una escalera después de un atari preparatorio."
+  piedras:
+    - { r: 10, c: 2, color: N }
+    - { r: 11, c: 2, color: N }
+    - { r: 11, c: 4, color: B }
+    - { r: 12, c: 1, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 7, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 18, c: 1, color: N }
+  secuencia:
+    ramas:
+      - en: [13, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [12, 3]
+        siguiente:
+          ramas:
+            - en: [15, 6]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [15, 6]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [14, 5]
+        siguiente:
+          ramas:
+            - en: [13, 4]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [12, 3]
+              siguiente:
+                ramas:
+                  - en: [13, 5]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [14, 6]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [13, 5]
+      - en: [12, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [13, 4]
+      - en: [14, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 6]
+
+- id: ogs-p3-atari-preparatorio-2-08
+  titulo: Atari preparatorio (8)
+  etiqueta: p3-atari-preparatorio-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: jugá una escalera después de un atari preparatorio."
+  piedras:
+    - { r: 11, c: 6, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 6, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [14, 5]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [15, 6]
+        siguiente:
+          ramas:
+            - en: [12, 4]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [15, 6]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [14, 5]
+        siguiente:
+          ramas:
+            - en: [12, 4]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-p3-atari-preparatorio-2-09
+  titulo: Atari preparatorio (9)
+  etiqueta: p3-atari-preparatorio-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: jugá una escalera después de un atari preparatorio."
+  piedras:
+    - { r: 12, c: 7, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 8, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [14, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [15, 5]
+        siguiente:
+          ramas:
+            - en: [14, 5]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [16, 6]
+              siguiente:
+                ramas:
+                  - en: [13, 2]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [13, 3]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [13, 2]
+            - en: [13, 2]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [13, 3]
+              siguiente:
+                ramas:
+                  - en: [12, 3]
+                    correcto: true
+                    texto: "Bien. Negro respondió: seguí."
+                    respuestaRival: [13, 4]
+                    siguiente:
+                      ramas:
+                        - en: [14, 5]
+                          correcto: true
+                          texto: ¡Correcto!
+                        - en: [13, 5]
+                          correcto: false
+                          texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                          respuestaRival: [14, 5]
+                  - en: [13, 4]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [12, 3]
+            - en: [13, 3]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [13, 2]
+      - en: [15, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 4]
+      - en: [16, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 5]
+
+- id: ogs-p3-atari-preparatorio-2-10
+  titulo: Atari preparatorio (10)
+  etiqueta: p3-atari-preparatorio-2
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: jugá una escalera después de un atari preparatorio."
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 8, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+  secuencia:
+    ramas:
+      - en: [17, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 2]
+        siguiente:
+          ramas:
+            - en: [15, 6]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [16, 5]
+              siguiente:
+                ramas:
+                  - en: [17, 5]
+                    correcto: true
+                    texto: "Bien. Negro respondió: seguí."
+                    respuestaRival: [16, 6]
+                    siguiente:
+                      ramas:
+                        - en: [16, 7]
+                          correcto: true
+                          texto: ¡Correcto!
+                        - en: [17, 6]
+                          correcto: false
+                          texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                          respuestaRival: [16, 7]
+                  - en: [16, 6]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [17, 5]
+      - en: [15, 6]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 5]
+        siguiente:
+          ramas:
+            - en: [17, 4]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [18, 2]
+              siguiente:
+                ramas:
+                  - en: [17, 5]
+                    correcto: true
+                    texto: ¡Correcto!
+      - en: [16, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 6]
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 2]

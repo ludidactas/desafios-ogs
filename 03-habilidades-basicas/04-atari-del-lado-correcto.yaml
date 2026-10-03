@@ -1,0 +1,283 @@
+# Habilidades básicas › Atari del lado correcto — Elegir el lado correcto para el atari
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/atari-correct-side).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-atari-del-lado-correcto-01
+  titulo: Atari del lado correcto (1)
+  etiqueta: atari-del-lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: Blanco puede darles atari a las piedras marcadas jugando en A o en B. Dales atari del
+    lado correcto.
+  piedras:
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 2, c: 8, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: N }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+  marcas:
+    - { r: 1, c: 8, tipo: letra, texto: A }
+    - { r: 4, c: 8, tipo: letra, texto: B }
+    - { r: 2, c: 8, tipo: triangulo }
+    - { r: 3, c: 7, tipo: triangulo }
+    - { r: 3, c: 8, tipo: triangulo }
+    - { r: 4, c: 5, tipo: triangulo }
+    - { r: 4, c: 6, tipo: triangulo }
+    - { r: 4, c: 7, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [1, 8]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 8]
+
+- id: ogs-atari-del-lado-correcto-02
+  titulo: Atari del lado correcto (2)
+  etiqueta: atari-del-lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto."
+  piedras:
+    - { r: 2, c: 0, color: B }
+    - { r: 2, c: 1, color: N }
+    - { r: 3, c: 0, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 2, color: B }
+  marcas:
+    - { r: 5, c: 2, tipo: triangulo }
+    - { r: 5, c: 1, tipo: triangulo }
+    - { r: 5, c: 0, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [6, 1]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [4, 0]
+        siguiente:
+          ramas:
+            - en: [3, 1]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [4, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [3, 1]
+
+- id: ogs-atari-del-lado-correcto-03
+  titulo: Atari del lado correcto (3)
+  etiqueta: atari-del-lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 2, c: 7, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 7, color: B }
+  marcas:
+    - { r: 6, c: 7, tipo: triangulo }
+    - { r: 5, c: 7, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 7]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [5, 8]
+        siguiente:
+          ramas:
+            - en: [2, 8]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [5, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 8]
+
+- id: ogs-atari-del-lado-correcto-04
+  titulo: Atari del lado correcto (4)
+  etiqueta: atari-del-lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto."
+  piedras:
+    - { r: 0, c: 0, color: B }
+    - { r: 0, c: 3, color: N }
+    - { r: 1, c: 0, color: B }
+    - { r: 1, c: 1, color: B }
+    - { r: 1, c: 2, color: B }
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: N }
+    - { r: 2, c: 0, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+  marcas:
+    - { r: 2, c: 3, tipo: triangulo }
+    - { r: 2, c: 2, tipo: triangulo }
+    - { r: 2, c: 1, tipo: triangulo }
+    - { r: 2, c: 0, tipo: triangulo }
+    - { r: 1, c: 3, tipo: triangulo }
+    - { r: 0, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [0, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [0, 2]
+        siguiente:
+          ramas:
+            - en: [0, 1]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [0, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [0, 1]
+
+- id: ogs-atari-del-lado-correcto-05
+  titulo: Atari del lado correcto (5)
+  etiqueta: atari-del-lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto."
+  piedras:
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 3, color: N }
+  marcas:
+    - { r: 8, c: 3, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 6, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [8, 4]
+        siguiente:
+          ramas:
+            - en: [8, 5]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 5]
+
+- id: ogs-atari-del-lado-correcto-06
+  titulo: Atari del lado correcto (6)
+  etiqueta: atari-del-lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: dales atari a las piedras marcadas del lado correcto."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 6, color: N }
+  marcas:
+    - { r: 8, c: 6, tipo: triangulo }
+    - { r: 7, c: 6, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 6, c: 5, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 7]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [7, 3]
+        siguiente:
+          ramas:
+            - en: [8, 5]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [8, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 4]

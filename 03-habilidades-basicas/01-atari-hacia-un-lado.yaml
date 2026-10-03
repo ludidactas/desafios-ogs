@@ -1,0 +1,632 @@
+# Habilidades básicas › Atari hacia el borde — Dar atari hacia el borde
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/atari-to-side).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-atari-hacia-un-lado-01
+  titulo: Atari hacia el borde (1)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: empujar la piedra blanca marcada hacia el borde del tablero hace más
+    fácil capturarla. Elegí dónde jugar para empujarla hacia el borde: A o B."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 3, c: 1, color: N }
+    - { r: 4, c: 1, color: B }
+    - { r: 5, c: 1, color: N }
+  marcas:
+    - { r: 4, c: 0, tipo: letra, texto: A }
+    - { r: 4, c: 2, tipo: letra, texto: B }
+    - { r: 4, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [4, 2]
+
+- id: ogs-atari-hacia-un-lado-02
+  titulo: Atari hacia el borde (2)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: elegí dónde jugar para empujar la cadena blanca marcada hacia el
+    borde: A o B."
+  piedras:
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 6, c: 2, color: B }
+  marcas:
+    - { r: 0, c: 4, tipo: letra, texto: A }
+    - { r: 3, c: 4, tipo: letra, texto: B }
+    - { r: 2, c: 4, tipo: triangulo }
+    - { r: 1, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [3, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [0, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [3, 4]
+
+- id: ogs-atari-hacia-un-lado-03
+  titulo: Atari hacia el borde (3)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: elegí dónde jugar para empujar la cadena blanca marcada hacia el
+    borde: A o B."
+  piedras:
+    - { r: 2, c: 1, color: N }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 2, color: B }
+  marcas:
+    - { r: 3, c: 0, tipo: letra, texto: A }
+    - { r: 4, c: 1, tipo: letra, texto: B }
+    - { r: 3, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [3, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [4, 1]
+
+- id: ogs-atari-hacia-un-lado-04
+  titulo: Atari hacia el borde (4)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: elegí dónde jugar para empujar la cadena blanca marcada hacia el
+    borde: A o B."
+  piedras:
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 8, c: 3, color: N }
+  marcas:
+    - { r: 7, c: 5, tipo: letra, texto: A }
+    - { r: 8, c: 4, tipo: letra, texto: B }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 5]
+
+- id: ogs-atari-hacia-un-lado-05
+  titulo: Atari hacia el borde (5)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: elegí dónde jugar para empujar la cadena blanca marcada hacia el
+    borde: A o B."
+  piedras:
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+  marcas:
+    - { r: 5, c: 0, tipo: letra, texto: A }
+    - { r: 6, c: 1, tipo: letra, texto: B }
+    - { r: 5, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [6, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [6, 1]
+
+- id: ogs-atari-hacia-un-lado-06
+  titulo: Atari hacia el borde (6)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: elegí dónde jugar para empujar la cadena blanca marcada hacia el
+    borde: A o B."
+  piedras:
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+  marcas:
+    - { r: 7, c: 4, tipo: letra, texto: A }
+    - { r: 8, c: 3, tipo: letra, texto: B }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 6, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 4]
+
+- id: ogs-atari-hacia-un-lado-07
+  titulo: Atari hacia el borde (7)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+  marcas:
+    - { r: 7, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 4]
+
+- id: ogs-atari-hacia-un-lado-08
+  titulo: Atari hacia el borde (8)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+  marcas:
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 6, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 4]
+
+- id: ogs-atari-hacia-un-lado-09
+  titulo: Atari hacia el borde (9)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+  marcas:
+    - { r: 7, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 4]
+
+- id: ogs-atari-hacia-un-lado-10
+  titulo: Atari hacia el borde (10)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas."
+  piedras:
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 2, color: N }
+  marcas:
+    - { r: 7, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 6]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 6]
+
+- id: ogs-atari-hacia-un-lado-11
+  titulo: Atari hacia el borde (11)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas."
+  piedras:
+    - { r: 1, c: 3, color: N }
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+  marcas:
+    - { r: 5, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [6, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 1]
+
+- id: ogs-atari-hacia-un-lado-12
+  titulo: Atari hacia el borde (12)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+  marcas:
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 6, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 2]
+
+- id: ogs-atari-hacia-un-lado-13
+  titulo: Atari hacia el borde (13)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 5, color: B }
+  marcas:
+    - { r: 7, c: 6, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 7]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 7]
+
+- id: ogs-atari-hacia-un-lado-14
+  titulo: Atari hacia el borde (14)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 5, color: B }
+  marcas:
+    - { r: 4, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 2]
+
+- id: ogs-atari-hacia-un-lado-15
+  titulo: Atari hacia el borde (15)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 7, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+  marcas:
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+    - { r: 5, c: 4, tipo: triangulo }
+    - { r: 5, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 3]
+
+- id: ogs-atari-hacia-un-lado-16
+  titulo: Atari hacia el borde (16)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas."
+  piedras:
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 3, color: B }
+  marcas:
+    - { r: 6, c: 4, tipo: triangulo }
+    - { r: 6, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [6, 5]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [7, 4]
+        siguiente:
+          ramas:
+            - en: [7, 5]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [8, 4]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [7, 5]
+              siguiente:
+                ramas:
+                  - en: [7, 6]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [8, 5]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [7, 6]
+      - en: [7, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 5]
+
+- id: ogs-atari-hacia-un-lado-17
+  titulo: Atari hacia el borde (17)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 3, color: B }
+  marcas:
+    - { r: 6, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [6, 5]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [7, 4]
+        siguiente:
+          ramas:
+            - en: [7, 5]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [8, 4]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [7, 5]
+              siguiente:
+                ramas:
+                  - en: [7, 6]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [8, 5]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [7, 6]
+
+- id: ogs-atari-hacia-un-lado-18
+  titulo: Atari hacia el borde (18)
+  etiqueta: atari-hacia-un-lado
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas."
+  piedras:
+    - { r: 4, c: 1, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 6, color: N }
+  marcas:
+    - { r: 5, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [5, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 2]

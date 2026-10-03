@@ -1,0 +1,384 @@
+# Principiante, nivel 2 › Forma — Buena forma
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl2-shape-1).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p2-forma-1-01
+  titulo: Forma (1)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "La forma es un concepto importante del Go: es cómo se disponen las piedras de un grupo
+    en el tablero, y decide qué tan bien se pueden aprovechar en la partida. Hay buena forma y mala
+    forma. Esta forma es un triángulo vacío, y es una mala forma: las tres piedras no rodean nada y
+    una de ellas sobra. ¿El grupo negro tiene buena o mala forma?"
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+  opciones:
+    - { texto: buena forma, correcta: false }
+    - { texto: mala forma, correcta: true }
+
+- id: ogs-p2-forma-1-02
+  titulo: Forma (2)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Esta forma es un amontonamiento, y es una mala forma: hay demasiadas piedras pegadas
+    entre sí. Podrías sacar varias y el grupo seguiría siendo igual de fuerte o útil. Tenés piedras
+    de más en el tablero, o sea que hiciste jugadas de más. ¿El grupo negro tiene buena o mala
+    forma?"
+  piedras:
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 4, color: N }
+  opciones:
+    - { texto: buena forma, correcta: false }
+    - { texto: mala forma, correcta: true }
+
+- id: ogs-p2-forma-1-03
+  titulo: Forma (3)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Esta forma es una boca de tigre, y es una buena forma: tres piedras que rodean y
+    protegen un punto del tablero. La boca de tigre sirve para cubrir un punto de corte o para
+    preparar un ojo. ¿El grupo negro tiene buena o mala forma?"
+  piedras:
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 5, color: N }
+  opciones:
+    - { texto: buena forma, correcta: true }
+    - { texto: mala forma, correcta: false }
+
+- id: ogs-p2-forma-1-04
+  titulo: Forma (4)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Esta forma es un ponnuki, y es una buena forma: cuatro piedras que quedan después de
+    capturar una piedra suelta. El ponnuki da posibilidades de ojo, es difícil de capturar y es
+    fuerte para atacar. Dice el proverbio: «Un ponnuki vale 30 puntos». ¿El grupo negro tiene buena
+    o mala forma?"
+  piedras:
+    - { r: 13, c: 5, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 5, color: N }
+  opciones:
+    - { texto: buena forma, correcta: true }
+    - { texto: mala forma, correcta: false }
+
+- id: ogs-p2-forma-1-05
+  titulo: Forma (5)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Esta forma es una tortuga, y es una buena forma. Es parecida al ponnuki pero todavía
+    mejor, y aparece después de capturar dos piedras. Dice el proverbio: «Una tortuga vale 60
+    puntos». ¿El grupo negro tiene buena o mala forma?"
+  piedras:
+    - { r: 13, c: 4, color: N }
+    - { r: 13, c: 5, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+  opciones:
+    - { texto: buena forma, correcta: true }
+    - { texto: mala forma, correcta: false }
+
+- id: ogs-p2-forma-1-06
+  titulo: Forma (6)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo negro tiene buena o mala forma?
+  piedras:
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 3, color: N }
+  opciones:
+    - { texto: buena forma, correcta: false }
+    - { texto: mala forma, correcta: true }
+
+- id: ogs-p2-forma-1-07
+  titulo: Forma (7)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo negro tiene buena o mala forma?
+  piedras:
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+  opciones:
+    - { texto: buena forma, correcta: true }
+    - { texto: mala forma, correcta: false }
+
+- id: ogs-p2-forma-1-08
+  titulo: Forma (8)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo negro tiene buena o mala forma?
+  piedras:
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+  opciones:
+    - { texto: buena forma, correcta: false }
+    - { texto: mala forma, correcta: true }
+
+- id: ogs-p2-forma-1-09
+  titulo: Forma (9)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo negro tiene buena o mala forma?
+  piedras:
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+  opciones:
+    - { texto: buena forma, correcta: true }
+    - { texto: mala forma, correcta: false }
+
+- id: ogs-p2-forma-1-10
+  titulo: Forma (10)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo negro tiene buena o mala forma?
+  piedras:
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+  opciones:
+    - { texto: buena forma, correcta: false }
+    - { texto: mala forma, correcta: true }
+
+- id: ogs-p2-forma-1-11
+  titulo: Forma (11)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo negro tiene buena o mala forma?
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+  opciones:
+    - { texto: buena forma, correcta: false }
+    - { texto: mala forma, correcta: true }
+
+- id: ogs-p2-forma-1-12
+  titulo: Forma (12)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo negro tiene buena o mala forma?
+  piedras:
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+  opciones:
+    - { texto: buena forma, correcta: true }
+    - { texto: mala forma, correcta: false }
+
+- id: ogs-p2-forma-1-13
+  titulo: Forma (13)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo negro tiene buena o mala forma?
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 3, color: B }
+  opciones:
+    - { texto: buena forma, correcta: true }
+    - { texto: mala forma, correcta: false }
+
+- id: ogs-p2-forma-1-14
+  titulo: Forma (14)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo negro tiene buena o mala forma?
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 2, color: B }
+  opciones:
+    - { texto: buena forma, correcta: false }
+    - { texto: mala forma, correcta: true }
+
+- id: ogs-p2-forma-1-15
+  titulo: Forma (15)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo negro tiene buena o mala forma?
+  piedras:
+    - { r: 13, c: 1, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+  opciones:
+    - { texto: buena forma, correcta: true }
+    - { texto: mala forma, correcta: false }
+
+- id: ogs-p2-forma-1-16
+  titulo: Forma (16)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo negro tiene buena o mala forma?
+  piedras:
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+  opciones:
+    - { texto: buena forma, correcta: false }
+    - { texto: mala forma, correcta: true }
+
+- id: ogs-p2-forma-1-17
+  titulo: Forma (17)
+  etiqueta: p2-forma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿El grupo negro tiene buena o mala forma?
+  piedras:
+    - { r: 13, c: 3, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: N }
+  opciones:
+    - { texto: buena forma, correcta: true }
+    - { texto: mala forma, correcta: false }

@@ -1,0 +1,952 @@
+# Habilidades básicas › Del lado correcto — Empezar la captura del lado correcto
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/correct-side).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-lado-correcto-01
+  titulo: Del lado correcto (1)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá una cadena blanca dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 3, color: B }
+  secuencia:
+    ramas:
+      - en: [4, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [4, 4]
+
+- id: ogs-lado-correcto-02
+  titulo: Del lado correcto (2)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá una cadena blanca dándole atari del lado correcto."
+  piedras:
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [6, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 4]
+
+- id: ogs-lado-correcto-03
+  titulo: Del lado correcto (3)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá una cadena blanca dándole atari del lado correcto."
+  piedras:
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+  secuencia:
+    ramas:
+      - en: [7, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [6, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 3]
+
+- id: ogs-lado-correcto-04
+  titulo: Del lado correcto (4)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá una cadena blanca dándole atari del lado correcto."
+  piedras:
+    - { r: 0, c: 3, color: B }
+    - { r: 1, c: 1, color: N }
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 3, color: B }
+    - { r: 2, c: 0, color: N }
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 2, color: B }
+  secuencia:
+    ramas:
+      - en: [4, 2]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [3, 1]
+        siguiente:
+          ramas:
+            - en: [4, 1]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [3, 0]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [4, 1]
+      - en: [3, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [4, 2]
+
+- id: ogs-lado-correcto-05
+  titulo: Del lado correcto (5)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá una cadena blanca dándole atari del lado correcto."
+  piedras:
+    - { r: 1, c: 5, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 6, c: 2, color: N }
+  secuencia:
+    ramas:
+      - en: [3, 2]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [1, 4]
+        siguiente:
+          ramas:
+            - en: [1, 3]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [0, 4]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [1, 3]
+              siguiente:
+                ramas:
+                  - en: [1, 2]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [2, 2]
+                    siguiente:
+                      ramas:
+                        - en: [0, 3]
+                          correcto: true
+                          texto: ¡Correcto!
+                        - en: [2, 1]
+                          correcto: false
+                          texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                          respuestaRival: [1, 6]
+                  - en: [0, 3]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                    respuestaRival: [1, 2]
+                  - en: [2, 2]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                    respuestaRival: [1, 6]
+      - en: [1, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [3, 2]
+
+- id: ogs-lado-correcto-06
+  titulo: Del lado correcto (6)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá una cadena blanca dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 4, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [5, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 3]
+
+- id: ogs-lado-correcto-07
+  titulo: Del lado correcto (7)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá una cadena blanca dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [4, 3]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [5, 4]
+        siguiente:
+          ramas:
+            - en: [4, 4]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [5, 5]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [4, 4]
+              siguiente:
+                ramas:
+                  - en: [3, 4]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [4, 5]
+                    siguiente:
+                      ramas:
+                        - en: [3, 5]
+                          correcto: true
+                          texto: "Bien. Blanco respondió: seguí."
+                          respuestaRival: [4, 6]
+                          siguiente:
+                            ramas:
+                              - en: [4, 7]
+                                correcto: true
+                                texto: ¡Correcto!
+                              - en: [3, 6]
+                                correcto: false
+                                texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                                respuestaRival: [4, 7]
+                        - en: [4, 6]
+                          correcto: true
+                          texto: "Bien. Blanco respondió: seguí."
+                          respuestaRival: [3, 5]
+                          siguiente:
+                            ramas:
+                              - en: [2, 5]
+                                correcto: true
+                                texto: "Bien. Blanco respondió: seguí."
+                                respuestaRival: [3, 6]
+                                siguiente:
+                                  ramas:
+                                    - en: [3, 7]
+                                      correcto: true
+                                      texto: "Bien. Blanco respondió: seguí."
+                                      respuestaRival: [2, 6]
+                                      siguiente:
+                                        ramas:
+                                          - en: [1, 6]
+                                            correcto: true
+                                            texto: ¡Correcto!
+                                          - en: [2, 7]
+                                            correcto: false
+                                            texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                                            respuestaRival: [1, 6]
+                                    - en: [2, 6]
+                                      correcto: false
+                                      texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                                      respuestaRival: [3, 7]
+                              - en: [3, 6]
+                                correcto: false
+                                texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                                respuestaRival: [2, 5]
+                  - en: [4, 5]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                    respuestaRival: [3, 4]
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [4, 3]
+
+- id: ogs-lado-correcto-08
+  titulo: Del lado correcto (8)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá una cadena blanca dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 6, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+  secuencia:
+    ramas:
+      - en: [4, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [4, 4]
+
+- id: ogs-lado-correcto-09
+  titulo: Del lado correcto (9)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá una cadena blanca dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 4]
+
+- id: ogs-lado-correcto-10
+  titulo: Del lado correcto (10)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá una cadena blanca dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [8, 6]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 3]
+
+- id: ogs-lado-correcto-11
+  titulo: Del lado correcto (11)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá una cadena blanca dándole atari del lado correcto."
+  piedras:
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 4]
+
+- id: ogs-lado-correcto-12
+  titulo: Del lado correcto (12)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá una cadena blanca dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+  secuencia:
+    ramas:
+      - en: [3, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [3, 1]
+
+- id: ogs-lado-correcto-13
+  titulo: Del lado correcto (13)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá una cadena negra dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 4, color: B }
+  secuencia:
+    ramas:
+      - en: [6, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [7, 3]
+        siguiente:
+          ramas:
+            - en: [7, 2]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [8, 3]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [7, 2]
+      - en: [7, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 2]
+
+- id: ogs-lado-correcto-14
+  titulo: Del lado correcto (14)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá una cadena negra dándole atari del lado correcto."
+  piedras:
+    - { r: 1, c: 4, color: B }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 5, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [4, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [3, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [2, 3]
+      - en: [2, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 5]
+      - en: [3, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 5]
+      - en: [2, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 5]
+
+- id: ogs-lado-correcto-15
+  titulo: Del lado correcto (15)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá una cadena negra dándole atari del lado correcto."
+  piedras:
+    - { r: 1, c: 2, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+  secuencia:
+    ramas:
+      - en: [5, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 3]
+
+- id: ogs-lado-correcto-16
+  titulo: Del lado correcto (16)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá una cadena negra dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 0, color: N }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 3, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [8, 2]
+        siguiente:
+          ramas:
+            - en: [8, 4]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [6, 2]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [8, 4]
+      - en: [8, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 2]
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 5]
+
+- id: ogs-lado-correcto-17
+  titulo: Del lado correcto (17)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá una cadena negra dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [4, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+
+- id: ogs-lado-correcto-18
+  titulo: Del lado correcto (18)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá una cadena negra dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 8, c: 1, color: N }
+  secuencia:
+    ramas:
+      - en: [6, 5]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [7, 4]
+        siguiente:
+          ramas:
+            - en: [7, 5]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [8, 4]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [7, 5]
+              siguiente:
+                ramas:
+                  - en: [7, 6]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [8, 5]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [7, 6]
+      - en: [7, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 5]
+
+- id: ogs-lado-correcto-19
+  titulo: Del lado correcto (19)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá una cadena negra dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 3, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [6, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 1]
+
+- id: ogs-lado-correcto-20
+  titulo: Del lado correcto (20)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá una cadena negra dándole atari del lado correcto."
+  piedras:
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 1, color: N }
+  secuencia:
+    ramas:
+      - en: [4, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+
+- id: ogs-lado-correcto-21
+  titulo: Del lado correcto (21)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá una cadena negra dándole atari del lado correcto."
+  piedras:
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [6, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 4]
+
+- id: ogs-lado-correcto-22
+  titulo: Del lado correcto (22)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá una cadena negra dándole atari del lado correcto."
+  piedras:
+    - { r: 3, c: 6, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [6, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 4]
+
+- id: ogs-lado-correcto-23
+  titulo: Del lado correcto (23)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá una cadena negra dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [7, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 3]
+
+- id: ogs-lado-correcto-24
+  titulo: Del lado correcto (24)
+  etiqueta: lado-correcto
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá una cadena negra dándole atari del lado correcto."
+  piedras:
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 1, color: B }
+  secuencia:
+    ramas:
+      - en: [7, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 5]

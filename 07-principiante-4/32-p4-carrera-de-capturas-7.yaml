@@ -1,0 +1,1268 @@
+# Principiante, nivel 4 › Carrera de capturas — Ganar la carrera de capturas
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl4-capturing-race-7).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p4-carrera-de-capturas-7-01
+  titulo: Carrera de capturas (1)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [16, 1]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 0]
+        siguiente:
+          ramas:
+            - en: [15, 0]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [15, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 1]
+      - en: [16, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 2]
+
+- id: ogs-p4-carrera-de-capturas-7-02
+  titulo: Carrera de capturas (2)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 10, c: 2, color: B }
+    - { r: 11, c: 1, color: B }
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+  secuencia:
+    ramas:
+      - en: [15, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 1]
+        siguiente:
+          ramas:
+            - en: [17, 1]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [17, 0]
+              siguiente:
+                ramas:
+                  - en: [12, 0]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [14, 0]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [13, 0]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [16, 0]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [18, 1]
+                  - en: [18, 1]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [14, 0]
+            - en: [12, 0]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [16, 0]
+            - en: [14, 0]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [16, 0]
+            - en: [13, 0]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [16, 0]
+            - en: [16, 0]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [17, 1]
+      - en: [17, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 0]
+      - en: [14, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 1]
+      - en: [12, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 1]
+      - en: [13, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 1]
+      - en: [16, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 1]
+
+- id: ogs-p4-carrera-de-capturas-7-03
+  titulo: Carrera de capturas (3)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 10, c: 2, color: N }
+    - { r: 10, c: 3, color: N }
+    - { r: 11, c: 4, color: N }
+    - { r: 11, c: 5, color: N }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 12, c: 4, color: B }
+    - { r: 12, c: 5, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 13, c: 5, color: B }
+    - { r: 13, c: 6, color: B }
+    - { r: 13, c: 7, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+  secuencia:
+    ramas:
+      - en: [14, 1]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [15, 3]
+        siguiente:
+          ramas:
+            - en: [14, 3]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [13, 2]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [14, 3]
+      - en: [14, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [13, 2]
+      - en: [13, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 3]
+      - en: [15, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [13, 2]
+
+- id: ogs-p4-carrera-de-capturas-7-04
+  titulo: Carrera de capturas (4)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 6, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 1, color: B }
+  secuencia:
+    ramas:
+      - en: [18, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 3]
+        siguiente:
+          ramas:
+            - en: [18, 2]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [18, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 3]
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 4]
+      - en: [18, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 0]
+
+- id: ogs-p4-carrera-de-capturas-7-05
+  titulo: Carrera de capturas (5)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 11, c: 5, color: B }
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 6, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [17, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 4]
+        siguiente:
+          ramas:
+            - en: [18, 2]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [15, 5]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [18, 3]
+      - en: [16, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+      - en: [18, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+      - en: [16, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+
+- id: ogs-p4-carrera-de-capturas-7-06
+  titulo: Carrera de capturas (6)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 11, c: 2, color: B }
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 18, c: 0, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 3, color: B }
+  secuencia:
+    ramas:
+      - en: [17, 1]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [17, 0]
+        siguiente:
+          ramas:
+            - en: [18, 4]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [15, 1]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [17, 5]
+      - en: [18, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [17, 5]
+        siguiente:
+          ramas:
+            - en: [17, 1]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [15, 1]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [18, 5]
+            - en: [18, 2]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [17, 1]
+      - en: [15, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 5]
+
+- id: ogs-p4-carrera-de-capturas-7-07
+  titulo: Carrera de capturas (7)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 11, c: 5, color: N }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: N }
+    - { r: 12, c: 3, color: B }
+    - { r: 12, c: 5, color: N }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+  secuencia:
+    ramas:
+      - en: [13, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [13, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 3]
+      - en: [14, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [13, 2]
+      - en: [11, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [13, 4]
+
+- id: ogs-p4-carrera-de-capturas-7-08
+  titulo: Carrera de capturas (8)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: N }
+  secuencia:
+    ramas:
+      - en: [18, 1]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 0]
+        siguiente:
+          ramas:
+            - en: [18, 4]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [18, 1]
+              siguiente:
+                ramas:
+                  - en: [16, 0]
+                    correcto: true
+                    texto: ¡Correcto!
+      - en: [18, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 1]
+      - en: [16, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 5]
+
+- id: ogs-p4-carrera-de-capturas-7-09
+  titulo: Carrera de capturas (9)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 12, c: 3, color: N }
+    - { r: 12, c: 6, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 8, color: B }
+    - { r: 18, c: 4, color: N }
+  secuencia:
+    ramas:
+      - en: [18, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [17, 4]
+        siguiente:
+          ramas:
+            - en: [18, 6]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [18, 1]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [18, 6]
+      - en: [17, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+      - en: [17, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 4]
+      - en: [18, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+      - en: [18, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+      - en: [18, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+
+- id: ogs-p4-carrera-de-capturas-7-10
+  titulo: Carrera de capturas (10)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 6, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: B }
+  secuencia:
+    ramas:
+      - en: [16, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [17, 5]
+        siguiente:
+          ramas:
+            - en: [16, 0]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [17, 0]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [18, 5]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [18, 6]
+      - en: [17, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 4]
+      - en: [16, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 4]
+
+- id: ogs-p4-carrera-de-capturas-7-11
+  titulo: Carrera de capturas (11)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 10, c: 1, color: B }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 0, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [14, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [14, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 0]
+      - en: [12, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 0]
+
+- id: ogs-p4-carrera-de-capturas-7-12
+  titulo: Carrera de capturas (12)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 13, c: 0, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 3, color: B }
+  secuencia:
+    ramas:
+      - en: [18, 1]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 4]
+        siguiente:
+          ramas:
+            - en: [17, 5]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [17, 3]
+              siguiente:
+                ramas:
+                  - en: [18, 5]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [17, 3]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [18, 2]
+            - en: [18, 2]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [17, 3]
+      - en: [17, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 4]
+      - en: [18, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+      - en: [17, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 2]
+
+- id: ogs-p4-carrera-de-capturas-7-13
+  titulo: Carrera de capturas (13)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 10, c: 2, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 8, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 4, color: N }
+  secuencia:
+    ramas:
+      - en: [16, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [15, 0]
+        siguiente:
+          ramas:
+            - en: [16, 2]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [16, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 1]
+      - en: [15, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 1]
+      - en: [18, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 1]
+
+- id: ogs-p4-carrera-de-capturas-7-14
+  titulo: Carrera de capturas (14)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 11, c: 1, color: N }
+    - { r: 11, c: 5, color: N }
+    - { r: 12, c: 2, color: N }
+    - { r: 12, c: 3, color: N }
+    - { r: 13, c: 0, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: N }
+    - { r: 13, c: 5, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 1, color: B }
+  secuencia:
+    ramas:
+      - en: [15, 1]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [15, 2]
+        siguiente:
+          ramas:
+            - en: [16, 2]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [15, 0]
+              siguiente:
+                ramas:
+                  - en: [14, 0]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [17, 0]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [12, 0]
+            - en: [15, 0]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [14, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 1]
+      - en: [15, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 1]
+      - en: [15, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 1]
+
+- id: ogs-p4-carrera-de-capturas-7-15
+  titulo: Carrera de capturas (15)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 11, c: 5, color: B }
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 5, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: B }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 5, color: N }
+    - { r: 18, c: 6, color: B }
+  secuencia:
+    ramas:
+      - en: [17, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 0]
+        siguiente:
+          ramas:
+            - en: [18, 2]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [15, 0]
+              siguiente:
+                ramas:
+                  - en: [15, 5]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [17, 4]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [18, 4]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [18, 1]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [17, 0]
+            - en: [17, 4]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [18, 2]
+            - en: [15, 5]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [18, 2]
+            - en: [18, 4]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [18, 2]
+      - en: [18, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 0]
+      - en: [15, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 2]
+      - en: [17, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 2]
+      - en: [18, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 2]
+      - en: [18, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 0]
+
+- id: ogs-p4-carrera-de-capturas-7-16
+  titulo: Carrera de capturas (16)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 11, c: 3, color: N }
+    - { r: 12, c: 6, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 4, color: N }
+  secuencia:
+    ramas:
+      - en: [14, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 0]
+      - en: [15, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 0]
+      - en: [18, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 0]
+
+- id: ogs-p4-carrera-de-capturas-7-17
+  titulo: Carrera de capturas (17)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 11, c: 4, color: B }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 7, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [13, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 1]
+        siguiente:
+          ramas:
+            - en: [14, 0]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [15, 1]
+              siguiente:
+                ramas:
+                  - en: [17, 1]
+                    correcto: true
+                    texto: ¡Correcto!
+                  - en: [15, 0]
+                    correcto: false
+                    texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+                    respuestaRival: [17, 1]
+            - en: [17, 1]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [14, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [16, 1]
+        siguiente:
+          ramas:
+            - en: [13, 0]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [15, 1]
+              siguiente:
+                ramas:
+                  - en: [17, 1]
+                    correcto: true
+                    texto: ¡Correcto!
+      - en: [15, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 1]
+      - en: [16, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 5]
+
+- id: ogs-p4-carrera-de-capturas-7-18
+  titulo: Carrera de capturas (18)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 12, c: 3, color: N }
+    - { r: 12, c: 7, color: B }
+    - { r: 13, c: 6, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 18, c: 4, color: B }
+  secuencia:
+    ramas:
+      - en: [13, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [13, 2]
+        siguiente:
+          ramas:
+            - en: [14, 3]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [14, 4]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [14, 3]
+      - en: [14, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 4]
+      - en: [14, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 3]
+      - en: [16, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 5]
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 5]
+
+- id: ogs-p4-carrera-de-capturas-7-19
+  titulo: Carrera de capturas (19)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 12, c: 6, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 17, c: 7, color: B }
+    - { r: 17, c: 8, color: B }
+  secuencia:
+    ramas:
+      - en: [17, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+      - en: [18, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+      - en: [18, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+
+- id: ogs-p4-carrera-de-capturas-7-20
+  titulo: Carrera de capturas (20)
+  etiqueta: p4-carrera-de-capturas-7
+  dificultad: 5
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: ganá la carrera de capturas."
+  piedras:
+    - { r: 12, c: 6, color: N }
+    - { r: 13, c: 1, color: B }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: N }
+    - { r: 18, c: 1, color: N }
+  secuencia:
+    ramas:
+      - en: [18, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 4]
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 4]
+      - en: [18, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 4]
+      - en: [16, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 6]

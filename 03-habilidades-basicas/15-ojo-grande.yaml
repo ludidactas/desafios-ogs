@@ -1,0 +1,1011 @@
+# Habilidades básicas › Ojo grande — Hacer dos ojos en un ojo grande
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/large-eye).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-ojo-grande-01
+  titulo: Ojo grande (1)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: Negro tiene un ojo grande de 3 puntos. Para que el grupo esté a salvo necesita dos
+    ojos. Jugás con negras. Hacé dos ojos jugando en el «punto vital».
+  piedras:
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: B }
+  marcas:
+    - { r: 8, c: 0, tipo: cruz }
+  desenlaces:
+    - en: [8, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-02
+  titulo: Ojo grande (2)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: Otra vez Negro tiene un espacio de ojos de 3 puntos. Jugás con negras. Hacé dos ojos
+    jugando en el punto vital.
+  piedras:
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 2, color: B }
+  marcas:
+    - { r: 7, c: 0, tipo: cruz }
+  desenlaces:
+    - en: [7, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-03
+  titulo: Ojo grande (3)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: Negro tiene un espacio de ojos de 4 puntos. Jugás con negras. Hacé dos ojos jugando en
+    el punto vital.
+  piedras:
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 6, color: N }
+    - { r: 8, c: 7, color: B }
+  marcas:
+    - { r: 8, c: 4, tipo: cruz }
+  desenlaces:
+    - en: [8, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-04
+  titulo: Ojo grande (4)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: Negro tiene un espacio de ojos de 5 puntos. Jugás con negras. Hacé dos ojos (o más)
+    jugando en el punto vital.
+  piedras:
+    - { r: 1, c: 2, color: B }
+    - { r: 1, c: 3, color: B }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 6, color: B }
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 5, color: N }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+  marcas:
+    - { r: 4, c: 4, tipo: cruz }
+  desenlaces:
+    - en: [4, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-05
+  titulo: Ojo grande (5)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: Negro tiene un espacio de ojos de 5 puntos. Jugás con negras. Hacé dos ojos jugando en
+    el punto vital.
+  piedras:
+    - { r: 1, c: 2, color: B }
+    - { r: 1, c: 3, color: B }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 6, color: B }
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 5, color: N }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+  marcas:
+    - { r: 4, c: 4, tipo: cruz }
+  desenlaces:
+    - en: [4, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-06
+  titulo: Ojo grande (6)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos para que viva el grupo blanco."
+  piedras:
+    - { r: 1, c: 6, color: N }
+    - { r: 2, c: 7, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 8, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: N }
+  desenlaces:
+    - en: [5, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-07
+  titulo: Ojo grande (7)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos para que viva el grupo blanco."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 7, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 8, color: B }
+    - { r: 8, c: 6, color: B }
+  desenlaces:
+    - en: [8, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-08
+  titulo: Ojo grande (8)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos para que viva el grupo blanco."
+  piedras:
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 7, color: B }
+  desenlaces:
+    - en: [7, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-09
+  titulo: Ojo grande (9)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos para que viva el grupo blanco."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 6, color: N }
+    - { r: 8, c: 7, color: B }
+  desenlaces:
+    - en: [7, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-10
+  titulo: Ojo grande (10)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos para que viva el grupo blanco."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 7, color: B }
+  desenlaces:
+    - en: [7, 6]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-11
+  titulo: Ojo grande (11)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos para que viva el grupo blanco."
+  piedras:
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: B }
+  desenlaces:
+    - en: [7, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-12
+  titulo: Ojo grande (12)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos para que viva el grupo blanco."
+  piedras:
+    - { r: 1, c: 4, color: N }
+    - { r: 1, c: 5, color: N }
+    - { r: 1, c: 6, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: N }
+    - { r: 3, c: 0, color: N }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: N }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+  desenlaces:
+    - en: [4, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-13
+  titulo: Ojo grande (13)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos para que viva el grupo blanco."
+  piedras:
+    - { r: 1, c: 5, color: N }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: N }
+    - { r: 1, c: 8, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 2, c: 8, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 8, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+  desenlaces:
+    - en: [4, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-14
+  titulo: Ojo grande (14)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: hacé dos ojos para que viva el grupo blanco."
+  piedras:
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: N }
+    - { r: 1, c: 8, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 2, c: 7, color: B }
+    - { r: 2, c: 8, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: N }
+  secuencia:
+    ramas:
+      - en: [4, 7]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [3, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 8]
+
+- id: ogs-ojo-grande-15
+  titulo: Ojo grande (15)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: hacé dos ojos para que viva el grupo blanco."
+  piedras:
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 7, color: B }
+  secuencia:
+    ramas:
+      - en: [7, 8]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [7, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 8]
+
+- id: ogs-ojo-grande-16
+  titulo: Ojo grande (16)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: hacé dos ojos para que viva el grupo blanco."
+  piedras:
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 2, c: 7, color: B }
+    - { r: 2, c: 8, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 7, c: 8, color: N }
+  secuencia:
+    ramas:
+      - en: [4, 8]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 8]
+
+- id: ogs-ojo-grande-17
+  titulo: Ojo grande (17)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: hacé dos ojos para que viva el grupo blanco."
+  piedras:
+    - { r: 3, c: 5, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: B }
+  desenlaces:
+    - en: [7, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-18
+  titulo: Ojo grande (18)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: impedí que haga dos ojos y capturá el grupo negro."
+  piedras:
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 6, color: N }
+  desenlaces:
+    - en: [5, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-19
+  titulo: Ojo grande (19)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: impedí que haga dos ojos y capturá el grupo negro."
+  piedras:
+    - { r: 1, c: 6, color: B }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 7, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+  desenlaces:
+    - en: [5, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-20
+  titulo: Ojo grande (20)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: impedí que haga dos ojos y capturá el grupo negro."
+  piedras:
+    - { r: 2, c: 4, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 7, color: N }
+  desenlaces:
+    - en: [7, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-21
+  titulo: Ojo grande (21)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: impedí que haga dos ojos y capturá el grupo negro."
+  piedras:
+    - { r: 1, c: 6, color: B }
+    - { r: 1, c: 7, color: B }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: N }
+    - { r: 2, c: 8, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 7, color: B }
+  desenlaces:
+    - en: [4, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-22
+  titulo: Ojo grande (22)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: impedí que haga dos ojos y capturá el grupo negro."
+  piedras:
+    - { r: 1, c: 6, color: B }
+    - { r: 1, c: 7, color: B }
+    - { r: 1, c: 8, color: B }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: N }
+    - { r: 2, c: 8, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 7, c: 8, color: B }
+  desenlaces:
+    - en: [4, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-23
+  titulo: Ojo grande (23)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: impedí que haga dos ojos y capturá el grupo negro."
+  piedras:
+    - { r: 1, c: 4, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: N }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+  desenlaces:
+    - en: [4, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-24
+  titulo: Ojo grande (24)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: impedí que haga dos ojos y capturá el grupo negro."
+  piedras:
+    - { r: 2, c: 6, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 6, color: N }
+  desenlaces:
+    - en: [7, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-25
+  titulo: Ojo grande (25)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: impedí que haga dos ojos y capturá el grupo negro."
+  piedras:
+    - { r: 1, c: 7, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: N }
+    - { r: 2, c: 8, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+  desenlaces:
+    - en: [4, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-26
+  titulo: Ojo grande (26)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: impedí que haga dos ojos y capturá el grupo negro."
+  piedras:
+    - { r: 1, c: 7, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: N }
+    - { r: 2, c: 8, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 7, c: 8, color: N }
+  desenlaces:
+    - en: [4, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-27
+  titulo: Ojo grande (27)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: impedí que haga dos ojos y capturá el grupo negro."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 4, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 5, color: N }
+  desenlaces:
+    - en: [8, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-28
+  titulo: Ojo grande (28)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: impedí que haga dos ojos y capturá el grupo negro."
+  piedras:
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: N }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 7, c: 8, color: N }
+  desenlaces:
+    - en: [5, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-ojo-grande-29
+  titulo: Ojo grande (29)
+  etiqueta: ojo-grande
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: impedí que haga dos ojos y capturá el grupo negro."
+  piedras:
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 7, c: 8, color: B }
+    - { r: 8, c: 0, color: N }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 7, color: N }
+  desenlaces:
+    - en: [8, 5]
+      correcto: true
+      texto: ¡Correcto!

@@ -1,0 +1,172 @@
+# Habilidades básicas › Cortar — Cortar los grupos rivales
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/basic-skills-cut).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-hb-cortar-01
+  titulo: Cortar (1)
+  etiqueta: hb-cortar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: cortá las piedras blancas."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 2, c: 7, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 7, color: B }
+  secuencia:
+    ramas:
+      - en: [5, 7]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 7]
+      - en: [6, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 7]
+      - en: [3, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 7]
+
+- id: ogs-hb-cortar-02
+  titulo: Cortar (2)
+  etiqueta: hb-cortar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: cortá las piedras blancas."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 6, color: B }
+  desenlaces:
+    - en: [7, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-cortar-03
+  titulo: Cortar (3)
+  etiqueta: hb-cortar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: cortá las piedras blancas."
+  piedras:
+    - { r: 1, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+  desenlaces:
+    - en: [4, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-cortar-04
+  titulo: Cortar (4)
+  etiqueta: hb-cortar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: cortá las piedras blancas."
+  piedras:
+    - { r: 1, c: 6, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 7, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: B }
+  desenlaces:
+    - en: [2, 6]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-cortar-05
+  titulo: Cortar (5)
+  etiqueta: hb-cortar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: cortá las piedras blancas."
+  piedras:
+    - { r: 1, c: 6, color: N }
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 3, color: B }
+  desenlaces:
+    - en: [3, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-cortar-06
+  titulo: Cortar (6)
+  etiqueta: hb-cortar
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: cortá las piedras blancas."
+  piedras:
+    - { r: 1, c: 6, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 4, color: N }
+  desenlaces:
+    - en: [3, 4]
+      correcto: true
+      texto: ¡Correcto!

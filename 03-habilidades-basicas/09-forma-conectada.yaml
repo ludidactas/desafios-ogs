@@ -1,0 +1,480 @@
+# Habilidades básicas › Formas conectadas — Evitar un corte
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/connected-shape).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-forma-conectada-01
+  titulo: Formas conectadas (1)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Las tres piedras blancas no forman una cadena, pero igual están conectadas: si Negro
+    intenta cortarlas jugando 1, Blanco evita el corte jugando en A. Impedí que Negro corte."
+  piedras:
+    - { r: 1, c: 4, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 5, color: N }
+  marcas:
+    - { r: 3, c: 5, tipo: letra, texto: "1" }
+    - { r: 4, c: 5, tipo: letra, texto: A }
+  secuencia:
+    ramas:
+      - en: [4, 5]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [4, 6]
+        siguiente:
+          ramas:
+            - en: [2, 5]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-forma-conectada-02
+  titulo: Formas conectadas (2)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: Las dos piedras blancas se pueden conectar jugando en A. Impedí que Negro corte.
+  piedras:
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 5, color: N }
+  marcas:
+    - { r: 4, c: 4, tipo: letra, texto: A }
+  secuencia:
+    ramas:
+      - en: [4, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [3, 4]
+        siguiente:
+          ramas:
+            - en: [4, 5]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [5, 4]
+              siguiente:
+                ramas:
+                  - en: [4, 3]
+                    correcto: true
+                    texto: ¡Correcto!
+
+- id: ogs-forma-conectada-03
+  titulo: Formas conectadas (3)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Las dos piedras blancas se pueden conectar directamente, o jugando en A o en B: eso se
+    llama «conexión colgante» o «boca de tigre». Impedí que Negro corte jugando una boca de tigre."
+  piedras:
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+  marcas:
+    - { r: 4, c: 4, tipo: letra, texto: A }
+    - { r: 5, c: 5, tipo: letra, texto: B }
+  desenlaces:
+    - en: [4, 4]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [5, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-forma-conectada-04
+  titulo: Formas conectadas (4)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: asegurate de que Negro ya no pueda cortar las piedras blancas."
+  piedras:
+    - { r: 3, c: 2, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [7, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 4]
+
+- id: ogs-forma-conectada-05
+  titulo: Formas conectadas (5)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: asegurate de que Negro ya no pueda cortar las piedras blancas."
+  piedras:
+    - { r: 1, c: 4, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [4, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+      - en: [4, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+      - en: [3, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+      - en: [4, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+
+- id: ogs-forma-conectada-06
+  titulo: Formas conectadas (6)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: asegurate de que Negro ya no pueda cortar las piedras blancas."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+  desenlaces:
+    - en: [5, 4]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [4, 5]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [4, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-forma-conectada-07
+  titulo: Formas conectadas (7)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: asegurate de que Negro ya no pueda cortar las piedras blancas."
+  piedras:
+    - { r: 2, c: 4, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+  desenlaces:
+    - en: [4, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-forma-conectada-08
+  titulo: Formas conectadas (8)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: asegurate de que Negro ya no pueda cortar las piedras blancas."
+  piedras:
+    - { r: 3, c: 4, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+  desenlaces:
+    - en: [5, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-forma-conectada-09
+  titulo: Formas conectadas (9)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: asegurate de que Negro ya no pueda cortar las piedras blancas."
+  piedras:
+    - { r: 2, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+  secuencia:
+    ramas:
+      - en: [4, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 6]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 5]
+
+- id: ogs-forma-conectada-10
+  titulo: Formas conectadas (10)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: asegurate de que Negro ya no pueda cortar las piedras blancas."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: N }
+  desenlaces:
+    - en: [5, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-forma-conectada-11
+  titulo: Formas conectadas (11)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: asegurate de que Negro ya no pueda cortar las piedras blancas."
+  piedras:
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [7, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 3]
+
+- id: ogs-forma-conectada-12
+  titulo: Formas conectadas (12)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: asegurate de que Negro ya no pueda cortar las piedras blancas."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+  desenlaces:
+    - en: [5, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-forma-conectada-13
+  titulo: Formas conectadas (13)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: asegurate de que Negro ya no pueda cortar las piedras blancas."
+  piedras:
+    - { r: 0, c: 4, color: B }
+    - { r: 0, c: 5, color: N }
+    - { r: 0, c: 6, color: N }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 6, color: N }
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 5, color: N }
+    - { r: 2, c: 7, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+  secuencia:
+    ramas:
+      - en: [1, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [1, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [0, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [0, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [1, 3]
+
+- id: ogs-forma-conectada-14
+  titulo: Formas conectadas (14)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: asegurate de que Negro ya no pueda cortar las piedras blancas."
+  piedras:
+    - { r: 3, c: 0, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 8, c: 3, color: B }
+  desenlaces:
+    - en: [5, 2]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [7, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-forma-conectada-15
+  titulo: Formas conectadas (15)
+  etiqueta: forma-conectada
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: asegurate de que Negro ya no pueda cortar las piedras blancas."
+  piedras:
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 2, color: N }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+  secuencia:
+    ramas:
+      - en: [5, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 2]
+      - en: [6, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 2]
+      - en: [5, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 2]
+      - en: [5, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [6, 2]

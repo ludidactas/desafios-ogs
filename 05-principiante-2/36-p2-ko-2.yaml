@@ -1,0 +1,669 @@
+# Principiante, nivel 2 › Ko — Rescatar con ko
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl2-ko-2).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p2-ko-2-01
+  titulo: Ko (1)
+  etiqueta: p2-ko-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Con la jugada 1, Negro amenaza capturar el grupo blanco. Si Blanco juega en A para
+    conectar sus piedras, Negro juega en B y el grupo blanco muere. Pero Blanco también puede
+    empezar un ko jugando en B. Después Negro empieza la pelea de ko capturando en A, y Blanco tiene
+    que jugar una amenaza de ko en otro lugar del tablero. Jugás con blancas. Tratá de rescatar el
+    grupo blanco con un ko.
+  piedras:
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 2, color: N }
+  marcas:
+    - { r: 18, c: 2, tipo: letra, texto: "1" }
+    - { r: 17, c: 1, tipo: letra, texto: A }
+    - { r: 18, c: 1, tipo: letra, texto: B }
+  secuencia:
+    ramas:
+      - en: [18, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 1]
+
+- id: ogs-p2-ko-2-02
+  titulo: Ko (2)
+  etiqueta: p2-ko-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: tratá de rescatar la piedra marcada con un ko."
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+  marcas:
+    - { r: 17, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [17, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [15, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 4]
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 4]
+
+- id: ogs-p2-ko-2-03
+  titulo: Ko (3)
+  etiqueta: p2-ko-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: tratá de rescatar las piedras marcadas con un ko."
+  piedras:
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+  marcas:
+    - { r: 17, c: 3, tipo: triangulo }
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 15, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [16, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 0]
+      - en: [17, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 2]
+
+- id: ogs-p2-ko-2-04
+  titulo: Ko (4)
+  etiqueta: p2-ko-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: tratá de rescatar las piedras marcadas con un ko."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 3, color: B }
+  marcas:
+    - { r: 18, c: 3, tipo: triangulo }
+    - { r: 17, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [18, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 2]
+      - en: [17, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 2]
+
+- id: ogs-p2-ko-2-05
+  titulo: Ko (5)
+  etiqueta: p2-ko-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: tratá de rescatar las piedras marcadas con un ko."
+  piedras:
+    - { r: 13, c: 1, color: N }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 1, color: B }
+  marcas:
+    - { r: 18, c: 1, tipo: triangulo }
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 16, c: 1, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 14, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [15, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [15, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 0]
+      - en: [13, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [15, 1]
+
+- id: ogs-p2-ko-2-06
+  titulo: Ko (6)
+  etiqueta: p2-ko-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: tratá de rescatar las piedras marcadas con un ko."
+  piedras:
+    - { r: 11, c: 1, color: N }
+    - { r: 11, c: 2, color: N }
+    - { r: 12, c: 0, color: N }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+  marcas:
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 15, c: 1, tipo: triangulo }
+    - { r: 14, c: 3, tipo: triangulo }
+    - { r: 14, c: 1, tipo: triangulo }
+    - { r: 13, c: 2, tipo: triangulo }
+    - { r: 12, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [13, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [13, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [13, 0]
+      - en: [14, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [13, 1]
+
+- id: ogs-p2-ko-2-07
+  titulo: Ko (7)
+  etiqueta: p2-ko-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: tratá de rescatar las piedras marcadas con un ko."
+  piedras:
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: N }
+    - { r: 18, c: 6, color: N }
+  marcas:
+    - { r: 17, c: 6, tipo: triangulo }
+    - { r: 17, c: 5, tipo: triangulo }
+    - { r: 16, c: 6, tipo: triangulo }
+    - { r: 16, c: 4, tipo: triangulo }
+    - { r: 15, c: 6, tipo: triangulo }
+    - { r: 15, c: 5, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [18, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 5]
+      - en: [18, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 5]
+
+- id: ogs-p2-ko-2-08
+  titulo: Ko (8)
+  etiqueta: p2-ko-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: tratá de rescatar las piedras marcadas con un ko."
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 1, color: B }
+  marcas:
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 15, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [16, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+      - en: [17, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 3]
+
+- id: ogs-p2-ko-2-09
+  titulo: Ko (9)
+  etiqueta: p2-ko-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: tratá de rescatar las piedras marcadas con un ko."
+  piedras:
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 1, color: N }
+  marcas:
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 15, c: 1, tipo: triangulo }
+    - { r: 14, c: 2, tipo: triangulo }
+    - { r: 14, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [16, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [16, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 0]
+      - en: [15, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [16, 1]
+
+- id: ogs-p2-ko-2-10
+  titulo: Ko (10)
+  etiqueta: p2-ko-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: tratá de rescatar las piedras marcadas con un ko."
+  piedras:
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 2, color: N }
+  marcas:
+    - { r: 17, c: 2, tipo: triangulo }
+    - { r: 17, c: 0, tipo: triangulo }
+    - { r: 16, c: 1, tipo: triangulo }
+    - { r: 15, c: 1, tipo: triangulo }
+    - { r: 14, c: 1, tipo: triangulo }
+    - { r: 13, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [18, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 1]
+      - en: [13, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 1]
+
+- id: ogs-p2-ko-2-11
+  titulo: Ko (11)
+  etiqueta: p2-ko-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: tratá de rescatar las piedras marcadas con un ko."
+  piedras:
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 1, color: N }
+  marcas:
+    - { r: 17, c: 1, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 16, c: 0, tipo: triangulo }
+    - { r: 15, c: 2, tipo: triangulo }
+    - { r: 15, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [18, 0]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 3]
+        siguiente:
+          ramas:
+            - en: [18, 0]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [18, 4]
+              siguiente:
+                ramas:
+                  - en: [18, 2]
+                    correcto: true
+                    texto: ¡Correcto!
+      - en: [14, 1]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [14, 0]
+        siguiente:
+          ramas:
+            - en: [18, 0]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [18, 2]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [18, 3]
+              siguiente:
+                ramas:
+                  - en: [18, 0]
+                    correcto: true
+                    texto: ¡Correcto!
+      - en: [14, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [14, 1]
+        siguiente:
+          ramas:
+            - en: [18, 0]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [18, 2]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [18, 3]
+              siguiente:
+                ramas:
+                  - en: [18, 0]
+                    correcto: true
+                    texto: ¡Correcto!
+
+- id: ogs-p2-ko-2-12
+  titulo: Ko (12)
+  etiqueta: p2-ko-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: tratá de rescatar las piedras marcadas con un ko."
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 4, color: N }
+  marcas:
+    - { r: 18, c: 2, tipo: triangulo }
+    - { r: 17, c: 3, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 16, c: 1, tipo: triangulo }
+    - { r: 15, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [17, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 2]
+      - en: [17, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [14, 1]
+      - en: [14, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 2]
+
+- id: ogs-p2-ko-2-13
+  titulo: Ko (13)
+  etiqueta: p2-ko-2
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: tratá de rescatar las piedras marcadas con un ko."
+  piedras:
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: N }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 6, color: N }
+    - { r: 18, c: 7, color: N }
+  marcas:
+    - { r: 18, c: 3, tipo: triangulo }
+    - { r: 17, c: 4, tipo: triangulo }
+    - { r: 17, c: 3, tipo: triangulo }
+    - { r: 17, c: 2, tipo: triangulo }
+    - { r: 17, c: 1, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [18, 5]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [17, 0]
+        siguiente:
+          ramas:
+            - en: [15, 0]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [18, 0]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [18, 1]
+              siguiente:
+                ramas:
+                  - en: [15, 0]
+                    correcto: true
+                    texto: ¡Correcto!
+            - en: [18, 4]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [18, 1]
+      - en: [17, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 1]
+        siguiente:
+          ramas:
+            - en: [18, 5]
+              correcto: true
+              texto: ¡Correcto!

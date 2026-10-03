@@ -1,0 +1,957 @@
+# Principiante, nivel 2 › Final 3 — Valor de una jugada
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl2-endgame3).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p2-final3-01
+  titulo: Final 3 (1)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 4, color: B }
+    - { r: 18, c: 5, color: N }
+  marcas:
+    - { r: 18, c: 3, tipo: letra, texto: A }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }
+    - { texto: "3", correcta: false }
+
+- id: ogs-p2-final3-02
+  titulo: Final 3 (2)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 11, c: 3, color: B }
+    - { r: 11, c: 4, color: N }
+    - { r: 12, c: 0, color: B }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 12, c: 4, color: N }
+    - { r: 13, c: 0, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+  marcas:
+    - { r: 16, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "6", correcta: false }
+    - { texto: "8", correcta: false }
+    - { texto: "9", correcta: true }
+
+- id: ogs-p2-final3-03
+  titulo: Final 3 (3)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 5, color: N }
+  marcas:
+    - { r: 18, c: 3, tipo: letra, texto: A }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: false }
+    - { texto: "3", correcta: true }
+
+- id: ogs-p2-final3-04
+  titulo: Final 3 (4)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 11, c: 3, color: B }
+    - { r: 11, c: 5, color: N }
+    - { r: 12, c: 3, color: B }
+    - { r: 12, c: 5, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 5, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 4, color: N }
+    - { r: 18, c: 5, color: N }
+  marcas:
+    - { r: 18, c: 3, tipo: letra, texto: A }
+  opciones:
+    - { texto: "7", correcta: false }
+    - { texto: "8", correcta: false }
+    - { texto: "9", correcta: true }
+
+- id: ogs-p2-final3-05
+  titulo: Final 3 (5)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: N }
+  marcas:
+    - { r: 15, c: 3, tipo: letra, texto: A }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: false }
+    - { texto: "3", correcta: true }
+
+- id: ogs-p2-final3-06
+  titulo: Final 3 (6)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 11, c: 6, color: N }
+    - { r: 12, c: 6, color: N }
+    - { r: 12, c: 7, color: B }
+    - { r: 13, c: 6, color: N }
+    - { r: 13, c: 7, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 14, c: 7, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 4, color: B }
+  marcas:
+    - { r: 17, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: false }
+    - { texto: "3", correcta: true }
+
+- id: ogs-p2-final3-07
+  titulo: Final 3 (7)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 6, color: N }
+  marcas:
+    - { r: 18, c: 4, tipo: letra, texto: A }
+  opciones:
+    - { texto: "2", correcta: false }
+    - { texto: "3", correcta: false }
+    - { texto: "4", correcta: true }
+
+- id: ogs-p2-final3-08
+  titulo: Final 3 (8)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 11, c: 6, color: N }
+    - { r: 12, c: 6, color: N }
+    - { r: 13, c: 0, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 6, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 14, c: 7, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 7, color: B }
+  marcas:
+    - { r: 16, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "4", correcta: false }
+    - { texto: "5", correcta: true }
+    - { texto: "6", correcta: false }
+
+- id: ogs-p2-final3-09
+  titulo: Final 3 (9)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 11, c: 3, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: N }
+  marcas:
+    - { r: 18, c: 1, tipo: letra, texto: A }
+  opciones:
+    - { texto: "3", correcta: false }
+    - { texto: "4", correcta: true }
+    - { texto: "5", correcta: false }
+
+- id: ogs-p2-final3-10
+  titulo: Final 3 (10)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 11, c: 6, color: N }
+    - { r: 12, c: 6, color: N }
+    - { r: 13, c: 0, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 6, color: N }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 14, c: 7, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 7, color: B }
+  marcas:
+    - { r: 16, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "4", correcta: false }
+    - { texto: "7", correcta: true }
+    - { texto: "8", correcta: false }
+
+- id: ogs-p2-final3-11
+  titulo: Final 3 (11)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 7, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 4, color: N }
+    - { r: 18, c: 5, color: N }
+  marcas:
+    - { r: 18, c: 2, tipo: letra, texto: A }
+  opciones:
+    - { texto: "2", correcta: false }
+    - { texto: "3", correcta: false }
+    - { texto: "4", correcta: true }
+
+- id: ogs-p2-final3-12
+  titulo: Final 3 (12)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 11, c: 6, color: N }
+    - { r: 12, c: 6, color: N }
+    - { r: 12, c: 7, color: B }
+    - { r: 13, c: 6, color: N }
+    - { r: 13, c: 7, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 14, c: 7, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 7, color: B }
+    - { r: 18, c: 4, color: B }
+    - { r: 18, c: 5, color: B }
+  marcas:
+    - { r: 18, c: 3, tipo: letra, texto: A }
+  opciones:
+    - { texto: "7", correcta: false }
+    - { texto: "8", correcta: true }
+    - { texto: "9", correcta: false }
+
+- id: ogs-p2-final3-13
+  titulo: Final 3 (13)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 10, c: 3, color: N }
+    - { r: 11, c: 0, color: N }
+    - { r: 11, c: 1, color: N }
+    - { r: 11, c: 2, color: N }
+    - { r: 12, c: 0, color: N }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: N }
+  marcas:
+    - { r: 13, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "3", correcta: false }
+    - { texto: "5", correcta: true }
+
+- id: ogs-p2-final3-14
+  titulo: Final 3 (14)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: B }
+  marcas:
+    - { r: 17, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }
+
+- id: ogs-p2-final3-15
+  titulo: Final 3 (15)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 11, c: 0, color: B }
+    - { r: 11, c: 1, color: B }
+    - { r: 11, c: 2, color: B }
+    - { r: 11, c: 3, color: B }
+    - { r: 11, c: 5, color: B }
+    - { r: 12, c: 0, color: B }
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: N }
+    - { r: 12, c: 3, color: N }
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: B }
+  marcas:
+    - { r: 13, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "5", correcta: false }
+    - { texto: "7", correcta: true }
+
+- id: ogs-p2-final3-16
+  titulo: Final 3 (16)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 12, c: 3, color: N }
+    - { r: 13, c: 5, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: B }
+    - { r: 14, c: 8, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 8, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 0, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 4, color: B }
+  marcas:
+    - { r: 17, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: false }
+    - { texto: "3", correcta: true }
+
+- id: ogs-p2-final3-17
+  titulo: Final 3 (17)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 10, c: 3, color: B }
+    - { r: 11, c: 0, color: B }
+    - { r: 11, c: 1, color: B }
+    - { r: 11, c: 2, color: B }
+    - { r: 12, c: 0, color: B }
+    - { r: 12, c: 1, color: N }
+    - { r: 12, c: 2, color: N }
+    - { r: 12, c: 3, color: B }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: B }
+  marcas:
+    - { r: 13, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "3", correcta: false }
+    - { texto: "4", correcta: true }
+    - { texto: "5", correcta: false }
+
+- id: ogs-p2-final3-18
+  titulo: Final 3 (18)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 4, color: B }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 7, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: N }
+  marcas:
+    - { r: 15, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "3", correcta: false }
+    - { texto: "5", correcta: false }
+    - { texto: "6", correcta: true }
+
+- id: ogs-p2-final3-19
+  titulo: Final 3 (19)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 14, c: 8, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: N }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 4, color: B }
+    - { r: 18, c: 6, color: B }
+    - { r: 18, c: 7, color: N }
+  marcas:
+    - { r: 17, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: false }
+    - { texto: "3", correcta: true }
+
+- id: ogs-p2-final3-20
+  titulo: Final 3 (20)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 11, c: 3, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 4, color: N }
+  marcas:
+    - { r: 17, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }
+    - { texto: "3", correcta: false }
+
+- id: ogs-p2-final3-21
+  titulo: Final 3 (21)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 13, c: 6, color: N }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 4, color: N }
+    - { r: 18, c: 6, color: N }
+  marcas:
+    - { r: 18, c: 5, tipo: letra, texto: A }
+  opciones:
+    - { texto: "3", correcta: false }
+    - { texto: "5", correcta: true }
+    - { texto: "6", correcta: false }
+
+- id: ogs-p2-final3-22
+  titulo: Final 3 (22)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 18, c: 0, color: B }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: N }
+  marcas:
+    - { r: 17, c: 1, tipo: letra, texto: A }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "4", correcta: false }
+    - { texto: "6", correcta: true }
+
+- id: ogs-p2-final3-23
+  titulo: Final 3 (23)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: B }
+  marcas:
+    - { r: 17, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "2", correcta: false }
+    - { texto: "3", correcta: true }
+    - { texto: "4", correcta: false }
+
+- id: ogs-p2-final3-24
+  titulo: Final 3 (24)
+  etiqueta: p2-final3
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuánto vale jugar en A?
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: N }
+  marcas:
+    - { r: 16, c: 0, tipo: letra, texto: A }
+  opciones:
+    - { texto: "6", correcta: false }
+    - { texto: "7", correcta: false }
+    - { texto: "8", correcta: true }

@@ -1,0 +1,461 @@
+# Principiante, nivel 1 › Contar ojos — Contar los ojos
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl1-count-eyes).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p1-contar-ojos-01
+  titulo: Contar ojos (1)
+  etiqueta: p1-contar-ojos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuántos ojos verdaderos tiene el grupo blanco?
+  piedras:
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: B }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }
+
+- id: ogs-p1-contar-ojos-02
+  titulo: Contar ojos (2)
+  etiqueta: p1-contar-ojos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuántos ojos verdaderos tiene el grupo blanco?
+  piedras:
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 3, color: B }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: true }
+    - { texto: "2", correcta: false }
+
+- id: ogs-p1-contar-ojos-03
+  titulo: Contar ojos (3)
+  etiqueta: p1-contar-ojos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuántos ojos verdaderos tiene el grupo blanco?
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: N }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 4, color: B }
+    - { r: 18, c: 5, color: B }
+    - { r: 18, c: 6, color: B }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }
+    - { texto: "3", correcta: false }
+
+- id: ogs-p1-contar-ojos-04
+  titulo: Contar ojos (4)
+  etiqueta: p1-contar-ojos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuántos ojos verdaderos tiene el grupo blanco?
+  piedras:
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: N }
+    - { r: 18, c: 3, color: B }
+    - { r: 18, c: 5, color: N }
+    - { r: 18, c: 6, color: N }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: true }
+    - { texto: "2", correcta: false }
+
+- id: ogs-p1-contar-ojos-05
+  titulo: Contar ojos (5)
+  etiqueta: p1-contar-ojos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuántos ojos verdaderos tiene el grupo blanco?
+  piedras:
+    - { r: 12, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 5, color: N }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }
+
+- id: ogs-p1-contar-ojos-06
+  titulo: Contar ojos (6)
+  etiqueta: p1-contar-ojos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuántos ojos verdaderos tiene el grupo blanco?
+  piedras:
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 4, color: B }
+    - { r: 18, c: 5, color: B }
+    - { r: 18, c: 6, color: N }
+    - { r: 18, c: 7, color: N }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: true }
+    - { texto: "2", correcta: false }
+    - { texto: "3", correcta: false }
+
+- id: ogs-p1-contar-ojos-07
+  titulo: Contar ojos (7)
+  etiqueta: p1-contar-ojos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuántos ojos verdaderos tiene el grupo blanco?
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 13, c: 6, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: N }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }
+
+- id: ogs-p1-contar-ojos-08
+  titulo: Contar ojos (8)
+  etiqueta: p1-contar-ojos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuántos ojos verdaderos tiene el grupo blanco?
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 6, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 7, color: N }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 4, color: N }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: true }
+    - { texto: "2", correcta: false }
+
+- id: ogs-p1-contar-ojos-09
+  titulo: Contar ojos (9)
+  etiqueta: p1-contar-ojos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuántos ojos verdaderos tiene el grupo blanco?
+  piedras:
+    - { r: 11, c: 4, color: N }
+    - { r: 11, c: 5, color: N }
+    - { r: 12, c: 3, color: N }
+    - { r: 12, c: 6, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: B }
+    - { r: 13, c: 5, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 14, c: 6, color: N }
+    - { r: 14, c: 7, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 5, color: N }
+  opciones:
+    - { texto: "0", correcta: true }
+    - { texto: "2", correcta: false }
+    - { texto: "4", correcta: false }
+
+- id: ogs-p1-contar-ojos-10
+  titulo: Contar ojos (10)
+  etiqueta: p1-contar-ojos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuántos ojos verdaderos tiene el grupo blanco?
+  piedras:
+    - { r: 11, c: 3, color: N }
+    - { r: 12, c: 4, color: N }
+    - { r: 12, c: 5, color: N }
+    - { r: 12, c: 6, color: N }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: B }
+    - { r: 13, c: 5, color: B }
+    - { r: 13, c: 7, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 5, color: B }
+    - { r: 14, c: 7, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 2, color: N }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: true }
+    - { texto: "2", correcta: false }
+
+- id: ogs-p1-contar-ojos-11
+  titulo: Contar ojos (11)
+  etiqueta: p1-contar-ojos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuántos ojos verdaderos tiene el grupo blanco?
+  piedras:
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 13, c: 5, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 6, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 3, color: N }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: true }
+    - { texto: "2", correcta: false }
+
+- id: ogs-p1-contar-ojos-12
+  titulo: Contar ojos (12)
+  etiqueta: p1-contar-ojos
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  tipo: opciones
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: ¿Cuántos ojos verdaderos tiene el grupo blanco?
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 13, c: 4, color: N }
+    - { r: 13, c: 6, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 7, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: N }
+    - { r: 18, c: 4, color: N }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: true }
+    - { texto: "2", correcta: false }

@@ -1,0 +1,186 @@
+# Principios básicos › Grupo vivo — ¿El grupo está vivo?
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/group-alive).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-grupo-vivo-01
+  titulo: Grupo vivo (1)
+  etiqueta: grupo-vivo
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: Un grupo de piedras está vivo si tiene dos ojos verdaderos. ¿El grupo negro está vivo?
+  piedras:
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 7, color: N }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-grupo-vivo-02
+  titulo: Grupo vivo (2)
+  etiqueta: grupo-vivo
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿El grupo negro está vivo?
+  piedras:
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 6, color: B }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-grupo-vivo-03
+  titulo: Grupo vivo (3)
+  etiqueta: grupo-vivo
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿El grupo negro está vivo?
+  piedras:
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-grupo-vivo-04
+  titulo: Grupo vivo (4)
+  etiqueta: grupo-vivo
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿El grupo negro está vivo?
+  piedras:
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 6, color: B }
+  opciones:
+    - { texto: Sí, correcta: false }
+    - { texto: No, correcta: true }
+
+- id: ogs-grupo-vivo-05
+  titulo: Grupo vivo (5)
+  etiqueta: grupo-vivo
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿El grupo negro está vivo?
+  piedras:
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }
+
+- id: ogs-grupo-vivo-06
+  titulo: Grupo vivo (6)
+  etiqueta: grupo-vivo
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿El grupo negro está vivo?
+  piedras:
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: B }
+    - { r: 3, c: 8, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 7, c: 8, color: B }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: B }
+  opciones:
+    - { texto: Sí, correcta: true }
+    - { texto: No, correcta: false }

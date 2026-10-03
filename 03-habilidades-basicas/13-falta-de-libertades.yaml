@@ -1,0 +1,535 @@
+# Habilidades básicas › Falta de libertades — Falta de libertades
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/shortage-liberties).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-falta-de-libertades-01
+  titulo: Falta de libertades (1)
+  etiqueta: falta-de-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Negro puede darles atari a las piedras marcadas jugando en A. Después Blanco puede
+    conectar en B, pero sus piedras siguen en atari: eso se llama «falta de libertades». Capturá las
+    piedras marcadas aprovechando la falta de libertades de Blanco."
+  piedras:
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 8, c: 0, color: N }
+    - { r: 8, c: 2, color: B }
+  marcas:
+    - { r: 7, c: 1, tipo: triangulo }
+    - { r: 6, c: 1, tipo: triangulo }
+    - { r: 7, c: 2, tipo: letra, texto: A }
+    - { r: 8, c: 1, tipo: letra, texto: B }
+  secuencia:
+    ramas:
+      - en: [7, 2]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [8, 1]
+        siguiente:
+          ramas:
+            - en: [8, 3]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [8, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 2]
+
+- id: ogs-falta-de-libertades-02
+  titulo: Falta de libertades (2)
+  etiqueta: falta-de-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá las piedras marcadas aprovechando la falta de libertades de Blanco."
+  piedras:
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 3, color: B }
+  marcas:
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [8, 5]
+        siguiente:
+          ramas:
+            - en: [8, 6]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [8, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 4]
+
+- id: ogs-falta-de-libertades-03
+  titulo: Falta de libertades (3)
+  etiqueta: falta-de-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá las piedras marcadas aprovechando la falta de libertades de Blanco."
+  piedras:
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 5, color: B }
+  marcas:
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 6, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 2]
+      - en: [8, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 5]
+
+- id: ogs-falta-de-libertades-04
+  titulo: Falta de libertades (4)
+  etiqueta: falta-de-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá las piedras marcadas aprovechando la falta de libertades de Blanco."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 4, color: B }
+  marcas:
+    - { r: 8, c: 2, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 7, c: 2, tipo: triangulo }
+  desenlaces:
+    - en: [8, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-falta-de-libertades-05
+  titulo: Falta de libertades (5)
+  etiqueta: falta-de-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá las piedras marcadas aprovechando la falta de libertades de Blanco."
+  piedras:
+    - { r: 4, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 8, c: 0, color: B }
+    - { r: 8, c: 2, color: B }
+  marcas:
+    - { r: 8, c: 0, tipo: triangulo }
+    - { r: 7, c: 1, tipo: triangulo }
+  desenlaces:
+    - en: [7, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-falta-de-libertades-06
+  titulo: Falta de libertades (6)
+  etiqueta: falta-de-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá las piedras marcadas aprovechando la falta de libertades de Blanco."
+  piedras:
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 6, color: N }
+  marcas:
+    - { r: 8, c: 4, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+  desenlaces:
+    - en: [8, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-falta-de-libertades-07
+  titulo: Falta de libertades (7)
+  etiqueta: falta-de-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá las piedras marcadas aprovechando la falta de libertades de Blanco."
+  piedras:
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 5, color: B }
+  marcas:
+    - { r: 8, c: 3, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+  desenlaces:
+    - en: [7, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-falta-de-libertades-08
+  titulo: Falta de libertades (8)
+  etiqueta: falta-de-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá las piedras marcadas aprovechando la falta de libertades de Blanco."
+  piedras:
+    - { r: 3, c: 3, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 8, c: 3, color: N }
+  marcas:
+    - { r: 6, c: 2, tipo: triangulo }
+    - { r: 5, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [5, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [6, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 3]
+
+- id: ogs-falta-de-libertades-09
+  titulo: Falta de libertades (9)
+  etiqueta: falta-de-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá las piedras marcadas aprovechando la falta de libertades de Blanco."
+  piedras:
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 5, color: B }
+  marcas:
+    - { r: 7, c: 7, tipo: triangulo }
+    - { r: 7, c: 6, tipo: triangulo }
+    - { r: 6, c: 7, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 7]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 7]
+
+- id: ogs-falta-de-libertades-10
+  titulo: Falta de libertades (10)
+  etiqueta: falta-de-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: capturá las piedras marcadas aprovechando la falta de libertades de Blanco."
+  piedras:
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+  marcas:
+    - { r: 5, c: 5, tipo: triangulo }
+    - { r: 4, c: 5, tipo: triangulo }
+    - { r: 4, c: 4, tipo: triangulo }
+  desenlaces:
+    - en: [6, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-falta-de-libertades-11
+  titulo: Falta de libertades (11)
+  etiqueta: falta-de-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá las piedras marcadas aprovechando la falta de libertades de Blanco."
+  piedras:
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: N }
+  marcas:
+    - { r: 8, c: 6, tipo: triangulo }
+    - { r: 8, c: 5, tipo: triangulo }
+    - { r: 7, c: 6, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 2]
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 3]
+
+- id: ogs-falta-de-libertades-12
+  titulo: Falta de libertades (12)
+  etiqueta: falta-de-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá las piedras marcadas aprovechando la falta de libertades de Blanco."
+  piedras:
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 3, color: B }
+  marcas:
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 8, c: 2, tipo: triangulo }
+    - { r: 8, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [8, 5]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [7, 1]
+        siguiente:
+          ramas:
+            - en: [8, 4]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [8, 1]
+              siguiente:
+                ramas:
+                  - en: [6, 1]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [6, 0]
+                    siguiente:
+                      ramas:
+                        - en: [5, 0]
+                          correcto: true
+                          texto: "Bien. Blanco respondió: seguí."
+                          respuestaRival: [6, 2]
+                          siguiente:
+                            ramas:
+                              - en: [7, 0]
+                                correcto: true
+                                texto: ¡Correcto!
+                        - en: [7, 0]
+                          correcto: true
+                          texto: ¡Correcto!
+                        - en: [8, 0]
+                          correcto: true
+                          texto: ¡Correcto!
+      - en: [8, 4]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [8, 5]
+        siguiente:
+          ramas:
+            - en: [8, 6]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [7, 1]
+              siguiente:
+                ramas:
+                  - en: [6, 1]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [6, 0]
+                    siguiente:
+                      ramas:
+                        - en: [8, 1]
+                          correcto: true
+                          texto: "Bien. Blanco respondió: seguí."
+                          respuestaRival: [8, 0]
+                          siguiente:
+                            ramas:
+                              - en: [5, 0]
+                                correcto: true
+                                texto: "Bien. Blanco respondió: seguí."
+                                respuestaRival: [6, 2]
+                                siguiente:
+                                  ramas:
+                                    - en: [8, 4]
+                                      correcto: true
+                                      texto: "Bien. Blanco respondió: seguí."
+                                      respuestaRival: [8, 1]
+                                      siguiente:
+                                        ramas:
+                                          - en: [7, 0]
+                                            correcto: true
+                                            texto: ¡Correcto!
+                        - en: [5, 0]
+                          correcto: false
+                          texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+                          respuestaRival: [6, 2]
+                  - en: [8, 4]
+                    correcto: true
+                    texto: "Bien. Blanco respondió: seguí."
+                    respuestaRival: [8, 1]
+                    siguiente:
+                      ramas:
+                        - en: [6, 1]
+                          correcto: true
+                          texto: ¡Correcto!
+      - en: [8, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 7]

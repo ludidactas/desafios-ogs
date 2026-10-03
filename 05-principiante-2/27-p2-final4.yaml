@@ -1,0 +1,357 @@
+# Principiante, nivel 2 › Final 4 — Contar puntos neutrales
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl2-endgame4).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p2-final4-01
+  titulo: Final 4 (1)
+  etiqueta: p2-final4
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: "Al final de la partida suelen quedar algunas intersecciones vacías sueltas entre los
+    territorios blanco y negro. Esas intersecciones no son territorio de nadie: se llaman puntos
+    neutrales (en japonés, «dame»). Esta partida terminó. ¿Cuántos puntos neutrales contás?"
+  piedras:
+    - { r: 0, c: 3, color: N }
+    - { r: 0, c: 5, color: N }
+    - { r: 0, c: 6, color: B }
+    - { r: 0, c: 8, color: N }
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 4, color: N }
+    - { r: 1, c: 5, color: N }
+    - { r: 1, c: 6, color: B }
+    - { r: 1, c: 8, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 2, c: 8, color: B }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 0, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: B }
+  opciones:
+    - { texto: "2", correcta: false }
+    - { texto: "4", correcta: true }
+    - { texto: "6", correcta: false }
+
+- id: ogs-p2-final4-02
+  titulo: Final 4 (2)
+  etiqueta: p2-final4
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Cuántos puntos neutrales contás?
+  piedras:
+    - { r: 0, c: 1, color: B }
+    - { r: 0, c: 2, color: B }
+    - { r: 0, c: 3, color: B }
+    - { r: 0, c: 4, color: B }
+    - { r: 0, c: 6, color: N }
+    - { r: 0, c: 8, color: N }
+    - { r: 1, c: 0, color: N }
+    - { r: 1, c: 1, color: N }
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: N }
+    - { r: 2, c: 8, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 8, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 0, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 8, color: B }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 6, color: B }
+  opciones:
+    - { texto: "6", correcta: false }
+    - { texto: "7", correcta: true }
+    - { texto: "8", correcta: false }
+
+- id: ogs-p2-final4-03
+  titulo: Final 4 (3)
+  etiqueta: p2-final4
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Cuántos puntos neutrales contás?
+  piedras:
+    - { r: 0, c: 3, color: N }
+    - { r: 0, c: 5, color: B }
+    - { r: 1, c: 1, color: N }
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 7, color: B }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 3, c: 0, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: B }
+    - { r: 3, c: 8, color: B }
+    - { r: 4, c: 0, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 0, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: B }
+  opciones:
+    - { texto: "5", correcta: false }
+    - { texto: "6", correcta: true }
+    - { texto: "7", correcta: false }
+
+- id: ogs-p2-final4-04
+  titulo: Final 4 (4)
+  etiqueta: p2-final4
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Cuántos puntos neutrales contás?
+  piedras:
+    - { r: 0, c: 2, color: N }
+    - { r: 0, c: 4, color: B }
+    - { r: 0, c: 6, color: B }
+    - { r: 0, c: 7, color: N }
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 6, color: B }
+    - { r: 1, c: 7, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 0, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 0, color: B }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: B }
+  opciones:
+    - { texto: "4", correcta: false }
+    - { texto: "6", correcta: true }
+    - { texto: "8", correcta: false }
+
+- id: ogs-p2-final4-05
+  titulo: Final 4 (5)
+  etiqueta: p2-final4
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Cuántos puntos neutrales contás?
+  piedras:
+    - { r: 1, c: 4, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 0, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 7, color: N }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 0, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 7, color: B }
+  opciones:
+    - { texto: "2", correcta: false }
+    - { texto: "3", correcta: false }
+    - { texto: "4", correcta: true }
+
+- id: ogs-p2-final4-06
+  titulo: Final 4 (6)
+  etiqueta: p2-final4
+  dificultad: 3
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: La partida terminó. ¿Cuántos puntos neutrales contás?
+  piedras:
+    - { r: 0, c: 6, color: N }
+    - { r: 0, c: 7, color: B }
+    - { r: 1, c: 1, color: N }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: B }
+    - { r: 2, c: 0, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 5, color: N }
+    - { r: 2, c: 6, color: N }
+    - { r: 2, c: 7, color: N }
+    - { r: 2, c: 8, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 8, color: N }
+    - { r: 4, c: 0, color: B }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 0, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 0, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 7, color: B }
+  opciones:
+    - { texto: "5", correcta: true }
+    - { texto: "6", correcta: false }
+    - { texto: "8", correcta: false }

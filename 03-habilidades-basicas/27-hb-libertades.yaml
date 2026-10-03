@@ -1,0 +1,720 @@
+# Habilidades básicas › Libertades — Quitar o sumar libertades
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bs-liberties).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-hb-libertades-01
+  titulo: Libertades (1)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Podés atacar una cadena quitándole una libertad. Al hacerlo, tratá de lograr algo más,
+    como conectar tus piedras o proteger territorio. Jugás con blancas. Elegí la mejor forma de
+    quitar libertades: A, B o C."
+  piedras:
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+  marcas:
+    - { r: 14, c: 3, tipo: letra, texto: A }
+    - { r: 15, c: 6, tipo: letra, texto: B }
+    - { r: 16, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-02
+  titulo: Libertades (2)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Otro objetivo al quitar una libertad puede ser cortar las piedras rivales. Jugás con
+    blancas. Elegí la mejor forma de quitar libertades: A, B o C."
+  piedras:
+    - { r: 12, c: 7, color: N }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 6, color: N }
+    - { r: 14, c: 7, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+  marcas:
+    - { r: 14, c: 3, tipo: letra, texto: A }
+    - { r: 14, c: 4, tipo: letra, texto: B }
+    - { r: 14, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [14, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-03
+  titulo: Libertades (3)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor forma de quitar libertades: A, B o C."
+  piedras:
+    - { r: 12, c: 3, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 14, c: 4, tipo: letra, texto: A }
+    - { r: 15, c: 3, tipo: letra, texto: B }
+    - { r: 16, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-04
+  titulo: Libertades (4)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Otro objetivo más es frenar el avance de las piedras rivales. Jugás con blancas. Elegí
+    la mejor forma de quitar libertades: A, B o C."
+  piedras:
+    - { r: 11, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 2, color: B }
+  marcas:
+    - { r: 14, c: 4, tipo: letra, texto: A }
+    - { r: 17, c: 3, tipo: letra, texto: B }
+    - { r: 17, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [14, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-05
+  titulo: Libertades (5)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor forma de quitar libertades: A, B o C."
+  piedras:
+    - { r: 11, c: 2, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 5, color: B }
+  marcas:
+    - { r: 13, c: 3, tipo: letra, texto: A }
+    - { r: 16, c: 4, tipo: letra, texto: C }
+    - { r: 17, c: 3, tipo: letra, texto: B }
+  desenlaces:
+    - en: [13, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-06
+  titulo: Libertades (6)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor forma de quitar libertades: A, B o C."
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 2, color: B }
+  marcas:
+    - { r: 12, c: 3, tipo: letra, texto: A }
+    - { r: 13, c: 2, tipo: letra, texto: B }
+    - { r: 16, c: 3, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-07
+  titulo: Libertades (7)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor forma de quitar libertades: A, B o C."
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 6, color: B }
+  marcas:
+    - { r: 14, c: 2, tipo: letra, texto: A }
+    - { r: 14, c: 3, tipo: letra, texto: B }
+    - { r: 16, c: 3, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-08
+  titulo: Libertades (8)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor forma de quitar libertades: A, B o C."
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 7, color: B }
+  marcas:
+    - { r: 14, c: 4, tipo: letra, texto: A }
+    - { r: 15, c: 5, tipo: letra, texto: B }
+    - { r: 17, c: 3, tipo: letra, texto: C }
+  desenlaces:
+    - en: [14, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-09
+  titulo: Libertades (9)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor forma de quitar libertades: A, B o C."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 5, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: B }
+  marcas:
+    - { r: 14, c: 3, tipo: letra, texto: A }
+    - { r: 15, c: 6, tipo: letra, texto: B }
+    - { r: 17, c: 3, tipo: letra, texto: C }
+  desenlaces:
+    - en: [17, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-10
+  titulo: Libertades (10)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor forma de quitar libertades: A, B o C."
+  piedras:
+    - { r: 12, c: 2, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+  marcas:
+    - { r: 16, c: 6, tipo: letra, texto: A }
+    - { r: 17, c: 3, tipo: letra, texto: B }
+    - { r: 17, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 6]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-11
+  titulo: Libertades (11)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: aumentá las libertades de la cadena marcada."
+  piedras:
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 7, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+  marcas:
+    - { r: 17, c: 4, tipo: triangulo }
+  desenlaces:
+    - en: [17, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-12
+  titulo: Libertades (12)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: aumentá las libertades de la cadena marcada."
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+  marcas:
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+  desenlaces:
+    - en: [16, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-13
+  titulo: Libertades (13)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: aumentá las libertades de la cadena marcada."
+  piedras:
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 7, color: N }
+  marcas:
+    - { r: 15, c: 4, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+  desenlaces:
+    - en: [15, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-14
+  titulo: Libertades (14)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: aumentá las libertades de la cadena marcada."
+  piedras:
+    - { r: 12, c: 2, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+  marcas:
+    - { r: 15, c: 3, tipo: triangulo }
+  desenlaces:
+    - en: [14, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-15
+  titulo: Libertades (15)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: aumentá las libertades de la cadena marcada."
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 6, color: B }
+  marcas:
+    - { r: 16, c: 4, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 16, c: 2, tipo: triangulo }
+    - { r: 15, c: 4, tipo: triangulo }
+  desenlaces:
+    - en: [14, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-16
+  titulo: Libertades (16)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: aumentá las libertades de la cadena marcada."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 13, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 5, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 3, color: N }
+  marcas:
+    - { r: 18, c: 3, tipo: triangulo }
+    - { r: 17, c: 3, tipo: triangulo }
+    - { r: 16, c: 3, tipo: triangulo }
+    - { r: 15, c: 3, tipo: triangulo }
+    - { r: 14, c: 3, tipo: triangulo }
+  desenlaces:
+    - en: [13, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-17
+  titulo: Libertades (17)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro se quitó una libertad propia con la jugada 1. Castigalo."
+  piedras:
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+  marcas:
+    - { r: 16, c: 5, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [16, 6]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hb-libertades-18
+  titulo: Libertades (18)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro se quitó una libertad propia con la jugada 1. Castigalo."
+  piedras:
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 17, c: 8, color: B }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 4, color: B }
+    - { r: 18, c: 5, color: N }
+  marcas:
+    - { r: 18, c: 5, tipo: letra, texto: "1" }
+  secuencia:
+    ramas:
+      - en: [17, 7]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 6]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 7]
+        siguiente:
+          ramas:
+            - en: [17, 7]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-hb-libertades-19
+  titulo: Libertades (19)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro se quitó una libertad propia con la jugada 1. Castigalo."
+  piedras:
+    - { r: 14, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 4, color: B }
+  marcas:
+    - { r: 17, c: 3, tipo: letra, texto: "1" }
+  secuencia:
+    ramas:
+      - en: [18, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 5]
+      - en: [18, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 6]
+
+- id: ogs-hb-libertades-20
+  titulo: Libertades (20)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro se quitó una libertad propia con la jugada 1. Castigalo."
+  piedras:
+    - { r: 15, c: 1, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 4, color: N }
+    - { r: 18, c: 5, color: B }
+  marcas:
+    - { r: 17, c: 4, tipo: letra, texto: "1" }
+  secuencia:
+    ramas:
+      - en: [17, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 1]
+
+- id: ogs-hb-libertades-21
+  titulo: Libertades (21)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro se quitó una libertad propia con la jugada 1. Castigalo."
+  piedras:
+    - { r: 15, c: 1, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 17, c: 5, color: B }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 4, color: B }
+  marcas:
+    - { r: 17, c: 4, tipo: letra, texto: "1" }
+  secuencia:
+    ramas:
+      - en: [17, 1]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 5]
+        siguiente:
+          ramas:
+            - en: [18, 1]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [18, 6]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [17, 0]
+      - en: [18, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 1]
+      - en: [18, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 1]
+
+- id: ogs-hb-libertades-22
+  titulo: Libertades (22)
+  etiqueta: hb-libertades
+  dificultad: 2
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: Negro se quitó una libertad propia con la jugada 1. Castigalo."
+  piedras:
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 5, color: N }
+    - { r: 14, c: 4, color: B }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: B }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: B }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 2, color: N }
+  marcas:
+    - { r: 15, c: 4, tipo: letra, texto: "1" }
+  secuencia:
+    ramas:
+      - en: [17, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [17, 5]
+        siguiente:
+          ramas:
+            - en: [17, 6]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [18, 5]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [17, 6]
+              siguiente:
+                ramas:
+                  - en: [17, 7]
+                    correcto: true
+                    texto: ¡Correcto!

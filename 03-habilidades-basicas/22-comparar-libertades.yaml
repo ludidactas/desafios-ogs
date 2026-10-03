@@ -1,0 +1,425 @@
+# Habilidades básicas › Comparar libertades — Comparar las libertades de las cadenas
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/compare-liberties).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-comparar-libertades-01
+  titulo: Comparar libertades (1)
+  etiqueta: comparar-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Qué cadena tiene más libertades, la negra o la blanca?
+  piedras:
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+  marcas:
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: false }
+    - { texto: igual, correcta: true }
+
+- id: ogs-comparar-libertades-02
+  titulo: Comparar libertades (2)
+  etiqueta: comparar-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Qué cadena tiene más libertades, la negra o la blanca?
+  piedras:
+    - { r: 2, c: 7, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 3, c: 7, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 7, color: B }
+  marcas:
+    - { r: 6, c: 7, tipo: triangulo }
+    - { r: 5, c: 7, tipo: triangulo }
+    - { r: 4, c: 7, tipo: triangulo }
+    - { r: 3, c: 7, tipo: triangulo }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: false }
+    - { texto: igual, correcta: true }
+
+- id: ogs-comparar-libertades-03
+  titulo: Comparar libertades (3)
+  etiqueta: comparar-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Qué cadena tiene más libertades, la negra o la blanca?
+  piedras:
+    - { r: 1, c: 1, color: B }
+    - { r: 1, c: 2, color: N }
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: B }
+    - { r: 1, c: 6, color: B }
+    - { r: 1, c: 7, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 5, color: N }
+    - { r: 2, c: 6, color: N }
+  marcas:
+    - { r: 1, c: 6, tipo: triangulo }
+    - { r: 1, c: 5, tipo: triangulo }
+    - { r: 1, c: 4, tipo: triangulo }
+    - { r: 1, c: 3, tipo: triangulo }
+    - { r: 1, c: 2, tipo: triangulo }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: true }
+    - { texto: igual, correcta: false }
+
+- id: ogs-comparar-libertades-04
+  titulo: Comparar libertades (4)
+  etiqueta: comparar-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Qué cadena tiene más libertades, la negra o la blanca?
+  piedras:
+    - { r: 2, c: 1, color: N }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 6, c: 1, color: B }
+  marcas:
+    - { r: 5, c: 1, tipo: triangulo }
+    - { r: 4, c: 1, tipo: triangulo }
+    - { r: 3, c: 1, tipo: triangulo }
+  opciones:
+    - { texto: Negro, correcta: true }
+    - { texto: Blanco, correcta: false }
+    - { texto: igual, correcta: false }
+
+- id: ogs-comparar-libertades-05
+  titulo: Comparar libertades (5)
+  etiqueta: comparar-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Qué cadena tiene más libertades, la negra o la blanca?
+  piedras:
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+  marcas:
+    - { r: 8, c: 6, tipo: triangulo }
+    - { r: 8, c: 5, tipo: triangulo }
+    - { r: 7, c: 8, tipo: triangulo }
+    - { r: 7, c: 7, tipo: triangulo }
+    - { r: 7, c: 6, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 7, c: 2, tipo: triangulo }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: true }
+    - { texto: igual, correcta: false }
+
+- id: ogs-comparar-libertades-06
+  titulo: Comparar libertades (6)
+  etiqueta: comparar-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Qué cadena tiene más libertades, la negra o la blanca?
+  piedras:
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 7, color: B }
+  marcas:
+    - { r: 6, c: 6, tipo: triangulo }
+    - { r: 6, c: 5, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+    - { r: 5, c: 6, tipo: triangulo }
+    - { r: 5, c: 5, tipo: triangulo }
+    - { r: 5, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: true }
+    - { texto: igual, correcta: false }
+
+- id: ogs-comparar-libertades-07
+  titulo: Comparar libertades (7)
+  etiqueta: comparar-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Qué cadena tiene más libertades, la negra o la blanca?
+  piedras:
+    - { r: 0, c: 4, color: B }
+    - { r: 0, c: 5, color: N }
+    - { r: 1, c: 4, color: B }
+    - { r: 1, c: 5, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+  marcas:
+    - { r: 2, c: 5, tipo: triangulo }
+    - { r: 2, c: 4, tipo: triangulo }
+    - { r: 1, c: 5, tipo: triangulo }
+    - { r: 1, c: 4, tipo: triangulo }
+    - { r: 0, c: 5, tipo: triangulo }
+    - { r: 0, c: 4, tipo: triangulo }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: false }
+    - { texto: igual, correcta: true }
+
+- id: ogs-comparar-libertades-08
+  titulo: Comparar libertades (8)
+  etiqueta: comparar-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Qué cadena tiene más libertades, la negra o la blanca?
+  piedras:
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 4, color: N }
+    - { r: 3, c: 0, color: B }
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+  marcas:
+    - { r: 5, c: 2, tipo: triangulo }
+    - { r: 5, c: 1, tipo: triangulo }
+    - { r: 4, c: 1, tipo: triangulo }
+    - { r: 3, c: 1, tipo: triangulo }
+    - { r: 3, c: 0, tipo: triangulo }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: false }
+    - { texto: igual, correcta: true }
+
+- id: ogs-comparar-libertades-09
+  titulo: Comparar libertades (9)
+  etiqueta: comparar-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Qué cadena tiene más libertades, la negra o la blanca?
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: N }
+  marcas:
+    - { r: 8, c: 7, tipo: triangulo }
+    - { r: 8, c: 6, tipo: triangulo }
+    - { r: 8, c: 5, tipo: triangulo }
+    - { r: 7, c: 7, tipo: triangulo }
+    - { r: 7, c: 6, tipo: triangulo }
+    - { r: 6, c: 7, tipo: triangulo }
+    - { r: 6, c: 6, tipo: triangulo }
+    - { r: 5, c: 7, tipo: triangulo }
+    - { r: 5, c: 6, tipo: triangulo }
+  opciones:
+    - { texto: Negro, correcta: true }
+    - { texto: Blanco, correcta: false }
+    - { texto: igual, correcta: false }
+
+- id: ogs-comparar-libertades-10
+  titulo: Comparar libertades (10)
+  etiqueta: comparar-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Qué cadena tiene más libertades, la negra o la blanca?
+  piedras:
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 0, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+  marcas:
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 7, c: 2, tipo: triangulo }
+    - { r: 7, c: 1, tipo: triangulo }
+    - { r: 6, c: 3, tipo: triangulo }
+    - { r: 6, c: 2, tipo: triangulo }
+  opciones:
+    - { texto: Negro, correcta: true }
+    - { texto: Blanco, correcta: false }
+    - { texto: igual, correcta: false }
+
+- id: ogs-comparar-libertades-11
+  titulo: Comparar libertades (11)
+  etiqueta: comparar-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Qué cadena tiene más libertades, la negra o la blanca?
+  piedras:
+    - { r: 5, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 6, color: B }
+  marcas:
+    - { r: 7, c: 6, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 7, c: 2, tipo: triangulo }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: false }
+    - { texto: igual, correcta: true }
+
+- id: ogs-comparar-libertades-12
+  titulo: Comparar libertades (12)
+  etiqueta: comparar-libertades
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Qué cadena tiene más libertades, la negra o la blanca?
+  piedras:
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 4, c: 7, color: B }
+    - { r: 4, c: 8, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 7, c: 7, color: N }
+    - { r: 7, c: 8, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+    - { r: 8, c: 8, color: N }
+  marcas:
+    - { r: 8, c: 8, tipo: triangulo }
+    - { r: 8, c: 6, tipo: triangulo }
+    - { r: 8, c: 5, tipo: triangulo }
+    - { r: 7, c: 8, tipo: triangulo }
+    - { r: 7, c: 7, tipo: triangulo }
+    - { r: 7, c: 6, tipo: triangulo }
+    - { r: 7, c: 5, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+    - { r: 7, c: 3, tipo: triangulo }
+    - { r: 6, c: 7, tipo: triangulo }
+    - { r: 5, c: 7, tipo: triangulo }
+  opciones:
+    - { texto: Negro, correcta: false }
+    - { texto: Blanco, correcta: false }
+    - { texto: igual, correcta: true }

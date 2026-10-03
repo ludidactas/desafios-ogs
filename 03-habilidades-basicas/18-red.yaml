@@ -1,0 +1,603 @@
+# Habilidades básicas › Red — Capturar con red
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/net).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-red-01
+  titulo: Red (1)
+  etiqueta: red
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: Si Negro intenta capturar la piedra blanca marcada con una serie de ataris, Blanco
+    escapa. Pero Negro puede capturarla con una «red» jugando en A. Capturá la piedra marcada con
+    una red.
+  piedras:
+    - { r: 3, c: 4, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 7, color: B }
+  marcas:
+    - { r: 5, c: 5, tipo: triangulo }
+    - { r: 4, c: 4, tipo: letra, texto: A }
+  secuencia:
+    ramas:
+      - en: [4, 4]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [4, 5]
+        siguiente:
+          ramas:
+            - en: [3, 5]
+              correcto: true
+              texto: "Bien. Blanco respondió: seguí."
+              respuestaRival: [5, 4]
+              siguiente:
+                ramas:
+                  - en: [5, 3]
+                    correcto: true
+                    texto: ¡Correcto!
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [4, 5]
+      - en: [4, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 4]
+
+- id: ogs-red-02
+  titulo: Red (2)
+  etiqueta: red
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una red."
+  piedras:
+    - { r: 1, c: 6, color: N }
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 7, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+  marcas:
+    - { r: 5, c: 5, tipo: triangulo }
+    - { r: 5, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 6]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 5]
+      - en: [4, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 6]
+
+- id: ogs-red-03
+  titulo: Red (3)
+  etiqueta: red
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una red."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 3, color: N }
+  marcas:
+    - { r: 5, c: 4, tipo: triangulo }
+    - { r: 5, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 5]
+      - en: [5, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+      - en: [4, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 5]
+
+- id: ogs-red-04
+  titulo: Red (4)
+  etiqueta: red
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una red."
+  piedras:
+    - { r: 5, c: 6, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: N }
+  marcas:
+    - { r: 8, c: 3, tipo: triangulo }
+    - { r: 8, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [8, 4]
+        siguiente:
+          ramas:
+            - en: [8, 5]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [7, 3]
+              correcto: false
+              texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+              respuestaRival: [8, 5]
+      - en: [7, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [8, 4]
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [7, 3]
+
+- id: ogs-red-05
+  titulo: Red (5)
+  etiqueta: red
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una red."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 1, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+  marcas:
+    - { r: 5, c: 3, tipo: triangulo }
+    - { r: 5, c: 2, tipo: triangulo }
+    - { r: 4, c: 3, tipo: triangulo }
+    - { r: 4, c: 2, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [3, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [3, 3]
+        siguiente:
+          ramas:
+            - en: [2, 3]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [3, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+      - en: [4, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [3, 3]
+      - en: [3, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [3, 4]
+
+- id: ogs-red-06
+  titulo: Red (6)
+  etiqueta: red
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá la piedra marcada con una red."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+  marcas:
+    - { r: 5, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 2]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [4, 3]
+        siguiente:
+          ramas:
+            - en: [3, 3]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [5, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 3]
+      - en: [4, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 2]
+
+- id: ogs-red-07
+  titulo: Red (7)
+  etiqueta: red
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá la piedra marcada con una red."
+  piedras:
+    - { r: 2, c: 1, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 6, color: N }
+  marcas:
+    - { r: 5, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 5]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [4, 4]
+        siguiente:
+          ramas:
+            - en: [3, 4]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [4, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 5]
+      - en: [5, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+
+- id: ogs-red-08
+  titulo: Red (8)
+  etiqueta: red
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una red."
+  piedras:
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 5, color: N }
+  marcas:
+    - { r: 5, c: 3, tipo: triangulo }
+    - { r: 4, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [3, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [3, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+      - en: [4, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [3, 3]
+      - en: [4, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [3, 4]
+
+- id: ogs-red-09
+  titulo: Red (9)
+  etiqueta: red
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una red."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+  marcas:
+    - { r: 6, c: 3, tipo: triangulo }
+    - { r: 6, c: 2, tipo: triangulo }
+    - { r: 5, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [4, 3]
+        siguiente:
+          ramas:
+            - en: [3, 3]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [4, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 4]
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 3]
+      - en: [5, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+
+- id: ogs-red-10
+  titulo: Red (10)
+  etiqueta: red
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una red."
+  piedras:
+    - { r: 1, c: 3, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+  marcas:
+    - { r: 6, c: 3, tipo: triangulo }
+    - { r: 5, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 4]
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 3]
+      - en: [5, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+
+- id: ogs-red-11
+  titulo: Red (11)
+  etiqueta: red
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá la piedra marcada con una red."
+  piedras:
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 5, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 3, color: N }
+  marcas:
+    - { r: 5, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [4, 3]
+        siguiente:
+          ramas:
+            - en: [3, 3]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [4, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 4]
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 3]
+
+- id: ogs-red-12
+  titulo: Red (12)
+  etiqueta: red
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una red."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+  marcas:
+    - { r: 6, c: 4, tipo: triangulo }
+    - { r: 6, c: 3, tipo: triangulo }
+    - { r: 5, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [4, 3]
+        siguiente:
+          ramas:
+            - en: [3, 3]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [4, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 3]
+      - en: [5, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+
+- id: ogs-red-13
+  titulo: Red (13)
+  etiqueta: red
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  tipo: secuencia
+  instruccion: "Jugás con blancas: capturá las piedras marcadas con una red."
+  piedras:
+    - { r: 1, c: 3, color: N }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 6, color: B }
+  marcas:
+    - { r: 5, c: 4, tipo: triangulo }
+    - { r: 5, c: 3, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 5]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [5, 5]
+        siguiente:
+          ramas:
+            - en: [5, 6]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [4, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]
+      - en: [4, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [5, 5]
+      - en: [5, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [4, 4]

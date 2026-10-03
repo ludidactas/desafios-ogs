@@ -1,0 +1,335 @@
+# Habilidades básicas › Hacer un ko — Hacer un ko
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/make-ko).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-hacer-ko-01
+  titulo: Hacer un ko (1)
+  etiqueta: hacer-ko
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: Negro jugó 1. Blanco puede conectar sus piedras jugando en A, pero
+    a veces conviene hacer un ko jugando en B. Hacé un ko."
+  piedras:
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 6, color: B }
+  marcas:
+    - { r: 3, c: 5, tipo: letra, texto: "1" }
+    - { r: 5, c: 5, tipo: letra, texto: A }
+    - { r: 6, c: 5, tipo: letra, texto: B }
+  desenlaces:
+    - en: [6, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-ko-02
+  titulo: Hacer un ko (2)
+  etiqueta: hacer-ko
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: Negro jugó 1. Hacé un ko."
+  piedras:
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 4, color: N }
+  marcas:
+    - { r: 8, c: 4, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [8, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-ko-03
+  titulo: Hacer un ko (3)
+  etiqueta: hacer-ko
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: Negro jugó 1. Hacé un ko."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 7, color: B }
+  marcas:
+    - { r: 6, c: 7, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [8, 6]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-ko-04
+  titulo: Hacer un ko (4)
+  etiqueta: hacer-ko
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: Negro jugó 1. Hacé un ko."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 7, color: B }
+  marcas:
+    - { r: 5, c: 8, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [6, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-ko-05
+  titulo: Hacer un ko (5)
+  etiqueta: hacer-ko
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: Negro jugó 1. Hacé un ko."
+  piedras:
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 7, color: B }
+  marcas:
+    - { r: 6, c: 8, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [7, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-ko-06
+  titulo: Hacer un ko (6)
+  etiqueta: hacer-ko
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: Negro jugó 1. Hacé un ko."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 6, color: N }
+  marcas:
+    - { r: 8, c: 6, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [8, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-ko-07
+  titulo: Hacer un ko (7)
+  etiqueta: hacer-ko
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: Negro jugó 1. Hacé un ko."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: N }
+    - { r: 4, c: 8, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 8, color: N }
+  marcas:
+    - { r: 7, c: 8, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [7, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-ko-08
+  titulo: Hacer un ko (8)
+  etiqueta: hacer-ko
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: Negro jugó 1. Hacé un ko."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 2, color: N }
+  marcas:
+    - { r: 8, c: 2, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [8, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-ko-09
+  titulo: Hacer un ko (9)
+  etiqueta: hacer-ko
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: Negro jugó 1. Hacé un ko."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+  marcas:
+    - { r: 5, c: 8, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [6, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-ko-10
+  titulo: Hacer un ko (10)
+  etiqueta: hacer-ko
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: Negro jugó 1. Hacé un ko."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 7, color: N }
+  marcas:
+    - { r: 8, c: 7, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [7, 7]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-ko-11
+  titulo: Hacer un ko (11)
+  etiqueta: hacer-ko
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: Negro jugó 1. Hacé un ko."
+  piedras:
+    - { r: 1, c: 5, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 4, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 7, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: B }
+    - { r: 8, c: 6, color: N }
+  marcas:
+    - { r: 8, c: 6, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [7, 6]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-hacer-ko-12
+  titulo: Hacer un ko (12)
+  etiqueta: hacer-ko
+  dificultad: 2
+  tamañoTablero: 9
+  turno: B
+  instruccion: "Jugás con blancas: Negro jugó 1. Hacé un ko."
+  piedras:
+    - { r: 3, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 7, color: B }
+  marcas:
+    - { r: 6, c: 8, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [7, 8]
+      correcto: true
+      texto: ¡Correcto!

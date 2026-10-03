@@ -1,0 +1,677 @@
+# Habilidades básicas › Atari con corte — Dar atari cortando
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/atari-with-cut).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-atari-con-corte-01
+  titulo: Atari con corte (1)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: Blanco puede conectar las piedras marcadas con las otras piedras
+    blancas y escapar. Evitalo cortando, y capturá las piedras marcadas."
+  piedras:
+    - { r: 1, c: 3, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 4, color: N }
+  marcas:
+    - { r: 5, c: 3, tipo: triangulo }
+    - { r: 6, c: 3, tipo: triangulo }
+    - { r: 6, c: 4, tipo: triangulo }
+    - { r: 7, c: 4, tipo: triangulo }
+  secuencia:
+    ramas:
+      - en: [4, 3]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [5, 4]
+        siguiente:
+          ramas:
+            - en: [4, 4]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [4, 3]
+
+- id: ogs-atari-con-corte-02
+  titulo: Atari con corte (2)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 6, color: B }
+  secuencia:
+    ramas:
+      - en: [6, 5]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [6, 3]
+        siguiente:
+          ramas:
+            - en: [7, 3]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [6, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [6, 5]
+
+- id: ogs-atari-con-corte-03
+  titulo: Atari con corte (3)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [5, 5]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [5, 4]
+        siguiente:
+          ramas:
+            - en: [4, 4]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 5]
+
+- id: ogs-atari-con-corte-04
+  titulo: Atari con corte (4)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 2, c: 6, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+  desenlaces:
+    - en: [4, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-atari-con-corte-05
+  titulo: Atari con corte (5)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 2, c: 2, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: B }
+  secuencia:
+    ramas:
+      - en: [7, 5]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [8, 5]
+        siguiente:
+          ramas:
+            - en: [8, 6]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [8, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 5]
+
+- id: ogs-atari-con-corte-06
+  titulo: Atari con corte (6)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 5, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [5, 4]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [4, 2]
+        siguiente:
+          ramas:
+            - en: [4, 1]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [4, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 4]
+
+- id: ogs-atari-con-corte-07
+  titulo: Atari con corte (7)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 7, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+  secuencia:
+    ramas:
+      - en: [6, 4]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [6, 3]
+        siguiente:
+          ramas:
+            - en: [7, 3]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [6, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [6, 4]
+
+- id: ogs-atari-con-corte-08
+  titulo: Atari con corte (8)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 2, c: 6, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [5, 5]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [4, 3]
+        siguiente:
+          ramas:
+            - en: [3, 3]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [4, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 5]
+
+- id: ogs-atari-con-corte-09
+  titulo: Atari con corte (9)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 5, c: 2, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 4, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 2]
+
+- id: ogs-atari-con-corte-10
+  titulo: Atari con corte (10)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 3, c: 1, color: B }
+    - { r: 3, c: 2, color: B }
+    - { r: 3, c: 6, color: N }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [6, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [6, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [6, 3]
+
+- id: ogs-atari-con-corte-11
+  titulo: Atari con corte (11)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 4, color: B }
+    - { r: 8, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [7, 2]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [8, 2]
+        siguiente:
+          ramas:
+            - en: [8, 1]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [8, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 2]
+
+- id: ogs-atari-con-corte-12
+  titulo: Atari con corte (12)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 1, c: 3, color: B }
+    - { r: 2, c: 3, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [5, 4]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [5, 5]
+        siguiente:
+          ramas:
+            - en: [5, 6]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [5, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 4]
+
+- id: ogs-atari-con-corte-13
+  titulo: Atari con corte (13)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: N }
+    - { r: 8, c: 5, color: N }
+  desenlaces:
+    - en: [6, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-atari-con-corte-14
+  titulo: Atari con corte (14)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 2, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 8, c: 3, color: N }
+    - { r: 8, c: 4, color: N }
+  secuencia:
+    ramas:
+      - en: [6, 3]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [6, 3]
+
+- id: ogs-atari-con-corte-15
+  titulo: Atari con corte (15)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 6, c: 7, color: B }
+  secuencia:
+    ramas:
+      - en: [6, 3]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [6, 4]
+        siguiente:
+          ramas:
+            - en: [7, 4]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [6, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [6, 3]
+
+- id: ogs-atari-con-corte-16
+  titulo: Atari con corte (16)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 4, c: 1, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [6, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [5, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [6, 1]
+      - en: [7, 3]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 1]
+
+- id: ogs-atari-con-corte-17
+  titulo: Atari con corte (17)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 2, c: 1, color: B }
+    - { r: 2, c: 3, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 4, c: 1, color: B }
+    - { r: 4, c: 2, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [3, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [4, 0]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [3, 1]
+
+- id: ogs-atari-con-corte-18
+  titulo: Atari con corte (18)
+  etiqueta: atari-con-corte
+  dificultad: 2
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: evitá que Blanco conecte y capturá una o más piedras blancas."
+  piedras:
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: B }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 4, c: 7, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [3, 7]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [3, 6]
+        siguiente:
+          ramas:
+            - en: [4, 8]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [4, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [3, 7]
+      - en: [4, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [3, 6]
+      - en: [5, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [4, 5]

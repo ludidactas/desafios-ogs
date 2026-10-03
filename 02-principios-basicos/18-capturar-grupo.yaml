@@ -1,0 +1,234 @@
+# Principios básicos › Capturar un grupo — Evitar dos ojos
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/capture-group).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-capturar-grupo-01
+  titulo: Capturar un grupo (1)
+  etiqueta: capturar-grupo
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: Blanco puede hacer dos ojos jugando en A. Jugás con negras. Capturá el grupo blanco.
+  piedras:
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: N }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 8, c: 1, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 8, c: 6, color: B }
+  marcas:
+    - { r: 8, c: 4, tipo: letra, texto: A }
+  secuencia:
+    ramas:
+      - en: [8, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 4]
+
+- id: ogs-capturar-grupo-02
+  titulo: Capturar un grupo (2)
+  etiqueta: capturar-grupo
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá el grupo blanco."
+  piedras:
+    - { r: 5, c: 6, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 8, color: B }
+  secuencia:
+    ramas:
+      - en: [8, 6]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 6]
+
+- id: ogs-capturar-grupo-03
+  titulo: Capturar un grupo (3)
+  etiqueta: capturar-grupo
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá el grupo blanco."
+  piedras:
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 7, c: 7, color: B }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 6, color: B }
+  secuencia:
+    ramas:
+      - en: [8, 8]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 8]
+      - en: [7, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [8, 8]
+
+- id: ogs-capturar-grupo-04
+  titulo: Capturar un grupo (4)
+  etiqueta: capturar-grupo
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá el grupo blanco."
+  piedras:
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 7, color: N }
+    - { r: 5, c: 8, color: N }
+    - { r: 6, c: 6, color: N }
+    - { r: 6, c: 7, color: B }
+    - { r: 6, c: 8, color: B }
+    - { r: 7, c: 5, color: N }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 5, color: N }
+    - { r: 8, c: 6, color: B }
+    - { r: 8, c: 8, color: B }
+  secuencia:
+    ramas:
+      - en: [7, 7]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 7]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 7]
+      - en: [7, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 7]
+
+- id: ogs-capturar-grupo-05
+  titulo: Capturar un grupo (5)
+  etiqueta: capturar-grupo
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá el grupo blanco."
+  piedras:
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: B }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [7, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 4]
+      - en: [8, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 4]
+      - en: [6, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [7, 4]
+
+- id: ogs-capturar-grupo-06
+  titulo: Capturar un grupo (6)
+  etiqueta: capturar-grupo
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: secuencia
+  instruccion: "Jugás con negras: capturá el grupo blanco."
+  piedras:
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 5, c: 6, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: B }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: B }
+    - { r: 8, c: 5, color: B }
+  secuencia:
+    ramas:
+      - en: [5, 4]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [8, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 4]
+      - en: [6, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+        respuestaRival: [5, 4]

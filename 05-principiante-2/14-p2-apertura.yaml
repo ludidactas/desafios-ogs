@@ -1,0 +1,189 @@
+# Principiante, nivel 2 › Apertura — Jugar una jugada de apertura
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl2-opening).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p2-apertura-01
+  titulo: Apertura (1)
+  etiqueta: p2-apertura
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  instruccion: "El objetivo principal en el Go es hacer territorio. Lo más fácil es hacerlo en las
+    esquinas, porque una esquina se defiende solo desde dos lados. Por eso las primeras jugadas de
+    la apertura suelen ser en las esquinas; después vienen los laterales, y el centro queda para el
+    final. Jugás con blancas. Elegí la mejor continuación: A, B o C."
+  piedras:
+    - { r: 3, c: 15, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 15, color: N }
+  marcas:
+    - { r: 3, c: 15, tipo: letra, texto: "1" }
+    - { r: 15, c: 3, tipo: letra, texto: "2" }
+    - { r: 16, c: 15, tipo: letra, texto: "3" }
+    - { r: 3, c: 3, tipo: letra, texto: C }
+    - { r: 9, c: 9, tipo: letra, texto: B }
+    - { r: 15, c: 9, tipo: letra, texto: A }
+  desenlaces:
+    - en: [3, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-apertura-02
+  titulo: Apertura (2)
+  etiqueta: p2-apertura
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Si tu primera jugada en una esquina es en el punto 3-4, podés cerrar la esquina con una
+    sola jugada más. Ese cierre de esquina se llama shimari en japonés, y lo podés hacer jugando en
+    A o en B. Jugás con negras. Cerrá la esquina con un shimari.
+  piedras:
+    - { r: 15, c: 2, color: N }
+  marcas:
+    - { r: 15, c: 4, tipo: letra, texto: A }
+    - { r: 16, c: 4, tipo: letra, texto: B }
+  desenlaces:
+    - en: [15, 4]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [16, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-apertura-03
+  titulo: Apertura (3)
+  etiqueta: p2-apertura
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Si tu rival no cerró la esquina, podés atacarla con una aproximación, que en japonés se
+    llama kakari. En este diagrama Blanco tiene una piedra en el punto 4-4, y Negro puede atacar la
+    esquina jugando en A o en B. Jugás con negras. Atacá la esquina con un kakari.
+  piedras:
+    - { r: 15, c: 3, color: B }
+  marcas:
+    - { r: 15, c: 5, tipo: letra, texto: A }
+    - { r: 16, c: 5, tipo: letra, texto: B }
+  desenlaces:
+    - en: [15, 5]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [16, 5]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [13, 2]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [13, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-apertura-04
+  titulo: Apertura (4)
+  etiqueta: p2-apertura
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Cuando atacan tu piedra de la esquina con un kakari, quizás quieras defenderla. Si no
+    lo hacés, tu rival podría volver a atacarla con otro kakari desde el otro lado. Lo habitual para
+    responder a un kakari es un salto de caballo o un salto de un punto. En este ejemplo Negro puede
+    responder al kakari 1 de Blanco jugando en A o en B. Jugás con negras. Defendete del kakari.
+  piedras:
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 5, color: B }
+  marcas:
+    - { r: 16, c: 5, tipo: letra, texto: "1" }
+    - { r: 13, c: 2, tipo: letra, texto: A }
+    - { r: 13, c: 3, tipo: letra, texto: B }
+  desenlaces:
+    - en: [13, 2]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [13, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-apertura-05
+  titulo: Apertura (5)
+  etiqueta: p2-apertura
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  instruccion: "Jugás con negras: elegí la mejor continuación: A, B o C."
+  piedras:
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 16, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 15, color: N }
+  marcas:
+    - { r: 3, c: 16, tipo: letra, texto: "1" }
+    - { r: 15, c: 3, tipo: letra, texto: "2" }
+    - { r: 16, c: 15, tipo: letra, texto: "3" }
+    - { r: 3, c: 3, tipo: letra, texto: "4" }
+    - { r: 2, c: 14, tipo: letra, texto: C }
+    - { r: 9, c: 13, tipo: letra, texto: B }
+    - { r: 17, c: 10, tipo: letra, texto: A }
+  desenlaces:
+    - en: [2, 14]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-apertura-06
+  titulo: Apertura (6)
+  etiqueta: p2-apertura
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  instruccion: "Jugás con negras: elegí la mejor continuación: A, B o C."
+  piedras:
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 15, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 15, color: N }
+  marcas:
+    - { r: 3, c: 15, tipo: letra, texto: "1" }
+    - { r: 15, c: 3, tipo: letra, texto: "2" }
+    - { r: 16, c: 15, tipo: letra, texto: "3" }
+    - { r: 3, c: 3, tipo: letra, texto: "4" }
+    - { r: 11, c: 9, tipo: letra, texto: C }
+    - { r: 13, c: 5, tipo: letra, texto: B }
+    - { r: 16, c: 5, tipo: letra, texto: A }
+  desenlaces:
+    - en: [16, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-apertura-07
+  titulo: Apertura (7)
+  etiqueta: p2-apertura
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  instruccion: "Jugás con negras: elegí la mejor continuación: A, B o C."
+  piedras:
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 16, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 15, color: N }
+  marcas:
+    - { r: 2, c: 16, tipo: letra, texto: "1" }
+    - { r: 15, c: 2, tipo: letra, texto: "2" }
+    - { r: 16, c: 15, tipo: letra, texto: "3" }
+    - { r: 2, c: 3, tipo: letra, texto: "4" }
+    - { r: 4, c: 14, tipo: letra, texto: C }
+    - { r: 9, c: 5, tipo: letra, texto: B }
+    - { r: 14, c: 15, tipo: letra, texto: A }
+  desenlaces:
+    - en: [14, 15]
+      correcto: true
+      texto: ¡Correcto!

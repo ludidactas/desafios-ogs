@@ -1,0 +1,347 @@
+# Principios básicos › Contar ataris — Contar cadenas en atari
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/count-atari).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-contar-ataris-01
+  titulo: Contar ataris (1)
+  etiqueta: contar-ataris
+  dificultad: 1
+  tamañoTablero: 9
+  turno: B
+  tipo: opciones
+  instruccion: ¿Cuántas cadenas blancas están en atari?
+  piedras:
+    - { r: 1, c: 1, color: N }
+    - { r: 1, c: 2, color: B }
+    - { r: 1, c: 3, color: N }
+    - { r: 2, c: 1, color: N }
+    - { r: 2, c: 2, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 7, color: N }
+    - { r: 7, c: 8, color: B }
+    - { r: 8, c: 7, color: N }
+    - { r: 8, c: 8, color: B }
+  marcas:
+    - { r: 0, c: 2, tipo: cruz }
+    - { r: 7, c: 3, tipo: cruz }
+    - { r: 6, c: 8, tipo: cruz }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: false }
+    - { texto: "3", correcta: true }
+
+- id: ogs-contar-ataris-02
+  titulo: Contar ataris (2)
+  etiqueta: contar-ataris
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Cuántas cadenas blancas están en atari?
+  piedras:
+    - { r: 1, c: 3, color: N }
+    - { r: 1, c: 4, color: N }
+    - { r: 1, c: 5, color: N }
+    - { r: 1, c: 6, color: N }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 7, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: N }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 1, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+    - { r: 8, c: 0, color: B }
+    - { r: 8, c: 1, color: B }
+    - { r: 8, c: 2, color: N }
+    - { r: 8, c: 3, color: N }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }
+    - { texto: "3", correcta: false }
+
+- id: ogs-contar-ataris-03
+  titulo: Contar ataris (3)
+  etiqueta: contar-ataris
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Cuántas cadenas blancas están en atari?
+  piedras:
+    - { r: 2, c: 2, color: B }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 5, color: N }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }
+    - { texto: "3", correcta: false }
+
+- id: ogs-contar-ataris-04
+  titulo: Contar ataris (4)
+  etiqueta: contar-ataris
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Cuántas cadenas blancas están en atari?
+  piedras:
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 3, c: 6, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }
+    - { texto: "3", correcta: false }
+
+- id: ogs-contar-ataris-05
+  titulo: Contar ataris (5)
+  etiqueta: contar-ataris
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Cuántas cadenas blancas están en atari?
+  piedras:
+    - { r: 1, c: 5, color: B }
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 4, color: N }
+    - { r: 2, c: 6, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 4, color: B }
+    - { r: 3, c: 5, color: B }
+    - { r: 3, c: 6, color: B }
+    - { r: 3, c: 7, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 4, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 1, color: N }
+    - { r: 6, c: 0, color: N }
+    - { r: 6, c: 1, color: B }
+    - { r: 7, c: 0, color: B }
+    - { r: 8, c: 0, color: B }
+    - { r: 8, c: 1, color: N }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }
+    - { texto: "3", correcta: false }
+
+- id: ogs-contar-ataris-06
+  titulo: Contar ataris (6)
+  etiqueta: contar-ataris
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Cuántas cadenas blancas están en atari?
+  piedras:
+    - { r: 0, c: 0, color: B }
+    - { r: 0, c: 1, color: N }
+    - { r: 0, c: 7, color: B }
+    - { r: 0, c: 8, color: B }
+    - { r: 1, c: 6, color: N }
+    - { r: 1, c: 7, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 5, color: N }
+    - { r: 4, c: 4, color: B }
+    - { r: 4, c: 5, color: B }
+    - { r: 4, c: 6, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: N }
+  opciones:
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }
+    - { texto: "3", correcta: false }
+
+- id: ogs-contar-ataris-07
+  titulo: Contar ataris (7)
+  etiqueta: contar-ataris
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Cuántas cadenas blancas están en atari?
+  piedras:
+    - { r: 3, c: 3, color: N }
+    - { r: 4, c: 2, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 5, c: 5, color: B }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: true }
+    - { texto: "2", correcta: false }
+
+- id: ogs-contar-ataris-08
+  titulo: Contar ataris (8)
+  etiqueta: contar-ataris
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Cuántas cadenas blancas están en atari?
+  piedras:
+    - { r: 4, c: 3, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 5, c: 6, color: B }
+    - { r: 5, c: 7, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 6, c: 6, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 5, color: B }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: true }
+    - { texto: "2", correcta: false }
+
+- id: ogs-contar-ataris-09
+  titulo: Contar ataris (9)
+  etiqueta: contar-ataris
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Cuántas cadenas blancas están en atari?
+  piedras:
+    - { r: 3, c: 2, color: N }
+    - { r: 4, c: 1, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: N }
+    - { r: 5, c: 1, color: B }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 5, color: N }
+    - { r: 6, c: 1, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 7, c: 1, color: B }
+    - { r: 7, c: 2, color: B }
+    - { r: 7, c: 3, color: B }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: true }
+    - { texto: "2", correcta: false }
+
+- id: ogs-contar-ataris-10
+  titulo: Contar ataris (10)
+  etiqueta: contar-ataris
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Cuántas cadenas blancas están en atari?
+  piedras:
+    - { r: 3, c: 2, color: B }
+    - { r: 5, c: 3, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 6, c: 6, color: B }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: N }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: true }
+    - { texto: "2", correcta: false }
+
+- id: ogs-contar-ataris-11
+  titulo: Contar ataris (11)
+  etiqueta: contar-ataris
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Cuántas cadenas blancas están en atari?
+  piedras:
+    - { r: 5, c: 2, color: N }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 2, color: B }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 7, c: 2, color: N }
+    - { r: 7, c: 3, color: N }
+    - { r: 7, c: 4, color: B }
+    - { r: 7, c: 6, color: B }
+    - { r: 8, c: 5, color: B }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: true }
+    - { texto: "2", correcta: false }
+
+- id: ogs-contar-ataris-12
+  titulo: Contar ataris (12)
+  etiqueta: contar-ataris
+  dificultad: 1
+  tamañoTablero: 9
+  turno: N
+  tipo: opciones
+  instruccion: ¿Cuántas cadenas blancas están en atari?
+  piedras:
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 1, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 4, color: N }
+    - { r: 6, c: 2, color: N }
+    - { r: 6, c: 3, color: B }
+    - { r: 6, c: 4, color: B }
+    - { r: 6, c: 5, color: N }
+    - { r: 7, c: 4, color: N }
+    - { r: 7, c: 5, color: B }
+    - { r: 7, c: 6, color: B }
+  opciones:
+    - { texto: "0", correcta: false }
+    - { texto: "1", correcta: false }
+    - { texto: "2", correcta: true }

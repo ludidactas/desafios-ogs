@@ -1,0 +1,559 @@
+# Principiante, nivel 4 › Apertura
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl4-opening-9).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p4-apertura-9-01
+  titulo: Apertura (1)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 9, color: B }
+    - { r: 3, c: 15, color: N }
+    - { r: 10, c: 3, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 8, color: N }
+    - { r: 15, c: 16, color: N }
+    - { r: 16, c: 14, color: N }
+  marcas:
+    - { r: 9, c: 15, tipo: letra, texto: A }
+    - { r: 5, c: 16, tipo: letra, texto: B }
+    - { r: 2, c: 13, tipo: letra, texto: C }
+  desenlaces:
+    - en: [9, 15]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-02
+  titulo: Apertura (2)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 2, c: 5, color: N }
+    - { r: 2, c: 7, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 15, color: N }
+    - { r: 14, c: 16, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 9, color: B }
+    - { r: 16, c: 15, color: N }
+  marcas:
+    - { r: 16, c: 11, tipo: letra, texto: A }
+    - { r: 4, c: 5, tipo: letra, texto: B }
+    - { r: 2, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [2, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-03
+  titulo: Apertura (3)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 2, c: 3, color: B }
+    - { r: 2, c: 9, color: N }
+    - { r: 2, c: 15, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 16, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 16, color: B }
+    - { r: 16, c: 14, color: B }
+  marcas:
+    - { r: 2, c: 6, tipo: letra, texto: A }
+    - { r: 10, c: 16, tipo: letra, texto: B }
+    - { r: 16, c: 9, tipo: letra, texto: C }
+  desenlaces:
+    - en: [10, 16]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-04
+  titulo: Apertura (4)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 2, c: 5, color: B }
+    - { r: 2, c: 14, color: N }
+    - { r: 3, c: 3, color: N }
+    - { r: 3, c: 11, color: B }
+    - { r: 3, c: 16, color: B }
+    - { r: 5, c: 3, color: N }
+    - { r: 5, c: 14, color: N }
+    - { r: 6, c: 16, color: B }
+    - { r: 7, c: 14, color: N }
+    - { r: 8, c: 15, color: B }
+    - { r: 10, c: 3, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 14, color: N }
+  marcas:
+    - { r: 3, c: 8, tipo: letra, texto: A }
+    - { r: 15, c: 8, tipo: letra, texto: B }
+    - { r: 16, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [3, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-05
+  titulo: Apertura (5)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 15, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 8, color: B }
+    - { r: 15, c: 15, color: N }
+    - { r: 16, c: 5, color: N }
+  marcas:
+    - { r: 15, c: 5, tipo: letra, texto: A }
+    - { r: 14, c: 5, tipo: letra, texto: B }
+    - { r: 13, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [14, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-06
+  titulo: Apertura (6)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 6, color: B }
+    - { r: 2, c: 13, color: B }
+    - { r: 2, c: 14, color: N }
+    - { r: 2, c: 15, color: N }
+    - { r: 3, c: 1, color: N }
+    - { r: 3, c: 2, color: N }
+    - { r: 3, c: 4, color: N }
+    - { r: 3, c: 9, color: B }
+    - { r: 3, c: 13, color: B }
+    - { r: 3, c: 14, color: B }
+    - { r: 3, c: 16, color: N }
+    - { r: 4, c: 2, color: B }
+    - { r: 4, c: 3, color: B }
+    - { r: 5, c: 16, color: N }
+    - { r: 8, c: 2, color: B }
+    - { r: 14, c: 16, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 9, color: B }
+    - { r: 16, c: 15, color: N }
+  marcas:
+    - { r: 16, c: 6, tipo: letra, texto: A }
+    - { r: 15, c: 5, tipo: letra, texto: B }
+    - { r: 13, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [13, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-07
+  titulo: Apertura (7)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 2, c: 5, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 9, color: N }
+    - { r: 3, c: 15, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 8, c: 16, color: B }
+    - { r: 14, c: 16, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 9, color: B }
+    - { r: 16, c: 15, color: N }
+  marcas:
+    - { r: 16, c: 11, tipo: letra, texto: A }
+    - { r: 10, c: 16, tipo: letra, texto: B }
+    - { r: 6, c: 16, tipo: letra, texto: C }
+  desenlaces:
+    - en: [6, 16]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-08
+  titulo: Apertura (8)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 1, c: 3, color: N }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 5, color: N }
+    - { r: 2, c: 8, color: N }
+    - { r: 2, c: 10, color: B }
+    - { r: 2, c: 13, color: B }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 15, color: N }
+    - { r: 4, c: 5, color: N }
+    - { r: 5, c: 3, color: B }
+    - { r: 5, c: 16, color: N }
+    - { r: 6, c: 5, color: B }
+    - { r: 9, c: 15, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 16, color: N }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 7, color: B }
+    - { r: 16, c: 14, color: N }
+  marcas:
+    - { r: 10, c: 2, tipo: letra, texto: A }
+    - { r: 9, c: 2, tipo: letra, texto: B }
+    - { r: 8, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [10, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-09
+  titulo: Apertura (9)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 15, color: N }
+    - { r: 13, c: 15, color: B }
+    - { r: 13, c: 16, color: B }
+    - { r: 14, c: 16, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 13, color: N }
+    - { r: 15, c: 15, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 11, color: B }
+  marcas:
+    - { r: 17, c: 13, tipo: letra, texto: A }
+    - { r: 10, c: 15, tipo: letra, texto: B }
+    - { r: 3, c: 9, tipo: letra, texto: C }
+  desenlaces:
+    - en: [10, 15]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-10
+  titulo: Apertura (10)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 12, color: N }
+    - { r: 2, c: 15, color: N }
+    - { r: 3, c: 2, color: B }
+    - { r: 4, c: 13, color: B }
+    - { r: 4, c: 16, color: B }
+    - { r: 7, c: 15, color: N }
+    - { r: 8, c: 2, color: N }
+    - { r: 13, c: 16, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 13, color: B }
+    - { r: 15, c: 15, color: B }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 9, color: B }
+  marcas:
+    - { r: 10, c: 15, tipo: letra, texto: A }
+    - { r: 11, c: 3, tipo: letra, texto: B }
+    - { r: 11, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [10, 15]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-11
+  titulo: Apertura (11)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 15, color: N }
+    - { r: 9, c: 3, color: B }
+    - { r: 9, c: 16, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 9, color: N }
+    - { r: 15, c: 16, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 14, color: N }
+  marcas:
+    - { r: 11, c: 16, tipo: letra, texto: A }
+    - { r: 5, c: 16, tipo: letra, texto: B }
+    - { r: 2, c: 9, tipo: letra, texto: C }
+  desenlaces:
+    - en: [11, 16]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-12
+  titulo: Apertura (12)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 2, c: 14, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 16, color: N }
+    - { r: 14, c: 15, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 15, color: N }
+  marcas:
+    - { r: 15, c: 13, tipo: letra, texto: A }
+    - { r: 14, c: 16, tipo: letra, texto: B }
+    - { r: 11, c: 16, tipo: letra, texto: C }
+  desenlaces:
+    - en: [14, 16]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-13
+  titulo: Apertura (13)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 2, c: 16, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 13, color: N }
+    - { r: 6, c: 16, color: B }
+    - { r: 13, c: 15, color: N }
+    - { r: 13, c: 16, color: N }
+    - { r: 14, c: 15, color: N }
+    - { r: 14, c: 16, color: B }
+    - { r: 15, c: 14, color: N }
+    - { r: 15, c: 16, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 15, color: B }
+  marcas:
+    - { r: 9, c: 16, tipo: letra, texto: A }
+    - { r: 8, c: 16, tipo: letra, texto: B }
+    - { r: 4, c: 16, tipo: letra, texto: C }
+  desenlaces:
+    - en: [8, 16]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-14
+  titulo: Apertura (14)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 2, c: 14, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 16, color: N }
+    - { r: 8, c: 16, color: B }
+    - { r: 12, c: 15, color: B }
+    - { r: 13, c: 16, color: B }
+    - { r: 14, c: 15, color: B }
+    - { r: 14, c: 16, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 16, color: N }
+    - { r: 16, c: 13, color: N }
+    - { r: 16, c: 15, color: N }
+  marcas:
+    - { r: 16, c: 5, tipo: letra, texto: A }
+    - { r: 6, c: 16, tipo: letra, texto: B }
+    - { r: 2, c: 11, tipo: letra, texto: C }
+  desenlaces:
+    - en: [6, 16]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-15
+  titulo: Apertura (15)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 8, color: N }
+    - { r: 2, c: 14, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 11, color: N }
+    - { r: 3, c: 16, color: N }
+    - { r: 5, c: 2, color: B }
+    - { r: 7, c: 16, color: B }
+    - { r: 9, c: 2, color: N }
+    - { r: 10, c: 16, color: B }
+    - { r: 12, c: 2, color: N }
+    - { r: 13, c: 16, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 13, color: N }
+    - { r: 15, c: 15, color: N }
+    - { r: 15, c: 17, color: B }
+    - { r: 16, c: 4, color: B }
+    - { r: 16, c: 7, color: B }
+    - { r: 16, c: 9, color: N }
+    - { r: 16, c: 16, color: N }
+  marcas:
+    - { r: 14, c: 9, tipo: letra, texto: A }
+    - { r: 14, c: 8, tipo: letra, texto: B }
+    - { r: 14, c: 7, tipo: letra, texto: C }
+  desenlaces:
+    - en: [14, 9]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-16
+  titulo: Apertura (16)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 15, color: N }
+    - { r: 11, c: 2, color: B }
+    - { r: 12, c: 4, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 14, c: 16, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 9, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 15, color: N }
+  marcas:
+    - { r: 6, c: 2, tipo: letra, texto: A }
+    - { r: 5, c: 2, tipo: letra, texto: B }
+    - { r: 2, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [2, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-17
+  titulo: Apertura (17)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 2, c: 14, color: N }
+    - { r: 3, c: 3, color: B }
+    - { r: 3, c: 16, color: N }
+    - { r: 6, c: 16, color: N }
+    - { r: 8, c: 14, color: B }
+    - { r: 8, c: 16, color: B }
+    - { r: 12, c: 15, color: B }
+    - { r: 13, c: 16, color: B }
+    - { r: 14, c: 15, color: B }
+    - { r: 14, c: 16, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 16, color: N }
+    - { r: 16, c: 13, color: N }
+    - { r: 16, c: 15, color: N }
+  marcas:
+    - { r: 16, c: 5, tipo: letra, texto: A }
+    - { r: 9, c: 3, tipo: letra, texto: B }
+    - { r: 2, c: 5, tipo: letra, texto: C }
+  desenlaces:
+    - en: [2, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p4-apertura-9-18
+  titulo: Apertura (18)
+  etiqueta: p4-apertura-9
+  dificultad: 5
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 0, abajo: 18, izquierda: 0, derecha: 18 }
+  instruccion: "Jugás con negras: elegí la mejor jugada: A, B o C."
+  piedras:
+    - { r: 1, c: 3, color: B }
+    - { r: 2, c: 2, color: B }
+    - { r: 2, c: 3, color: N }
+    - { r: 2, c: 4, color: B }
+    - { r: 2, c: 13, color: B }
+    - { r: 3, c: 11, color: B }
+    - { r: 3, c: 15, color: N }
+    - { r: 4, c: 3, color: B }
+    - { r: 4, c: 13, color: N }
+    - { r: 9, c: 15, color: N }
+    - { r: 13, c: 1, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 16, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 6, color: N }
+    - { r: 15, c: 10, color: N }
+    - { r: 15, c: 14, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 17, c: 4, color: B }
+  marcas:
+    - { r: 5, c: 11, tipo: letra, texto: A }
+    - { r: 9, c: 3, tipo: letra, texto: B }
+    - { r: 11, c: 3, tipo: letra, texto: C }
+  desenlaces:
+    - en: [5, 11]
+      correcto: true
+      texto: ¡Correcto!

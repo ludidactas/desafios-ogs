@@ -1,0 +1,370 @@
+# Principiante, nivel 2 › Haengma — Doblar después de un contacto
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl2-haengma-1).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p2-haengma-1-01
+  titulo: Haengma (1)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: Haengma es un término importante del Go que viene de Corea. Indica la relación entre
+    las piedras, la manera en que se desarrolla un grupo. La palabra coreana haengma significa «la
+    forma en que se mueve el caballo». Una jugada de haengma útil es doblar («hane») después de un
+    contacto («tsuke»), en este ejemplo jugando en A después de la jugada 1 de Blanco. Es un
+    contraataque fuerte. Jugás con negras. Elegí la mejor respuesta al contacto 1.
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 4, color: B }
+  marcas:
+    - { r: 16, c: 2, tipo: letra, texto: "1" }
+    - { r: 16, c: 1, tipo: letra, texto: A }
+  desenlaces:
+    - en: [16, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-02
+  titulo: Haengma (2)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta al contacto 1: A, B o C."
+  piedras:
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+  marcas:
+    - { r: 15, c: 2, tipo: letra, texto: "1" }
+    - { r: 15, c: 1, tipo: letra, texto: A }
+    - { r: 16, c: 2, tipo: letra, texto: B }
+    - { r: 16, c: 3, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-03
+  titulo: Haengma (3)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta al contacto 1: A, B o C."
+  piedras:
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 14, c: 3, tipo: letra, texto: "1" }
+    - { r: 13, c: 3, tipo: letra, texto: A }
+    - { r: 14, c: 2, tipo: letra, texto: B }
+    - { r: 15, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [14, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-04
+  titulo: Haengma (4)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta al contacto 1: A, B o C."
+  piedras:
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 15, c: 4, tipo: letra, texto: "1" }
+    - { r: 14, c: 4, tipo: letra, texto: A }
+    - { r: 15, c: 5, tipo: letra, texto: B }
+    - { r: 16, c: 4, tipo: letra, texto: C }
+  desenlaces:
+    - en: [14, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-05
+  titulo: Haengma (5)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta al contacto 1: A, B o C."
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 3, color: N }
+  marcas:
+    - { r: 16, c: 3, tipo: letra, texto: "1" }
+    - { r: 15, c: 2, tipo: letra, texto: A }
+    - { r: 15, c: 4, tipo: letra, texto: B }
+    - { r: 16, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-06
+  titulo: Haengma (6)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta al contacto 1: A, B o C."
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+  marcas:
+    - { r: 14, c: 2, tipo: letra, texto: "1" }
+    - { r: 14, c: 3, tipo: letra, texto: A }
+    - { r: 15, c: 1, tipo: letra, texto: B }
+    - { r: 15, c: 3, tipo: letra, texto: C }
+  desenlaces:
+    - en: [14, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-07
+  titulo: Haengma (7)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: elegí la mejor respuesta al contacto 1: A, B o C."
+  piedras:
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 17, c: 3, color: B }
+  marcas:
+    - { r: 15, c: 2, tipo: letra, texto: "1" }
+    - { r: 16, c: 2, tipo: letra, texto: A }
+    - { r: 16, c: 3, tipo: letra, texto: B }
+    - { r: 17, c: 2, tipo: letra, texto: C }
+  desenlaces:
+    - en: [16, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-08
+  titulo: Haengma (8)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: respondé bien (doblando) al contacto 1."
+  piedras:
+    - { r: 13, c: 3, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: N }
+  marcas:
+    - { r: 15, c: 2, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [16, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-09
+  titulo: Haengma (9)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: respondé bien (doblando) al contacto 1."
+  piedras:
+    - { r: 14, c: 4, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: N }
+  marcas:
+    - { r: 14, c: 4, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [14, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-10
+  titulo: Haengma (10)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: respondé bien (doblando) al contacto 1."
+  piedras:
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 5, color: B }
+    - { r: 16, c: 5, color: N }
+  marcas:
+    - { r: 15, c: 5, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [15, 6]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-11
+  titulo: Haengma (11)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: respondé bien (doblando) al contacto 1."
+  piedras:
+    - { r: 13, c: 3, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 2, color: B }
+  marcas:
+    - { r: 16, c: 2, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [16, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-12
+  titulo: Haengma (12)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: respondé bien (doblando) al contacto 1."
+  piedras:
+    - { r: 14, c: 3, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+  marcas:
+    - { r: 16, c: 2, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [17, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-13
+  titulo: Haengma (13)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: respondé bien (doblando) al contacto 1."
+  piedras:
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 7, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 7, color: N }
+  marcas:
+    - { r: 15, c: 7, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [15, 8]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-14
+  titulo: Haengma (14)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: respondé bien (doblando) al contacto 1."
+  piedras:
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 4, color: B }
+  marcas:
+    - { r: 16, c: 4, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [16, 5]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-15
+  titulo: Haengma (15)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: respondé bien (doblando) al contacto 1."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 8, color: N }
+  marcas:
+    - { r: 16, c: 3, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [16, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-16
+  titulo: Haengma (16)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: respondé bien (doblando) al contacto 1."
+  piedras:
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: B }
+  marcas:
+    - { r: 16, c: 4, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [17, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p2-haengma-1-17
+  titulo: Haengma (17)
+  etiqueta: p2-haengma-1
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "En vez de un contacto, también te pueden atacar con un golpe de hombro: una jugada en
+    diagonal pegada a tu piedra. Muchas veces la mejor defensa es estirar desde la piedra atacada.
+    En este ejemplo Negro juega un golpe de hombro con la piedra 1, y Blanco tiene que defenderse
+    estirando su piedra en A. Así, la piedra 1 de Negro queda apoyada contra una formación fuerte de
+    dos piedras blancas. Jugás con blancas. Defendete bien de la jugada 1 de Negro."
+  piedras:
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 16, c: 4, color: N }
+  marcas:
+    - { r: 14, c: 3, tipo: letra, texto: "1" }
+    - { r: 14, c: 2, tipo: letra, texto: A }
+  desenlaces:
+    - en: [14, 2]
+      correcto: true
+      texto: ¡Correcto!

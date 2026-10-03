@@ -1,0 +1,663 @@
+# Principiante, nivel 1 › Ko — Hacer un ko
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl1-ko).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p1-ko-01
+  titulo: Ko (1)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ko."
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 2, color: N }
+  desenlaces:
+    - en: [18, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-02
+  titulo: Ko (2)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ko."
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+  desenlaces:
+    - en: [16, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-03
+  titulo: Ko (3)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ko."
+  piedras:
+    - { r: 13, c: 1, color: N }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 1, color: B }
+  desenlaces:
+    - en: [15, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-04
+  titulo: Ko (4)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ko."
+  piedras:
+    - { r: 11, c: 1, color: N }
+    - { r: 11, c: 2, color: N }
+    - { r: 11, c: 3, color: N }
+    - { r: 11, c: 4, color: N }
+    - { r: 12, c: 1, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 12, c: 3, color: B }
+    - { r: 12, c: 4, color: N }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 13, c: 4, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 3, color: N }
+  desenlaces:
+    - en: [14, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-05
+  titulo: Ko (5)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ko."
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 1, color: N }
+  desenlaces:
+    - en: [15, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-06
+  titulo: Ko (6)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ko."
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 15, c: 0, color: B }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: N }
+    - { r: 18, c: 4, color: N }
+  desenlaces:
+    - en: [17, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-07
+  titulo: Ko (7)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ko."
+  piedras:
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 18, c: 1, color: N }
+  desenlaces:
+    - en: [18, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-08
+  titulo: Ko (8)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ko."
+  piedras:
+    - { r: 11, c: 2, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 5, color: N }
+  desenlaces:
+    - en: [14, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-09
+  titulo: Ko (9)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ko."
+  piedras:
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 13, c: 3, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 4, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 1, color: N }
+  desenlaces:
+    - en: [16, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-10
+  titulo: Ko (10)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ko."
+  piedras:
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 3, color: N }
+  desenlaces:
+    - en: [18, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-11
+  titulo: Ko (11)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ko."
+  piedras:
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 2, color: N }
+  desenlaces:
+    - en: [18, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-12
+  titulo: Ko (12)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con blancas: hacé un ko."
+  piedras:
+    - { r: 11, c: 2, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 4, color: N }
+  desenlaces:
+    - en: [15, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-13
+  titulo: Ko (13)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: hacé un ko."
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: B }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 4, color: N }
+  desenlaces:
+    - en: [16, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-14
+  titulo: Ko (14)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: hacé un ko."
+  piedras:
+    - { r: 16, c: 4, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 2, color: N }
+    - { r: 18, c: 5, color: B }
+  desenlaces:
+    - en: [18, 4]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-15
+  titulo: Ko (15)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: hacé un ko."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 15, c: 4, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 5, color: B }
+  desenlaces:
+    - en: [14, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-16
+  titulo: Ko (16)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: hacé un ko."
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 2, color: B }
+  desenlaces:
+    - en: [18, 3]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-17
+  titulo: Ko (17)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: hacé un ko."
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 0, color: N }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: N }
+  desenlaces:
+    - en: [16, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-18
+  titulo: Ko (18)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: hacé un ko."
+  piedras:
+    - { r: 12, c: 1, color: N }
+    - { r: 13, c: 0, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 17, c: 1, color: N }
+  desenlaces:
+    - en: [14, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-19
+  titulo: Ko (19)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: hacé un ko."
+  piedras:
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+  desenlaces:
+    - en: [15, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-20
+  titulo: Ko (20)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: hacé un ko."
+  piedras:
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 2, color: B }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 3, color: N }
+    - { r: 18, c: 1, color: B }
+    - { r: 18, c: 2, color: N }
+  desenlaces:
+    - en: [17, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-21
+  titulo: Ko (21)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: hacé un ko."
+  piedras:
+    - { r: 11, c: 1, color: B }
+    - { r: 12, c: 2, color: B }
+    - { r: 13, c: 1, color: N }
+    - { r: 13, c: 2, color: B }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: B }
+    - { r: 14, c: 3, color: B }
+    - { r: 15, c: 0, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 17, c: 1, color: N }
+  desenlaces:
+    - en: [14, 2]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-22
+  titulo: Ko (22)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: hacé un ko."
+  piedras:
+    - { r: 13, c: 0, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 16, c: 0, color: B }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: N }
+  desenlaces:
+    - en: [15, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-23
+  titulo: Ko (23)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: hacé un ko."
+  piedras:
+    - { r: 13, c: 2, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: N }
+    - { r: 15, c: 3, color: B }
+    - { r: 16, c: 1, color: B }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 18, c: 1, color: N }
+    - { r: 18, c: 2, color: B }
+    - { r: 18, c: 3, color: B }
+  desenlaces:
+    - en: [17, 0]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p1-ko-24
+  titulo: Ko (24)
+  etiqueta: p1-ko
+  dificultad: 3
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 8 }
+  instruccion: "Jugás con negras: hacé un ko."
+  piedras:
+    - { r: 13, c: 0, color: B }
+    - { r: 13, c: 1, color: B }
+    - { r: 13, c: 2, color: B }
+    - { r: 13, c: 3, color: B }
+    - { r: 14, c: 0, color: B }
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 14, c: 3, color: N }
+    - { r: 15, c: 1, color: B }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 3, color: N }
+  desenlaces:
+    - en: [15, 0]
+      correcto: true
+      texto: ¡Correcto!

@@ -1,0 +1,640 @@
+# Principiante, nivel 3 › Vida y muerte — Vivir en el lateral
+
+# Generado automáticamente por extraer-ogs.mjs a partir del tutorial "Learn to Play Go" de
+# online-go.com (https://online-go.com/learn-to-play-go/bl3-life-death-5).
+# Copyright (C) Online-Go.com — distribuido bajo GNU AGPL-3.0 (ver LICENSE en esta carpeta).
+# Fuente: github.com/online-go/online-go.com @ 8baf0345423d
+# Cambios respecto del original: conversión al formato Desafio, coordenadas a [fila, columna],
+# textos de feedback por jugada agregados.
+
+# Coordenadas: [fila, columna] desde la esquina superior izquierda.
+
+- id: ogs-p3-vida-y-muerte-5-01
+  titulo: Vida y muerte (1)
+  etiqueta: p3-vida-y-muerte-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 12 }
+  instruccion: "Seis piedras en la segunda línea a lo largo del lateral no alcanzan para vivir: aunque
+    te toque jugar, no las podés salvar. Jugás con blancas. Si Blanco juega en A, Negro juega en B.
+    Jugá en A o en B para ver qué pasa."
+  piedras:
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 16, c: 9, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: B }
+    - { r: 17, c: 8, color: B }
+    - { r: 17, c: 9, color: N }
+  marcas:
+    - { r: 18, c: 3, tipo: letra, texto: A }
+    - { r: 18, c: 8, tipo: letra, texto: B }
+  secuencia:
+    ramas:
+      - en: [18, 8]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 3]
+        siguiente:
+          ramas:
+            - en: [18, 4]
+              correcto: true
+              texto: ¡Correcto!
+              respuestaRival: [18, 6]
+      - en: [18, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 8]
+        siguiente:
+          ramas:
+            - en: [18, 7]
+              correcto: true
+              texto: ¡Correcto!
+              respuestaRival: [18, 5]
+
+- id: ogs-p3-vida-y-muerte-5-02
+  titulo: Vida y muerte (2)
+  etiqueta: p3-vida-y-muerte-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 12 }
+  instruccion: Con siete piedras en la segunda línea a lo largo del lateral se puede vivir. Si le toca
+    a Blanco, puede darle dos ojos al grupo jugando en A, B o C; si le toca a Negro, las piedras
+    blancas se pueden capturar. Jugás con blancas. Hacé vivir al grupo blanco del lateral.
+  piedras:
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 16, c: 9, color: N }
+    - { r: 16, c: 10, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: B }
+    - { r: 17, c: 8, color: B }
+    - { r: 17, c: 9, color: B }
+    - { r: 17, c: 10, color: N }
+  marcas:
+    - { r: 18, c: 3, tipo: letra, texto: A }
+    - { r: 18, c: 6, tipo: letra, texto: B }
+    - { r: 18, c: 9, tipo: letra, texto: C }
+  secuencia:
+    ramas:
+      - en: [18, 9]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 3]
+        siguiente:
+          ramas:
+            - en: [18, 4]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [18, 6]
+              siguiente:
+                ramas:
+                  - en: [18, 7]
+                    correcto: true
+                    texto: ¡Correcto!
+      - en: [18, 3]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 9]
+        siguiente:
+          ramas:
+            - en: [18, 8]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [18, 5]
+              siguiente:
+                ramas:
+                  - en: [18, 6]
+                    correcto: true
+                    texto: ¡Correcto!
+      - en: [18, 6]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 3]
+        siguiente:
+          ramas:
+            - en: [18, 4]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [18, 9]
+              siguiente:
+                ramas:
+                  - en: [18, 8]
+                    correcto: true
+                    texto: ¡Correcto!
+
+- id: ogs-p3-vida-y-muerte-5-03
+  titulo: Vida y muerte (3)
+  etiqueta: p3-vida-y-muerte-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 12 }
+  instruccion: Con ocho piedras en la segunda línea a lo largo del lateral, el grupo está vivo aunque
+    juegue el rival. Si Negro ataca el grupo blanco con 1, Blanco puede defenderse y vivir. Jugás
+    con blancas. Defendé el grupo blanco del lateral.
+  piedras:
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 16, c: 9, color: N }
+    - { r: 16, c: 10, color: N }
+    - { r: 16, c: 11, color: N }
+    - { r: 17, c: 2, color: N }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: B }
+    - { r: 17, c: 8, color: B }
+    - { r: 17, c: 9, color: B }
+    - { r: 17, c: 10, color: B }
+    - { r: 17, c: 11, color: N }
+    - { r: 18, c: 3, color: N }
+  marcas:
+    - { r: 18, c: 3, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [18, 4]
+      correcto: true
+      texto: ¡Correcto!
+    - en: [18, 10]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-vida-y-muerte-5-04
+  titulo: Vida y muerte (4)
+  etiqueta: p3-vida-y-muerte-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 12 }
+  instruccion: "Cuatro piedras en la esquina sobre la segunda línea no alcanzan para vivir: aunque te
+    toque jugar, no las podés salvar. Acá Blanco intenta salvarlas con 1. Capturá las piedras
+    blancas impidiendo que hagan dos ojos."
+  piedras:
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: N }
+    - { r: 18, c: 3, color: B }
+  marcas:
+    - { r: 18, c: 3, tipo: letra, texto: "1" }
+  desenlaces:
+    - en: [18, 1]
+      correcto: true
+      texto: ¡Correcto!
+
+- id: ogs-p3-vida-y-muerte-5-05
+  titulo: Vida y muerte (5)
+  etiqueta: p3-vida-y-muerte-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: N
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 12 }
+  instruccion: Con cinco piedras en la esquina sobre la segunda línea podés vivir dándole dos ojos al
+    grupo. Acá Blanco puede hacer dos ojos, pero si le toca a Negro, puede capturar el grupo blanco.
+    Jugás con negras. Capturá el grupo blanco.
+  piedras:
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [18, 4]
+        correcto: true
+        texto: "Bien. Blanco respondió: seguí."
+        respuestaRival: [18, 3]
+        siguiente:
+          ramas:
+            - en: [18, 1]
+              correcto: true
+              texto: ¡Correcto!
+            - en: [18, 5]
+              correcto: false
+              texto: "Esa jugada no funciona: Blanco tiene una buena respuesta."
+              respuestaRival: [18, 1]
+
+- id: ogs-p3-vida-y-muerte-5-06
+  titulo: Vida y muerte (6)
+  etiqueta: p3-vida-y-muerte-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 12 }
+  instruccion: Con seis piedras en la esquina sobre la segunda línea, el grupo está vivo aunque juegue
+    el rival. Acá Negro intenta capturar las piedras blancas con 1. Salvá el grupo blanco.
+  piedras:
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 5, color: N }
+  marcas:
+    - { r: 18, c: 5, tipo: letra, texto: "1" }
+  secuencia:
+    ramas:
+      - en: [18, 4]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 1]
+        siguiente:
+          ramas:
+            - en: [18, 2]
+              correcto: true
+              texto: ¡Correcto!
+
+- id: ogs-p3-vida-y-muerte-5-07
+  titulo: Vida y muerte (7)
+  etiqueta: p3-vida-y-muerte-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 12 }
+  instruccion: "Jugás con blancas: hacé vivir al grupo blanco del lateral."
+  piedras:
+    - { r: 15, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 16, c: 9, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: B }
+    - { r: 17, c: 8, color: B }
+    - { r: 17, c: 9, color: N }
+    - { r: 17, c: 11, color: N }
+  secuencia:
+    ramas:
+      - en: [18, 8]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 2]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 9]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 2]
+      - en: [18, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 8]
+
+- id: ogs-p3-vida-y-muerte-5-08
+  titulo: Vida y muerte (8)
+  etiqueta: p3-vida-y-muerte-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 12 }
+  instruccion: "Jugás con blancas: hacé vivir al grupo blanco del lateral."
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 7, color: N }
+  secuencia:
+    ramas:
+      - en: [17, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [18, 4]
+        siguiente:
+          ramas:
+            - en: [17, 5]
+              correcto: true
+              texto: "Bien. Negro respondió: seguí."
+              respuestaRival: [18, 5]
+              siguiente:
+                ramas:
+                  - en: [18, 6]
+                    correcto: true
+                    texto: "Bien. Negro respondió: seguí."
+                    respuestaRival: [17, 6]
+                    siguiente:
+                      ramas:
+                        - en: [18, 3]
+                          correcto: true
+                          texto: "Bien. Negro respondió: seguí."
+                          respuestaRival: [18, 5]
+                          siguiente:
+                            ramas:
+                              - en: [18, 1]
+                                correcto: true
+                                texto: ¡Correcto!
+      - en: [17, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 0]
+      - en: [18, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 0]
+      - en: [18, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 0]
+
+- id: ogs-p3-vida-y-muerte-5-09
+  titulo: Vida y muerte (9)
+  etiqueta: p3-vida-y-muerte-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 12 }
+  instruccion: "Jugás con blancas: hacé vivir al grupo blanco del lateral."
+  piedras:
+    - { r: 14, c: 4, color: N }
+    - { r: 14, c: 5, color: N }
+    - { r: 14, c: 7, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 4, color: N }
+    - { r: 15, c: 5, color: B }
+    - { r: 15, c: 6, color: N }
+    - { r: 15, c: 9, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: B }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: B }
+    - { r: 17, c: 8, color: B }
+    - { r: 17, c: 9, color: N }
+  secuencia:
+    ramas:
+      - en: [18, 5]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [17, 5]
+        siguiente:
+          ramas:
+            - en: [16, 5]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [17, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 2]
+      - en: [18, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 5]
+      - en: [18, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 5]
+
+- id: ogs-p3-vida-y-muerte-5-10
+  titulo: Vida y muerte (10)
+  etiqueta: p3-vida-y-muerte-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 12 }
+  instruccion: "Jugás con blancas: hacé vivir al grupo blanco del lateral."
+  piedras:
+    - { r: 15, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 16, c: 10, color: N }
+    - { r: 17, c: 1, color: N }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 6, color: B }
+    - { r: 17, c: 7, color: B }
+    - { r: 17, c: 8, color: B }
+    - { r: 17, c: 9, color: N }
+  secuencia:
+    ramas:
+      - en: [18, 5]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 8]
+      - en: [18, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 5]
+      - en: [18, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 5]
+
+- id: ogs-p3-vida-y-muerte-5-11
+  titulo: Vida y muerte (11)
+  etiqueta: p3-vida-y-muerte-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 12 }
+  instruccion: "Jugás con blancas: hacé vivir al grupo blanco del lateral."
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 0, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: N }
+  secuencia:
+    ramas:
+      - en: [18, 1]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [17, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [18, 4]
+      - en: [18, 4]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 1]
+
+- id: ogs-p3-vida-y-muerte-5-12
+  titulo: Vida y muerte (12)
+  etiqueta: p3-vida-y-muerte-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 12 }
+  instruccion: "Jugás con blancas: hacé vivir al grupo blanco del lateral."
+  piedras:
+    - { r: 15, c: 9, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: N }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 4, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 16, c: 6, color: N }
+    - { r: 16, c: 7, color: N }
+    - { r: 16, c: 8, color: N }
+    - { r: 17, c: 0, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 2, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 7, color: B }
+    - { r: 17, c: 8, color: B }
+    - { r: 17, c: 9, color: N }
+  secuencia:
+    ramas:
+      - en: [17, 6]
+        correcto: true
+        texto: ¡Correcto!
+      - en: [18, 6]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 6]
+      - en: [18, 1]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 6]
+      - en: [18, 8]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 6]
+
+- id: ogs-p3-vida-y-muerte-5-13
+  titulo: Vida y muerte (13)
+  etiqueta: p3-vida-y-muerte-5
+  dificultad: 4
+  tamañoTablero: 19
+  turno: B
+  tipo: secuencia
+  recorte: { arriba: 10, abajo: 18, izquierda: 0, derecha: 12 }
+  instruccion: "Jugás con blancas: hacé vivir al grupo blanco del lateral."
+  piedras:
+    - { r: 14, c: 1, color: N }
+    - { r: 14, c: 2, color: N }
+    - { r: 15, c: 1, color: N }
+    - { r: 15, c: 2, color: B }
+    - { r: 15, c: 3, color: N }
+    - { r: 15, c: 5, color: N }
+    - { r: 15, c: 7, color: N }
+    - { r: 16, c: 0, color: N }
+    - { r: 16, c: 1, color: N }
+    - { r: 16, c: 2, color: B }
+    - { r: 16, c: 3, color: N }
+    - { r: 16, c: 5, color: N }
+    - { r: 17, c: 1, color: B }
+    - { r: 17, c: 3, color: B }
+    - { r: 17, c: 4, color: B }
+    - { r: 17, c: 5, color: B }
+    - { r: 17, c: 6, color: N }
+    - { r: 18, c: 2, color: B }
+  secuencia:
+    ramas:
+      - en: [17, 0]
+        correcto: true
+        texto: "Bien. Negro respondió: seguí."
+        respuestaRival: [17, 2]
+        siguiente:
+          ramas:
+            - en: [16, 2]
+              correcto: true
+              texto: ¡Correcto!
+      - en: [17, 2]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 0]
+      - en: [18, 5]
+        correcto: false
+        texto: "Esa jugada no funciona: Negro tiene una buena respuesta."
+        respuestaRival: [17, 0]
